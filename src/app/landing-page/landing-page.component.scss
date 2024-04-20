@@ -1,5 +1,5 @@
 section {
-  height: 100vh;
+  height: calc(100vh + 120px);
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -21,7 +21,7 @@ section {
 
   .headline {
     padding-right: 100px;
-    > h3 {
+    > h6 {
       font-size: 60.5px;
       line-height: 1.5;
     }

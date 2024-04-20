@@ -1,0 +1,33 @@
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #5988ff, #0043f0);
+
+  h3 {
+    padding-top: 52px;
+  }
+}
+
+.skill-icons {
+  padding: 52px 242px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .skill-icon {
+    padding-top: 24px;
+    gap: 10px;
+
+    img {
+      width: 70px;
+      height: 75px;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 16px;
+    }
+  }
+}
