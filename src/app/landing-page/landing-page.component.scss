@@ -5,6 +5,9 @@ section {
   display: flex;
   position: relative;
   background: linear-gradient(to bottom, #ffffff, #eaf0ff);
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: -120px;
 }
 
 .aot-right {
@@ -14,28 +17,19 @@ section {
   justify-content: start;
   flex-direction: column;
   width: 100%;
-  margin-top: 227px;
+  margin-top: 224px;
 
   .headline {
     padding-right: 100px;
-    h1 {
-      font-size: 55.5px;
-      color: #5988ff;
-      font-weight: 400;
-      margin-block-start: 0 !important;
-      margin-block-end: 0 !important;
-      &:nth-child(2),
-      &:nth-child(3) {
-        font-family: "Baloo 2";
-        font-weight: 900;
-        font-size: 128px;
-        line-height: 0.9;
-      }
+    > h3 {
+      font-size: 60.5px;
+      line-height: 1.5;
+    }
+    > h1 {
+      font-size: 116px;
+
       &:nth-child(2) {
-        font-size: 113px;
-      }
-      &:nth-child(3) {
-        font-size: 106px;
+        font-size: 124px !important;
       }
     }
   }
@@ -43,8 +37,8 @@ section {
 
 .aot-ball {
   position: absolute;
-  top: -71px;
-  left: -199px;
+  top: -171px;
+  left: -299px;
   img {
     width: 892px;
     height: 892px;

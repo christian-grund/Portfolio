@@ -1,0 +1,65 @@
+section {
+  position: relative;
+  max-width: 1440px; /* Maximale Breite der Webseite */
+  width: 100%;
+  padding: 180px 100px; /* Fügt seitlichen Abstand hinzu */
+  box-sizing: border-box; /* Berücksichtigt das Padding in der Breite */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  .left {
+    width: 50%;
+    padding-bottom: 90px;
+  }
+  .right {
+    width: 50%;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+
+    span {
+      font-size: 23px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    div {
+      border: 2px solid #9747ff;
+      border-radius: 10px;
+      padding: 15px 30px !important;
+      gap: 10px;
+      font-size: 23px;
+      font-weight: 400;
+      color: #9747ff;
+      cursor: pointer;
+      width: 254px !important;
+      box-sizing: border-box !important;
+    }
+  }
+}
+
+.ball-big {
+  position: absolute;
+  top: -103px;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    width: 206px;
+    height: 206px;
+  }
+}
+
+.ball-small {
+  position: absolute;
+  top: 58px;
+  right: 20%;
+  img {
+    width: 82px;
+    height: 82px;
+  }
+}

@@ -1,30 +1,37 @@
 @import "../../../../styles.scss";
 
 nav {
-  height: 117px;
+  height: 120px;
   width: 100%;
   max-width: 1440px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  // padding: 0 100px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute; /* Ändere die Position auf relative */
+  z-index: 10;
+
   > img {
     width: 64px;
     height: 69px;
     padding-left: 100px;
-    z-index: 10;
   }
   > div {
     display: flex;
     justify-content: flex-end;
     gap: 80px;
-    padding-right: 108px;
+    padding-right: 100px;
     > a {
       &:hover {
         text-decoration: underline;
+        font-weight: 700;
+        font-size: 22.7px;
+        &:nth-child(2) {
+          font-size: 22.2px;
+        }
       }
     }
   }
