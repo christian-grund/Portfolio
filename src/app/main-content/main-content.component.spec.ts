@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AotComponent } from './aot.component';
+import { MainContentComponent } from './main-content.component';
 
-describe('AotComponent', () => {
-  let component: AotComponent;
-  let fixture: ComponentFixture<AotComponent>;
+describe('MainContentComponent', () => {
+  let component: MainContentComponent;
+  let fixture: ComponentFixture<MainContentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AotComponent]
+      imports: [MainContentComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AotComponent);
+    fixture = TestBed.createComponent(MainContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

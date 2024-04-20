@@ -1,3 +1,14 @@
 @import "./app/shared/style/baloo.scss";
 @import "./app/shared/style/montserrat.scss";
 @import "./app/shared/style/colors.scss";
+
+body {
+  //   background-color: lightseagreen;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+h1 {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
