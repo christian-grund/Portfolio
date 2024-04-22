@@ -1,3 +1,5 @@
+@import "../shared/style/colors.scss";
+
 section {
   position: relative;
   max-width: 1440px;
@@ -29,13 +31,13 @@ section {
     }
 
     div {
-      border: 2px solid #9747ff;
+      border: 2px solid $color-purple;
       border-radius: 10px;
       padding: 15px 30px !important;
       gap: 10px;
       font-size: 23px;
       font-weight: 400;
-      color: #9747ff;
+      color: $color-purple;
       cursor: pointer;
       width: 254px !important;
       box-sizing: border-box !important;

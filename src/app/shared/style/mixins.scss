@@ -1,0 +1,8 @@
+@import "./colors.scss";
+
+@mixin circle($size, $primary-color, $secondary-color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: linear-gradient(120deg, $primary-color, $secondary-color);
+}

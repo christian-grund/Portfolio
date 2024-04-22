@@ -1,10 +1,13 @@
+@import "../shared/style/colors.scss";
+@import "../shared/style/mixins.scss";
+
 section {
   height: calc(100vh + 120px);
   width: 100%;
   max-width: 1440px;
   display: flex;
   position: relative;
-  background: linear-gradient(to bottom, #ffffff, #eaf0ff);
+  background: linear-gradient(to bottom, $color-white, $color-landingpage);
   overflow: hidden;
   box-sizing: border-box;
   margin-top: -120px;
@@ -45,6 +48,15 @@ section {
   }
 }
 
+.circle-top-left {
+  position: absolute;
+  top: -171px;
+  left: -299px;
+  max-width: 1000px;
+  max-height: 1000px;
+  @include circle(892px, #5988ff, #0043f0);
+}
+
 .aot-social-icons {
   position: absolute;
   bottom: 100px;
@@ -64,12 +76,12 @@ section {
   span {
     font-size: 28px;
     font-weight: 500;
-    color: #5988ff;
+    color: $primary-color;
   }
   div {
     height: 330px;
     width: 0;
-    border: 2px solid #5988ff;
+    border: 2px solid $primary-color;
   }
 }
 
