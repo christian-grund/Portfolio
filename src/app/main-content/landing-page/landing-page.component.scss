@@ -1,5 +1,5 @@
-@import "../shared/style/colors.scss";
-@import "../shared/style/mixins.scss";
+@import "../../shared/style/colors.scss";
+@import "../../shared/style/mixins.scss";
 
 section {
   height: calc(100vh + 120px);
@@ -49,12 +49,10 @@ section {
 }
 
 .circle-top-left {
+  @include circle(60vw, 864px, #5988ff, #0043f0);
   position: absolute;
-  top: -171px;
-  left: -299px;
-  max-width: 1000px;
-  max-height: 1000px;
-  @include circle(892px, #5988ff, #0043f0);
+  top: -10vh;
+  left: -15vw;
 }
 
 .aot-social-icons {

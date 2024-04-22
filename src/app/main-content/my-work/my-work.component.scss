@@ -1,6 +1,8 @@
-@import "../shared/style/colors.scss";
+@import "../../shared/style/colors.scss";
+@import "../../shared/style/mixins.scss";
 
 section {
+  position: relative;
   max-width: 1440px;
   width: 100%;
   display: flex;
@@ -65,4 +67,11 @@ section {
       }
     }
   }
+}
+
+.circle-1 {
+  @include circle(110px, 110px, #5988ff, #0043f0);
+  position: absolute;
+  top: 50px;
+  left: 550px;
 }
