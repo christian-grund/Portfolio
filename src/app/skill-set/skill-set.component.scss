@@ -9,25 +9,41 @@ section {
   }
 }
 
-.skill-icons {
-  padding: 52px 242px;
+.skill-set {
+  padding: 0px 12.5% 100px 12.5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
 
-  .skill-icon {
-    padding-top: 24px;
-    gap: 10px;
+  .skill-icons {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
 
-    img {
-      width: 70px;
-      height: 75px;
-    }
+    .skill-icon {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 24px;
+      gap: 10px;
+      width: 86px;
 
-    p {
-      color: #ffffff;
-      font-size: 16px;
+      img {
+        width: 70px;
+        height: 75px;
+      }
+
+      p {
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+      }
     }
   }
 }
