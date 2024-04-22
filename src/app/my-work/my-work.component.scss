@@ -1,0 +1,36 @@
+section {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.header-about {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  h3 {
+    color: #5988ff;
+  }
+  p {
+    font-size: 23px;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  .project {
+    display: flex;
+    gap: 32px;
+    .project-img {
+      width: 50%;
+    }
+    .project-text {
+      width: 50%;
+    }
+  }
+}

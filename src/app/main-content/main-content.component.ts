@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { SkillSetComponent } from '../skill-set/skill-set.component';
+import { MyWorkComponent } from '../my-work/my-work.component';
 
 @Component({
   selector: 'app-main-content',
@@ -12,6 +13,7 @@ import { SkillSetComponent } from '../skill-set/skill-set.component';
     LandingPageComponent,
     AboutMeComponent,
     SkillSetComponent,
+    MyWorkComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

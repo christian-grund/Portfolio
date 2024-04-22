@@ -9,14 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './skill-set.component.scss',
 })
 export class SkillSetComponent {
-  skillSetIconsTop = [
+  skillSetIcons = [
     'angular.svg',
     'typescript.svg',
     'javascript.svg',
     'html.svg',
     'scrum.svg',
-  ];
-  skillSetIconsBottom = [
     'firebase.svg',
     'git.svg',
     'css.svg',
@@ -24,8 +22,12 @@ export class SkillSetComponent {
     'material_design.svg',
   ];
 
-  skillSetNamesTop = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Scrum'];
-  skillSetNamesBottom = [
+  skillSetNames = [
+    'Angular',
+    'TypeScript',
+    'JavaScript',
+    'HTML',
+    'Scrum',
     'Firebase',
     'GIT',
     'CSS',
