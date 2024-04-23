@@ -6,6 +6,7 @@ section {
   width: 100%;
   padding: 100px;
   box-sizing: border-box;
+  background: linear-gradient(to bottom, $color-white, $color-landingpage);
 }
 
 h3 {
@@ -21,6 +22,7 @@ h6 {
 
 .wrapper {
   display: flex;
+  flex-direction: row;
   .text {
     display: flex;
     align-items: flex-start;
@@ -32,6 +34,7 @@ h6 {
     }
     p {
       font-size: 16px;
+
       span {
         font-weight: bold;
       }
@@ -44,11 +47,36 @@ h6 {
   }
   .form {
     width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-    button {
-      border: 1px solid $primary-color;
-      color: $primary-color;
-      padding: 13px 24px;
+    .checkbox-privacy-policy {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      input {
+        display: none;
+      }
+      p {
+        font-size: 14px;
+
+        a {
+          color: $primary-color;
+          letter-spacing: 2;
+          &:hover {
+            font-weight: 700;
+            text-decoration: underline;
+            letter-spacing: 1;
+          }
+        }
+      }
+    }
+
+    .submit-btn {
+      width: 200px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -90,14 +118,14 @@ input[type="submit"]:hover {
   padding: 20px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 15px 25px;
-  border: 1px solid $primary-color;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
+// input[type="text"],
+// input[type="email"],
+// textarea {
+//   padding: 15px 25px;
+//   border: 1px solid $primary-color;
+//   border-radius: 10px;
+//   //   box-sizing: border-box;
+// }
 
 input[type="checkbox"] {
   display: none;
@@ -116,21 +144,70 @@ input[type="checkbox"] + label {
 input[type="checkbox"]:checked + label {
   background: url(../../../assets/img/icons/checkbox/checkbox_checked.svg)
     no-repeat;
-  height: 20px;
-  width: 16px;
+  height: 24px;
+  width: 24px;
   display: inline-block;
   background-size: 100%;
 }
 
-input:focus {
-  border-color: #29abe2 !important;
-  outline: none;
+input[type="text"],
+[type="email"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 15px 25px;
+  border: 1px solid $primary-color; /* Set border with 1px and color $primary-color */
+  border-radius: 10px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+
+  &:focus {
+    border: 1px solid $primary-color !important; /* Set border to 1px solid $primary-color on focus */
+    outline: none;
+  }
 }
 
-input:hover {
+/* Style inputs and textareas on hover */
+input[type="text"]:hover,
+[type="email"]:hover,
+textarea:hover {
+  border-width: 2px;
 }
 
-.inputFokusError:focus {
-  border-color: #ff3d00 !important;
-  outline: none;
+input[type="text"]:hover,
+[type="email"]:hover {
+  margin-bottom: 14px;
+}
+
+input[type="text"]:focus,
+[type="email"]:focus {
+  margin-bottom: 16px;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  color: $primary-color;
+  padding: 15px 30px;
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+// .inputFokusError:focus {
+//   border-color: #ff3d00 !important;
+//   outline: none;
+// }
+
+.go-up {
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+  img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
 }

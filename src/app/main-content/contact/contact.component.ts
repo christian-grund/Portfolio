@@ -18,6 +18,7 @@ export class ContactComponent {
     message: '',
   };
   mailTest = true;
+
   // post = {
   //   endPoint: 'https://deineDomain.de/sendMail.php',
   //   body: (payload: any) => JSON.stringify(payload),
