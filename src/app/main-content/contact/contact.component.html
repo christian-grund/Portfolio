@@ -1,0 +1,95 @@
+<section>
+  <h3>Contact</h3>
+
+  <div class="wrapper">
+    <div class="text">
+      <h6>Got a problem to solve?</h6>
+      <p>
+        Contact me through this form, I am interested in hearing from you,
+        knowing your ideas and contributing to your projects with my work.
+      </p>
+      <p>Need a Frontend Developer?<span> Contact me!</span></p>
+    </div>
+
+    <div class="form">
+      <div class="input-fields">
+        <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"> -->
+        <!-- <label for="name">Name</label> -->
+        <input
+          #name="ngModel"
+          [(ngModel)]="contactData.name"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+        @if (!name.valid && name.touched) {
+        <span>Please enter your name</span>
+        }
+
+        <!-- <label for="email">Email</label> -->
+        <input
+          #email="ngModel"
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email"
+          required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        />
+        @if (!email.valid && email.touched) {
+        <span>Please enter your email address</span>
+        }
+
+        <!-- <label for="message">Message</label> -->
+        <textarea
+          #message="ngModel"
+          [(ngModel)]="contactData.message"
+          minlength="4"
+          id="message"
+          name="message"
+          placeholder="Your message"
+          style="height: 200px"
+          required
+        ></textarea>
+        @if (!message.valid && message.touched) {
+        <span>Please enter a message</span>
+        }
+
+        <div class="checkbox-privacy-policy">
+          <input
+            type="checkbox"
+            id="checkboxPrivatPolicy"
+            name="checkbox-privacy-policy"
+            class="checkbox-privacy-policy"
+            onclick="enableButton()"
+          />
+          <label for="checkbox-privacy-policy"></label>
+          <p class="accept-privacy-policy">
+            I've read the
+            <a href="#" target="”_blank”">privacy policy</a>
+            and agree to the processing of my data as outlined.
+          </p>
+          <!-- <div class="passwordDontMatch" id="passwordDontMatch">Ups! your password don't match</div> -->
+        </div>
+
+        <input
+          type="submit"
+          class="submit-btn"
+          id="submit-btn"
+          value="Say hello ;)"
+        />
+
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="circle-1"></div>
+<div class="circle-2"></div>
+<div class="go-up">
+  <img src="./assets/img/icons/go_up/go_up_filled.svg" alt="" />
+</div>
