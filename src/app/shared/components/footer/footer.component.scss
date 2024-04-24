@@ -70,25 +70,21 @@ section {
       transition: 0.2s ease;
     }
     &:hover a {
-      font-weight: bold; /* Mache das Wort fett, wenn über .imprint gehovert wird */
+      font-weight: bold;
     }
     .imprint-underline {
-      width: 50px; // Ändere die Breite, um die Linie einzublenden
-      height: 0; // Ändere die Höhe auf 1px, um die Linie anzuzeigen
+      width: 50px;
+      height: 0;
       margin-top: 4px;
       border: 1px solid $color-white;
-      transition: transform 0.2s ease; // Füge eine sanfte Animation für die Transformation hinzu
-      transform: translateX(
-        -25%
-      ); // Verschiebe die Linie außerhalb des Bildschirms
-      opacity: 0; // Setze die Opazität auf 0, um die Linie auszublenden
+      transition: transform 0.2s ease;
+      transform: translateX(-25%);
+      opacity: 0;
     }
 
     &:hover .imprint-underline {
-      transform: translateX(
-        0%
-      ); // Transformiere die Linie zurück in ihre ursprüngliche Position
-      opacity: 1; // Setze die Opazität auf 1, um die Linie einzublenden
+      transform: translateX(0%);
+      opacity: 1;
     }
   }
 }

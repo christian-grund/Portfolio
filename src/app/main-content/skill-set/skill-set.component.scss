@@ -40,19 +40,30 @@ section {
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding-top: 24px;
+      padding-top: 48px;
       gap: 10px;
       width: 208px;
 
       img {
         width: 70px;
         height: 75px;
+        transition: transform 0.2s ease-in-out;
+        transform: translateX(0);
+      }
+
+      &:hover img {
+        transform: translateY(-12px);
       }
 
       p {
         color: $color-white;
         font-size: 16px;
         text-align: center;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover p {
+        font-weight: bold;
       }
     }
   }
