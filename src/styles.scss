@@ -2,6 +2,10 @@
 @import "./app/shared/style/montserrat.scss";
 @import "./app/shared/style/colors.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   //   background-color: lightseagreen;
   font-family: "Montserrat";

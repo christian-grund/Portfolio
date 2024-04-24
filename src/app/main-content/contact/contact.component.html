@@ -64,13 +64,19 @@
             id="checkboxPrivatPolicy"
             name="checkboxPrivatPolicy"
             class="checkbox-privacy-policy"
-            onclick="enableButton()"
+            (click)="enableButton()"
           />
-          <label for="checkboxPrivatPolicy"></label>
-          <p class="accept-privacy-policy">
-            I've read the
-            <a href="#" target="”_blank”">privacy policy</a>
-            and agree to the processing of my data as outlined.
+          <label
+            for="checkboxPrivatPolicy"
+            [ngStyle]="{ 'background-image': checkboxBackground }"
+          ></label>
+          <p
+            class="accept-privacy-policy"
+            (mouseover)="changeCheckboxBackground(true)"
+            (mouseout)="changeCheckboxBackground(false)"
+          >
+            I've read the <a href="#" target="”_blank”">privacy policy</a> and
+            agree to the processing of my data as outlined.
           </p>
           <!-- <div class="passwordDontMatch" id="passwordDontMatch">Ups! your password don't match</div> -->
         </div>
@@ -93,6 +99,8 @@
   <div class="circle-2"></div>
 
   <div class="go-up">
-    <img src="./assets/img/icons/go_up/go_up_filled.svg" alt="" />
+    <a href="#landing_page"
+      ><img src="./assets/img/icons/go_up/go_up_filled.svg" alt=""
+    /></a>
   </div>
 </section>

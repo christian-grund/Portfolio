@@ -50,33 +50,81 @@ h6 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    justify-content: center;
+
+    // .checkbox-privacy-policy {
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 8px;
+    //   input {
+    //     display: none;
+    //   }
+    //   p {
+    //     font-size: 14px;
+
+    //     a {
+    //       color: $primary-color;
+    //       font-weight: 300;
+    //       width: 99px; /* Feste Breite für das <a>-Tag */
+    //       display: inline-block; /* Damit die Breite wirkt */
+    //       &:hover {
+    //         font-weight: 600;
+    //         text-decoration: underline;
+    //         letter-spacing: 1;
+
+    //         & + label[for="checkboxPrivatPolicy"] {
+    //           background: url(../../../assets/img/icons/checkbox/checkbox_default_hover.svg)
+    //             no-repeat;
+    //           background-size: 100%;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
 
     .checkbox-privacy-policy {
       display: flex;
       align-items: center;
       gap: 8px;
-      input {
+
+      input[type="checkbox"] {
         display: none;
       }
-      p {
+
+      label[for="checkboxPrivatPolicy"] {
+        display: inline-block;
+        padding: 0;
+        background-size: 100%;
+        cursor: pointer; /* Cursor ändern, um anzuzeigen, dass das Label anklickbar ist */
+        transition: background 0.3s; /* Übergangseffekt für ein sanftes Erscheinungsbild */
+        width: 24px;
+        height: 24px;
+      }
+
+      p.accept-privacy-policy {
         font-size: 14px;
 
-        a {
-          color: $primary-color;
-          letter-spacing: 2;
-          &:hover {
-            font-weight: 700;
+        &:hover {
+          a {
+            font-weight: 600;
             text-decoration: underline;
             letter-spacing: 1;
           }
+        }
+
+        a {
+          color: $primary-color;
+          font-weight: 300;
         }
       }
     }
 
     .submit-btn {
-      width: 200px;
-      display: flex;
-      justify-content: center;
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      font-size: 23px;
     }
   }
 }
@@ -127,19 +175,26 @@ input[type="submit"]:hover {
 //   //   box-sizing: border-box;
 // }
 
-input[type="checkbox"] {
-  display: none;
-}
+// input[type="checkbox"] {
+//   display: none;
+// }
 
-input[type="checkbox"] + label {
-  display: inline-block;
-  padding: 0 0 0 0px;
-  background: url(../../../assets/img/icons/checkbox/checkbox_default.svg)
-    no-repeat;
-  height: 24px;
-  width: 24px;
-  background-size: 100%;
-}
+// input[type="checkbox"] + label {
+//   display: inline-block;
+//   padding: 0 0 0 0px;
+//   background: url(../../../assets/img/icons/checkbox/checkbox_default.svg)
+//   no-repeat;
+//   height: 24px;
+//   width: 24px;
+//   background-size: 100%;
+//   transition: background 0.3s;
+
+//   &:hover {
+//     background: url(../../../assets/img/icons/checkbox/checkbox_default_hover.svg)
+//       no-repeat;
+//     background-size: 100%;
+//   }
+// }
 
 input[type="checkbox"]:checked + label {
   background: url(../../../assets/img/icons/checkbox/checkbox_checked.svg)
@@ -188,12 +243,17 @@ input[type="text"]:focus,
 
 /* Style the submit button with a specific background color etc */
 input[type="submit"] {
+  width: 180px !important;
   color: $primary-color;
   padding: 15px 30px;
   border: 2px solid $primary-color;
   border-radius: 10px;
-
+  background-color: unset;
   cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: unset;
 }
 
 // .inputFokusError:focus {

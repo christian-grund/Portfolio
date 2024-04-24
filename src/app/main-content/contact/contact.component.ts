@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -6,7 +7,7 @@ import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -18,6 +19,22 @@ export class ContactComponent {
     message: '',
   };
   mailTest = true;
+  checkboxBackground: string =
+    'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
+
+  changeCheckboxBackground(hover: boolean) {
+    if (hover) {
+      this.checkboxBackground =
+        'url(../../../assets/img/icons/checkbox/checkbox_default_hover.svg) no-repeat';
+    } else {
+      this.checkboxBackground =
+        'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
+    }
+  }
+
+  enableButton() {
+    // Your enableButton logic here
+  }
 
   // post = {
   //   endPoint: 'https://deineDomain.de/sendMail.php',

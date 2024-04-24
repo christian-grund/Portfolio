@@ -30,14 +30,14 @@ section {
       text-align: left;
     }
 
-    div {
-      border: 2px solid $color-purple;
+    a {
+      border: 2px solid $primary-color;
       border-radius: 10px;
       padding: 15px 30px !important;
       gap: 10px;
       font-size: 23px;
       font-weight: 400;
-      color: $color-purple;
+      color: $primary-color;
       cursor: pointer;
       width: 254px !important;
       box-sizing: border-box !important;
