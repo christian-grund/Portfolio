@@ -265,9 +265,21 @@ input[type="submit"]:hover {
   position: absolute;
   left: 100px;
   bottom: 50px;
-  img {
-    width: 40px;
-    height: auto;
-    cursor: pointer;
+  // img {
+  //   width: 40px;
+  //   height: auto;
+  //   cursor: pointer;
+  // }
+  .go-up-link {
+    display: block;
+    width: 40px; /* Breite des Bildes anpassen */
+    height: 40px; /* Höhe des Bildes anpassen */
+    background-image: url("../../../assets/img/icons/go_up/go_up_filled.svg");
+    background-size: cover; /* Hintergrundbild anpassen */
+    transition: background-image 0.2s ease; /* Füge eine sanfte Animation hinzu */
+
+    &:hover {
+      background-image: url("../../../assets/img/icons/go_up/go_up_blanc.svg");
+    }
   }
 }

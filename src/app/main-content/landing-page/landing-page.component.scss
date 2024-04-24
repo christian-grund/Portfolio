@@ -60,8 +60,20 @@ section {
   bottom: 100px;
   right: 108px;
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
+  width: 50px;
   gap: 16px;
+
+  a {
+    img {
+      transition: transform 0.125s ease; // Füge eine sanfte Animation hinzu
+    }
+
+    &:hover img {
+      transform: translateX(-16px); // Bewege das Bild um 24px nach links
+    }
+  }
 }
 
 .scroll {

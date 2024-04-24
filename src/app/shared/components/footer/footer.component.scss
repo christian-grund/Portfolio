@@ -43,6 +43,13 @@ section {
         &:not(:last-child) {
           padding-right: 32px;
         }
+        img {
+          transition: transform 0.125s ease;
+        }
+
+        &:hover img {
+          transform: scale(1.25);
+        }
       }
     }
   }
