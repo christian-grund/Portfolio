@@ -241,15 +241,15 @@ input[type="text"]:focus,
   margin-bottom: 16px;
 }
 
-// input[type="submit"] {
-//   width: 180px !important;
-//   color: $primary-color;
-//   padding: 15px 30px;
-//   border: 2px solid $primary-color;
-//   border-radius: 10px;
-//   // background-color: unset;
-//   cursor: pointer;
-// }
+input[type="submit"] {
+  width: 180px !important;
+  color: $primary-color;
+  padding: 15px 30px;
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+  // background-color: unset;
+  cursor: pointer;
+}
 
 .submit-btn {
   text-align: center;
@@ -262,11 +262,10 @@ input[type="text"]:focus,
     padding: 15px 30px;
     border: 2px solid $primary-color;
     border-radius: 10px;
-    background-color: transparent; // Hintergrundfarbe transparent setzen
+    // background-color: transparent; // Hintergrundfarbe transparent setzen
     cursor: pointer;
     position: relative;
-    overflow: hidden;
-    transition: color 0.225s ease; // Übergang für Schriftfarbe
+    transition: none; // Entferne die Übergänge für den Button
   }
 
   input[type="submit"]:hover {
@@ -274,25 +273,38 @@ input[type="text"]:focus,
   }
 
   input[type="submit"]::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: $color-white; // Hintergrundfarbe des Pseudoelements auf weiß ändern
-    z-index: -1;
-    transition: left 0.225s ease;
+    background-color: $color-white !important; // Hintergrundfarbe des Pseudoelements auf weiß ändern
   }
 
   input[type="submit"]:hover::before {
-    left: 0;
     background: linear-gradient(
       to bottom right,
       $primary-color,
       $secondary-color
-    ); // Farbverlauf für den gefüllten Hintergrund
+    ) !important; // Farbverlauf für den gefüllten Hintergrund
   }
+
+  // input[type="submit"]::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0; // Ändere den Wert von -100% auf 0, um das Pseudoelement sichtbar zu machen
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: red !important; // Ändere die Hintergrundfarbe vorübergehend, um zu überprüfen, ob das Pseudoelement sichtbar ist
+  //   z-index: 2;
+  //   transition: none; // Entferne die Übergänge für das Pseudoelement
+  // }
+
+  // input[type="submit"]:hover::before {
+  //   left: 0;
+  //   background-color: red !important;
+  //   // background: linear-gradient(
+  //   //   to bottom right,
+  //   //   $primary-color,
+  //   //   $secondary-color
+  //   // ) !important; // Farbverlauf für den gefüllten Hintergrund
+  // }
 }
 
 // input[type="submit"]:hover {
