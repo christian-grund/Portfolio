@@ -30,4 +30,29 @@ export class MyWorkComponent {
     'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
   ];
   projectLinks = [];
+
+  onProjectHover(isHovering: boolean, index: number): void {
+    const projectText = document.querySelectorAll('.project-text')[
+      index
+    ] as HTMLElement;
+    if (isHovering) {
+      const fadeClass = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
+      const positionClass =
+        index % 2 === 0 ? 'right-position' : 'left-position'; // Anpassung der Positionsklassen
+      projectText.classList.add(fadeClass, positionClass);
+      clearTimeout(Number(projectText.dataset['timer'])); // Timer löschen, um sofortiges Ausblenden zu verhindern
+    } else {
+      projectText.classList.remove(
+        'fade-in-left',
+        'fade-in-right',
+        'left-position',
+        'right-position'
+      );
+      projectText.dataset['timer'] = String(
+        setTimeout(() => {
+          projectText.classList.add('fade-out');
+        }, 300)
+      ); // Warte 300ms, bevor die fade-out Animation gestartet wird
+    }
+  }
 }

@@ -25,26 +25,94 @@ section {
   }
 }
 
+// .projects {
+//   display: flex;
+//   flex-direction: column;
+//   box-sizing: border-box;
+//   .project {
+//     display: flex;
+//     gap: 32px;
+//     padding-top: 64px;
+//     .project-img {
+//       display: flex;
+//       justify-content: center;
+//       align-items: flex-end;
+//       width: 50%;
+//       box-sizing: border-box;
+//       img {
+//         width: 500px;
+//         height: auto;
+//         filter: grayscale(100%);
+//       }
+//     }
+//     .project-text {
+//       display: flex;
+//       justify-content: flex-end;
+//       flex-direction: column;
+//       width: 50%;
+//       gap: 16px;
+//       box-sizing: border-box;
+//       // padding: 32px;
+//       p {
+//         &:first-child {
+//           font-size: 16px;
+//         }
+//         &:nth-child(2) {
+//           font-size: 23px;
+//           color: $primary-color;
+//         }
+//       }
+//       button {
+//         border: 2px solid $primary-color;
+//         color: $primary-color;
+//         // padding-top: 16px;
+//       }
+//     }
+//   }
+// }
+
+.circle-1 {
+  @include circle(110px, 110px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 50px;
+  left: 550px;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
   .project {
+    position: relative;
     display: flex;
     gap: 32px;
     padding-top: 64px;
+
+    // &.even {
+    //   align-items: flex-end; /* Ändern der Ausrichtung für gerade Elemente */
+    // }
+
+    // &.odd {
+    //   align-items: flex-start; /* Ändern der Ausrichtung für ungerade Elemente */
+    // }
+
     .project-img {
       display: flex;
       justify-content: center;
       align-items: flex-end;
       width: 50%;
       box-sizing: border-box;
+      position: relative;
+
       img {
         width: 500px;
         height: auto;
         filter: grayscale(100%);
+        transition: filter 0.3s ease;
       }
     }
+
     .project-text {
       display: flex;
       justify-content: flex-end;
@@ -52,7 +120,17 @@ section {
       width: 50%;
       gap: 16px;
       box-sizing: border-box;
-      // padding: 32px;
+      // position: absolute;
+      // top: 154px;
+      // right: 0;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      h4 {
+        margin: 0;
+      }
+
       p {
         &:first-child {
           font-size: 16px;
@@ -62,18 +140,104 @@ section {
           color: $primary-color;
         }
       }
-      button {
-        border: 2px solid $primary-color;
-        color: $primary-color;
-        // padding-top: 16px;
+
+      &.fade-in-left {
+        animation: fade-in-left 0.3s ease forwards;
+      }
+
+      &.fade-in-right {
+        animation: fade-in-right 0.3s ease forwards;
+      }
+    }
+    &:hover {
+      .project-img img {
+        filter: none; /* Filter entfernen, wenn über das Projekt-Element gehovert wird */
       }
     }
   }
 }
 
-.circle-1 {
-  @include circle(110px, 110px, $primary-color, $secondary-color);
-  position: absolute;
-  top: 50px;
-  left: 550px;
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.left-position {
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 100px;
+}
+
+.right-position {
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 75px;
 }
