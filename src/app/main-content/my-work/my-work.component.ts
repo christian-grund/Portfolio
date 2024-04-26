@@ -11,7 +11,6 @@ import { Component } from '@angular/core';
 export class MyWorkComponent {
   projectImages = [
     'join.png',
-
     'pollo_loco.png',
     'simple_crm.png',
     'pokedex.png',
@@ -29,7 +28,7 @@ export class MyWorkComponent {
     'A very Simple Customer Relationship Management system working with CRUD functionality. ',
     'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
   ];
-  projectLinks = [];
+  projectLinks = ['JOIN', 'El-Pollo-Loco', '', 'Pokedex'];
 
   onProjectHover(isHovering: boolean, index: number): void {
     const projectText = document.querySelectorAll('.project-text')[

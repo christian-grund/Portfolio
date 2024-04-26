@@ -6,12 +6,11 @@ nav {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  // padding: 0 100px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute; /* Ändere die Position auf relative */
+  position: absolute;
   z-index: 10;
 
   > img {
@@ -19,27 +18,42 @@ nav {
     height: 69px;
     padding-left: 100px;
   }
-  > div {
+
+  > .links {
     display: flex;
     justify-content: flex-end;
     gap: 80px;
     padding-right: 100px;
-    > a {
-      &:hover {
-        font-weight: 700;
-        font-size: 22.7px;
-        &:nth-child(2) {
-          font-size: 22.2px;
-        }
+
+    > .link-wrapper {
+      position: relative;
+
+      > a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 24px;
+        color: #5988ff;
+        z-index: 2;
+      }
+
+      > .underline {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 55.5px;
+        height: 0;
+        border: 2px solid $primary-color;
+        display: none;
+      }
+
+      // > a:hover + .underline,
+      // > a:focus + .underline {
+      //   display: block;
+      // }
+
+      > .underline.active {
+        display: block;
       }
     }
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 24px;
-    color: #5988ff;
-    z-index: 2;
   }
 }

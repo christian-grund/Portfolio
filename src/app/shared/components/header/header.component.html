@@ -1,8 +1,17 @@
 <nav>
   <img class="header-logo" src="./assets/img/icons/logo.svg" alt="Logo" />
-  <div>
-    <a href="#about_me">About me</a>
-    <a href="#skill_set">Skill set</a>
-    <a href="#my_work">My Work</a>
+  <div class="links">
+    <div class="link-wrapper">
+      <a (click)="toggleUnderline(1)" href="#about_me">About me</a>
+      <div class="underline" [class.active]="underlineActive === 1"></div>
+    </div>
+    <div class="link-wrapper">
+      <a (click)="toggleUnderline(2)" href="#skill_set">Skill set</a>
+      <div class="underline" [class.active]="underlineActive === 2"></div>
+    </div>
+    <div class="link-wrapper">
+      <a (click)="toggleUnderline(3)" href="#my_work">My Work</a>
+      <div class="underline" [class.active]="underlineActive === 3"></div>
+    </div>
   </div>
 </nav>

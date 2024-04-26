@@ -3,6 +3,7 @@
 
 section {
   position: relative;
+  overflow: hidden;
   max-width: 1440px;
   width: 100%;
   display: flex;
@@ -23,59 +24,6 @@ section {
   p {
     font-size: 23px;
   }
-}
-
-// .projects {
-//   display: flex;
-//   flex-direction: column;
-//   box-sizing: border-box;
-//   .project {
-//     display: flex;
-//     gap: 32px;
-//     padding-top: 64px;
-//     .project-img {
-//       display: flex;
-//       justify-content: center;
-//       align-items: flex-end;
-//       width: 50%;
-//       box-sizing: border-box;
-//       img {
-//         width: 500px;
-//         height: auto;
-//         filter: grayscale(100%);
-//       }
-//     }
-//     .project-text {
-//       display: flex;
-//       justify-content: flex-end;
-//       flex-direction: column;
-//       width: 50%;
-//       gap: 16px;
-//       box-sizing: border-box;
-//       // padding: 32px;
-//       p {
-//         &:first-child {
-//           font-size: 16px;
-//         }
-//         &:nth-child(2) {
-//           font-size: 23px;
-//           color: $primary-color;
-//         }
-//       }
-//       button {
-//         border: 2px solid $primary-color;
-//         color: $primary-color;
-//         // padding-top: 16px;
-//       }
-//     }
-//   }
-// }
-
-.circle-1 {
-  @include circle(110px, 110px, $primary-color, $secondary-color);
-  position: absolute;
-  top: 50px;
-  left: 550px;
 }
 
 .projects {
@@ -239,5 +187,67 @@ section {
   right: 0;
   display: flex;
   align-items: flex-start;
-  padding-left: 75px;
+  padding-left: 85px;
+}
+
+.circle-1 {
+  @include circle(110px, 110px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 50px;
+  left: 550px;
+}
+
+.circle-2 {
+  @include circle(180px, 180px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 250px;
+  right: 70px;
+}
+
+.circle-3 {
+  @include circle(400px, 400px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 500px;
+  left: -200px;
+  z-index: -1;
+}
+
+.circle-4 {
+  @include circle(650px, 650px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 650px;
+  right: -200px;
+  z-index: -1;
+}
+
+.circle-5 {
+  @include circle(50px, 50px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 1000px;
+  left: 100px;
+  z-index: -1;
+}
+
+.circle-6 {
+  @include circle(240px, 240px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 1300px;
+  left: 150px;
+  z-index: -1;
+}
+
+.circle-7 {
+  @include circle(100px, 100px, $primary-color, $secondary-color);
+  position: absolute;
+  top: 650px;
+  right: -200px;
+  z-index: -1;
+}
+
+.circle-8 {
+  @include circle(180px, 180px, $primary-color, $secondary-color);
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+  z-index: -1;
 }
