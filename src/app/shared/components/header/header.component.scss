@@ -58,15 +58,30 @@ nav {
   }
 }
 
+// .language-change {
+//   font-weight: 400;
+//   font-size: 24px;
+//   color: $primary-color;
+//   z-index: 2;
+
+//   &:hover {
+//     cursor: pointer;
+//     font-weight: bold;
+//   }
+// }
+
 .language-change {
-  font-weight: 400;
-  font-size: 24px;
+  display: flex;
+  align-items: center;
   color: $primary-color;
-  z-index: 2;
+  gap: 12px;
 
   &:hover {
     cursor: pointer;
-    font-weight: bold;
+
+    a:hover {
+      font-weight: bold;
+    }
   }
 }
 

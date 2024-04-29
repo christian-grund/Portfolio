@@ -13,12 +13,11 @@ export class HeaderComponent {
   underlineActive: number | null = null;
 
   constructor(public translateService: TranslateService) {}
-  //   translate.addLangs(['en', 'de']);
-  //   translate.setDefaultLang('en');
-  // }
 
   changeLanguage(langCode: string) {
     this.translateService.use(langCode);
+    console.log('current Language:', this.translateService);
+    console.log('current Language:', this.translateService.currentLang);
   }
 
   toggleUnderline(index: number): void {
