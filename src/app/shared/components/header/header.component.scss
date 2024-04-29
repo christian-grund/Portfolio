@@ -22,11 +22,19 @@ nav {
   > .links {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 60px;
     padding-right: 100px;
 
     > .link-wrapper {
       position: relative;
+
+      > a {
+        &:hover {
+          font-weight: 700;
+          font-size: 22.7px;
+        }
+      }
 
       > .underline {
         position: absolute;
@@ -51,13 +59,28 @@ nav {
 }
 
 .language-change {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 24px;
+  color: $primary-color;
+  z-index: 2;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
 }
 
 a {
   text-decoration: none;
   font-weight: 400;
   font-size: 24px;
-  color: #5988ff;
+  color: $primary-color;
   z-index: 2;
+}
+
+.font-size {
+  &:hover {
+    font-weight: 700;
+    font-size: 22.2px !important;
+  }
 }

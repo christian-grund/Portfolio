@@ -2,17 +2,21 @@
   <img class="header-logo" src="./assets/img/icons/logo.svg" alt="Logo" />
   <div class="links">
     <div class="link-wrapper">
-      <a (click)="toggleUnderline(1)" href="#about_me">About me</a>
+      <a (click)="toggleUnderline(1)" href="#about_me">{{ aboutMe }}</a>
       <div class="underline" [class.active]="underlineActive === 1"></div>
     </div>
     <div class="link-wrapper">
-      <a (click)="toggleUnderline(2)" href="#skill_set">Skill set</a>
+      <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size">{{
+        skillSet
+      }}</a>
       <div class="underline" [class.active]="underlineActive === 2"></div>
     </div>
     <div class="link-wrapper">
-      <a (click)="toggleUnderline(3)" href="#my_work">My Work</a>
+      <a (click)="toggleUnderline(3)" href="#my_work">Portfolio</a>
       <div class="underline" [class.active]="underlineActive === 3"></div>
     </div>
-    <a href="#" class="language-change">EN</a>
+    <div class="language-change" (click)="changeLanguage()">
+      {{ buttonText }}
+    </div>
   </div>
 </nav>
