@@ -22,19 +22,11 @@ nav {
   > .links {
     display: flex;
     justify-content: flex-end;
-    gap: 80px;
+    gap: 60px;
     padding-right: 100px;
 
     > .link-wrapper {
       position: relative;
-
-      > a {
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 24px;
-        color: #5988ff;
-        z-index: 2;
-      }
 
       > .underline {
         position: absolute;
@@ -56,4 +48,16 @@ nav {
       }
     }
   }
+}
+
+.language-change {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  color: #5988ff;
+  z-index: 2;
 }
