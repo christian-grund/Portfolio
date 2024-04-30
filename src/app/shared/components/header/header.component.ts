@@ -16,8 +16,6 @@ export class HeaderComponent {
 
   changeLanguage(langCode: string) {
     this.translateService.use(langCode);
-    console.log('current Language:', this.translateService);
-    console.log('current Language:', this.translateService.currentLang);
   }
 
   toggleUnderline(index: number): void {
