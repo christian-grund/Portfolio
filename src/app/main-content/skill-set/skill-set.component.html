@@ -3,9 +3,12 @@
   <p>{{ "skillSetText" | translate }}</p>
   <div class="skill-set">
     <div class="skill-icons">
-      <div class="skill-icon" *ngFor="let icon of skillSetIcons; let i = index">
-        <img src="./assets/img/icons/skillset/desktop/{{ icon }}" alt="" />
-        <p>{{ skillSetNames[i] }}</p>
+      <div class="skill-icon" *ngFor="let skill of skillSet; let i = index">
+        <img
+          src="./assets/img/icons/skillset/desktop/{{ skillSet[i].icon }}"
+          alt=""
+        />
+        <p>{{ skillSet[i].name }}</p>
       </div>
     </div>
   </div>

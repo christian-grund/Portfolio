@@ -10,47 +10,55 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
-  projectImages = [
-    'join.png',
-    'pollo_loco.png',
-    'simple_crm.png',
-    'pokedex.png',
+  projects = [
+    {
+      mockup: 'join.png',
+      name: 'Join',
+      projectLanguage: 'JavaScript | HTML | CSS',
+      description: 'joinDescription',
+      link: 'JOIN',
+      liveTest: '#',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'pollo_loco.png',
+      name: 'Pollo Loco',
+      projectLanguage: 'JavaScript | HTML | CSS',
+      description: 'polloLocoDescription',
+      link: 'El-Pollo-Loco',
+      liveTest: '#',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'simple_crm.png',
+      name: 'Simple CRM',
+      projectLanguage: 'Angular | Firebase',
+      description: 'simpleCRMDescription',
+      link: '',
+      liveTest: '#',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'pokedex.png',
+      name: 'Pokédex',
+      projectLanguage: 'JavaScript | HTML | CSS | Api',
+      description: 'pokedexDescription',
+      link: 'Pokedex',
+      liveTest: '#',
+      translatedDescription: '',
+    },
   ];
-  projectNames = ['Join', 'Pollo Loco', 'Simple CRM', 'Pokédex'];
-  projectLanguages = [
-    'Angular | TypeScript | HTML | CSS | Firebase',
-    'JavaScript | HTML | CSS',
-    'Angular | Firebase',
-    'JavaScript | HTML | CSS | Api',
-  ];
-  // projectDescriptions = [
-  //   'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-  //   'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-  //   'A very Simple Customer Relationship Management system working with CRUD functionality. ',
-  //   'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-  // ];
-
-  projectDescriptions = [
-    'joinDescription',
-    'polloLocoDescription',
-    'simpleCRMDescription',
-    'pokedexDescription',
-  ];
-  projectLinks = ['JOIN', 'El-Pollo-Loco', '', 'Pokedex'];
-
-  translatedDescriptions: string[] = [];
 
   constructor(private translateService: TranslateService) {
-    // Ändern des ersten Elements im Array
     this.translateProjectDescriptions();
   }
 
   translateProjectDescriptions(): void {
-    for (const description of this.projectDescriptions) {
+    for (const project of this.projects) {
       this.translateService
-        .get(description)
+        .get(project.description)
         .subscribe((translatedDesc: string) => {
-          this.translatedDescriptions.push(translatedDesc);
+          project.translatedDescription = translatedDesc;
         });
     }
   }
@@ -62,9 +70,9 @@ export class MyWorkComponent {
     if (isHovering) {
       const fadeClass = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
       const positionClass =
-        index % 2 === 0 ? 'right-position' : 'left-position'; // Anpassung der Positionsklassen
+        index % 2 === 0 ? 'right-position' : 'left-position';
       projectText.classList.add(fadeClass, positionClass);
-      clearTimeout(Number(projectText.dataset['timer'])); // Timer löschen, um sofortiges Ausblenden zu verhindern
+      clearTimeout(Number(projectText.dataset['timer']));
     } else {
       projectText.classList.remove(
         'fade-in-left',
@@ -76,7 +84,7 @@ export class MyWorkComponent {
         setTimeout(() => {
           projectText.classList.add('fade-out');
         }, 300)
-      ); // Warte 300ms, bevor die fade-out Animation gestartet wird
+      );
     }
   }
 }

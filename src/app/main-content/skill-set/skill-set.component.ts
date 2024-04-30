@@ -10,29 +10,16 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './skill-set.component.scss',
 })
 export class SkillSetComponent {
-  skillSetIcons = [
-    'angular.svg',
-    'typescript.svg',
-    'javascript.svg',
-    'html.svg',
-    'scrum.svg',
-    'firebase.svg',
-    'git.svg',
-    'css.svg',
-    'api.svg',
-    'material_design.svg',
-  ];
-
-  skillSetNames = [
-    'Angular',
-    'TypeScript',
-    'JavaScript',
-    'HTML',
-    'Scrum',
-    'Firebase',
-    'GIT',
-    'CSS',
-    'Rest-Api',
-    'Material Design',
+  skillSet = [
+    { icon: 'angular.svg', name: 'Angular' },
+    { icon: 'typescript.svg', name: 'TypeScript' },
+    { icon: 'javascript.svg', name: 'JavaScript' },
+    { icon: 'html.svg', name: 'HTML' },
+    { icon: 'scrum.svg', name: 'Scrum' },
+    { icon: 'firebase.svg', name: 'Firebase' },
+    { icon: 'git.svg', name: 'GIT' },
+    { icon: 'css.svg', name: 'CSS' },
+    { icon: 'api.svg', name: 'Rest-Api' },
+    { icon: 'material_design.svg', name: 'Material Design' },
   ];
 }

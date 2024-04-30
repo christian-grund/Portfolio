@@ -46,7 +46,7 @@
   <div class="projects">
     <div
       class="project"
-      *ngFor="let project of projectNames; let i = index"
+      *ngFor="let project of projects; let i = index"
       [ngStyle]="{
         'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'
       }"
@@ -56,19 +56,19 @@
     >
       <div class="project-img">
         <img
-          [src]="'./assets/img/pc_mockup/' + projectImages[i]"
-          [alt]="projectImages[i]"
+          [src]="'./assets/img/pc_mockup/' + projects[i].mockup"
+          [alt]="projects[i].mockup"
         />
       </div>
       <div class="project-text">
-        <h4>{{ project }}</h4>
-        <p>{{ projectLanguages[i] }}</p>
-        <p>{{ projectDescriptions[i] | translate }}</p>
-        <a href="#" target="_blank">
+        <h4>{{ projects[i].name }}</h4>
+        <p>{{ projects[i].projectLanguage }}</p>
+        <p>{{ projects[i].description | translate }}</p>
+        <a href="{{ projects[i].liveTest }}" target="_blank">
           <button class="fill-button">{{ "liveTest" | translate }}</button></a
         >
         <a
-          href="https://github.com/christian-grund/{{ projectLinks[i] }}"
+          href="https://github.com/christian-grund/{{ projects[i].link }}"
           target="_blank"
         >
           <button class="fill-button">Github</button></a
