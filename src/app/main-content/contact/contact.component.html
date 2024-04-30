@@ -1,14 +1,13 @@
 <section>
-  <h3>Contact</h3>
+  <h3>{{ "contact" | translate }}</h3>
 
   <div class="wrapper">
     <div class="text">
-      <h6>Got a problem to solve or thinking about a project?</h6>
+      <h6>{{ "problemToSolve" | translate }}</h6>
+      <p>{{ "contactMe" | translate }}</p>
       <p>
-        Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work.
+        {{ "needFD" | translate }}<span>{{ "contactMe2" | translate }}</span>
       </p>
-      <p>Need a Frontend Developer?<span> Contact me!</span></p>
     </div>
 
     <div class="form">
@@ -21,11 +20,11 @@
           type="text"
           id="name"
           name="name"
-          placeholder="Your name"
+          placeholder="{{ 'enterName' | translate }}"
           required
         />
         @if (!name.valid && name.touched) {
-        <span>Please enter your name</span>
+        <span>{{ "enterNameError" | translate }}</span>
         }
 
         <!-- <label for="email">Email</label> -->
@@ -35,12 +34,12 @@
           type="email"
           id="email"
           name="email"
-          placeholder="Your email"
+          placeholder="{{ 'enterMail' | translate }}"
           required
           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
         />
         @if (!email.valid && email.touched) {
-        <span>Please enter your email address</span>
+        <span>{{ "enterMailError" | translate }}</span>
         }
 
         <!-- <label for="message">Message</label> -->
@@ -50,12 +49,12 @@
           minlength="4"
           id="message"
           name="message"
-          placeholder="Your message"
+          placeholder="{{ 'enterMessage' | translate }}"
           style="height: 200px"
           required
         ></textarea>
         @if (!message.valid && message.touched) {
-        <span>Please enter a message</span>
+        <span>{{ "enterMessageError" | translate }}</span>
         }
 
         <div
@@ -74,14 +73,19 @@
             [ngStyle]="{ 'background-image': checkboxBackground }"
           ></label>
           <p class="accept-privacy-policy">
-            I've read the <a href="#" target="”_blank”">privacy policy</a> and
-            agree to the processing of my data as outlined.
+            {{ "iHaveRead" | translate }}
+            <a href="#" target="”_blank”">{{ "privacyPolicy" | translate }}</a
+            >{{ "iAgree" | translate }}
           </p>
           <!-- <div class="passwordDontMatch" id="passwordDontMatch">Ups! your password don't match</div> -->
         </div>
 
         <div class="submit-btn">
-          <input type="submit" id="submit-btn" value="Say hello ;)" />
+          <input
+            type="submit"
+            id="submit-btn"
+            value="{{ 'sayHello' | translate }}"
+          />
         </div>
 
         <!-- </form> -->

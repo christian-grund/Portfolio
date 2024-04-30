@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })
@@ -22,13 +23,37 @@ export class MyWorkComponent {
     'Angular | Firebase',
     'JavaScript | HTML | CSS | Api',
   ];
+  // projectDescriptions = [
+  //   'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+  //   'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+  //   'A very Simple Customer Relationship Management system working with CRUD functionality. ',
+  //   'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+  // ];
+
   projectDescriptions = [
-    'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-    'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-    'A very Simple Customer Relationship Management system working with CRUD functionality. ',
-    'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+    'joinDescription',
+    'polloLocoDescription',
+    'simpleCRMDescription',
+    'pokedexDescription',
   ];
   projectLinks = ['JOIN', 'El-Pollo-Loco', '', 'Pokedex'];
+
+  translatedDescriptions: string[] = [];
+
+  constructor(private translateService: TranslateService) {
+    // Ändern des ersten Elements im Array
+    this.translateProjectDescriptions();
+  }
+
+  translateProjectDescriptions(): void {
+    for (const description of this.projectDescriptions) {
+      this.translateService
+        .get(description)
+        .subscribe((translatedDesc: string) => {
+          this.translatedDescriptions.push(translatedDesc);
+        });
+    }
+  }
 
   onProjectHover(isHovering: boolean, index: number): void {
     const projectText = document.querySelectorAll('.project-text')[
