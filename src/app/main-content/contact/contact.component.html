@@ -12,85 +12,96 @@
       </div>
 
       <div class="form">
-        <div class="input-fields">
-          <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"> -->
-          <!-- <label for="name">Name</label> -->
+        <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"> -->
+        <!-- <label for="name">Name</label> -->
+        <input
+          #name="ngModel"
+          [(ngModel)]="contactData.name"
+          type="text"
+          id="name"
+          name="name"
+          minlength="2"
+          [ngClass]="{
+            error: !name.valid && name.touched,
+            success: name.valid && name.touched
+          }"
+          placeholder="{{ 'enterName' | translate }}"
+          required
+        />
+        @if (!name.valid && name.touched) {
+        <span class="error-message">{{ "enterNameError" | translate }}</span>
+        }
+
+        <!-- <label for="email">Email</label> -->
+        <input
+          #email="ngModel"
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="email"
+          [ngClass]="{
+            error: !email.valid && email.touched,
+            success: email.valid && email.touched
+          }"
+          placeholder="{{ 'enterMail' | translate }}"
+          required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        />
+        @if (!email.valid && email.touched) {
+        <span class="error-message">{{ "enterMailError" | translate }}</span>
+        }
+
+        <!-- <label for="message">Message</label> -->
+        <textarea
+          #message="ngModel"
+          [(ngModel)]="contactData.message"
+          minlength="4"
+          id="message"
+          name="message"
+          [ngClass]="{
+            error: !message.valid && message.touched,
+            success: message.valid && message.touched
+          }"
+          placeholder="{{ 'enterMessage' | translate }}"
+          style="height: 200px"
+          required
+        ></textarea>
+        @if (!message.valid && message.touched) {
+        <span class="error-message">{{ "enterMessageError" | translate }}</span>
+        }
+
+        <div
+          class="checkbox-privacy-policy"
+          (mouseover)="changeCheckboxBackground(true)"
+          (mouseout)="changeCheckboxBackground(false)"
+        >
           <input
-            #name="ngModel"
-            [(ngModel)]="contactData.name"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="{{ 'enterName' | translate }}"
-            required
-          />
-          @if (!name.valid && name.touched) {
-          <span>{{ "enterNameError" | translate }}</span>
-          }
-
-          <!-- <label for="email">Email</label> -->
-          <input
-            #email="ngModel"
-            [(ngModel)]="contactData.email"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="{{ 'enterMail' | translate }}"
-            required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-          />
-          @if (!email.valid && email.touched) {
-          <span>{{ "enterMailError" | translate }}</span>
-          }
-
-          <!-- <label for="message">Message</label> -->
-          <textarea
-            #message="ngModel"
-            [(ngModel)]="contactData.message"
-            minlength="4"
-            id="message"
-            name="message"
-            placeholder="{{ 'enterMessage' | translate }}"
-            style="height: 200px"
-            required
-          ></textarea>
-          @if (!message.valid && message.touched) {
-          <span>{{ "enterMessageError" | translate }}</span>
-          }
-
-          <div
+            type="checkbox"
+            id="checkboxPrivatPolicy"
+            name="checkboxPrivatPolicy"
             class="checkbox-privacy-policy"
-            (mouseover)="changeCheckboxBackground(true)"
-            (mouseout)="changeCheckboxBackground(false)"
-          >
-            <input
-              type="checkbox"
-              id="checkboxPrivatPolicy"
-              name="checkboxPrivatPolicy"
-              class="checkbox-privacy-policy"
-            />
-            <label
-              for="checkboxPrivatPolicy"
-              [ngStyle]="{ 'background-image': checkboxBackground }"
-            ></label>
-            <p class="accept-privacy-policy">
-              {{ "iHaveRead" | translate }}
-              <a href="#" target="”_blank”">{{ "privacyPolicy" | translate }}</a
-              >{{ "iAgree" | translate }}
-            </p>
-            <!-- <div class="passwordDontMatch" id="passwordDontMatch">Ups! your password don't match</div> -->
-          </div>
-
-          <div class="submit-btn">
-            <input
-              type="submit"
-              id="submit-btn"
-              value="{{ 'sayHello' | translate }}"
-            />
-          </div>
-
-          <!-- </form> -->
+          />
+          <label
+            for="checkboxPrivatPolicy"
+            [ngStyle]="{ 'background-image': checkboxBackground }"
+          ></label>
+          <p class="accept-privacy-policy">
+            {{ "iHaveRead" | translate }}
+            <a href="#" target="”_blank”">{{ "privacyPolicy" | translate }}</a
+            >{{ "iAgree" | translate }}
+          </p>
+          <!-- <div class="passwordDontMatch" id="passwordDontMatch">Ups! your password don't match</div> -->
         </div>
+
+        <div class="submit-btn">
+          <input
+            type="submit"
+            id="submit-btn"
+            value="{{ 'sayHello' | translate }}"
+          />
+        </div>
+
+        <!-- </form> -->
       </div>
     </div>
 

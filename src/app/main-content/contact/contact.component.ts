@@ -24,13 +24,13 @@ export class ContactComponent {
     'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
 
   changeCheckboxBackground(hover: boolean) {
-    if (hover) {
-      this.checkboxBackground =
-        'url(../../../assets/img/icons/checkbox/checkbox_default_hover.svg) no-repeat';
-    } else {
-      this.checkboxBackground =
-        'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
-    }
+    // if (hover) {
+    //   this.checkboxBackground =
+    //     'url(../../../assets/img/icons/checkbox/checkbox_default_hover.svg) no-repeat';
+    // } else {
+    //   this.checkboxBackground =
+    //     'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
+    // }
   }
 
   enableButton() {
