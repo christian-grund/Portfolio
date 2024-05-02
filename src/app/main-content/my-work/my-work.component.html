@@ -1,11 +1,12 @@
 <section>
-  <div class="header-about">
-    <h3>Portfolio</h3>
-    <p>{{ "portfolioDescription" | translate }}</p>
-  </div>
+  <div class="main">
+    <div class="header-about">
+      <h3>Portfolio</h3>
+      <p>{{ "portfolioDescription" | translate }}</p>
+    </div>
 
-  <!-- [ngStyle]="{ 'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse' }" -->
-  <!-- <div class="projects">
+    <!-- [ngStyle]="{ 'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse' }" -->
+    <!-- <div class="projects">
     <div
       class="project"
       *ngFor="let project of projectNames; let i = index"
@@ -43,46 +44,47 @@
     </div>
   </div> -->
 
-  <div class="projects">
-    <div
-      class="project"
-      *ngFor="let project of projects; let i = index"
-      [ngStyle]="{
-        'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'
-      }"
-      [ngClass]="{ even: i % 2 === 0, odd: i % 2 !== 0 }"
-      (mouseenter)="onProjectHover(true, i)"
-      (mouseleave)="onProjectHover(false, i)"
-    >
-      <div class="project-img">
-        <img
-          [src]="'./assets/img/pc_mockup/' + projects[i].mockup"
-          [alt]="projects[i].mockup"
-        />
-      </div>
-      <div class="project-text">
-        <h4>{{ projects[i].name }}</h4>
-        <p>{{ projects[i].projectLanguage }}</p>
-        <p>{{ projects[i].description | translate }}</p>
-        <a href="{{ projects[i].liveTest }}" target="_blank">
-          <button class="fill-button">{{ "liveTest" | translate }}</button></a
-        >
-        <a
-          href="https://github.com/christian-grund/{{ projects[i].link }}"
-          target="_blank"
-        >
-          <button class="fill-button">Github</button></a
-        >
+    <div class="projects">
+      <div
+        class="project"
+        *ngFor="let project of projects; let i = index"
+        [ngStyle]="{
+          'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'
+        }"
+        [ngClass]="{ even: i % 2 === 0, odd: i % 2 !== 0 }"
+        (mouseenter)="onProjectHover(true, i)"
+        (mouseleave)="onProjectHover(false, i)"
+      >
+        <div class="project-img">
+          <img
+            [src]="'./assets/img/pc_mockup/' + projects[i].mockup"
+            [alt]="projects[i].mockup"
+          />
+        </div>
+        <div class="project-text">
+          <h4>{{ projects[i].name }}</h4>
+          <p>{{ projects[i].projectLanguage }}</p>
+          <p>{{ projects[i].description | translate }}</p>
+          <a href="{{ projects[i].liveTest }}" target="_blank">
+            <button class="fill-button">{{ "liveTest" | translate }}</button></a
+          >
+          <a
+            href="https://github.com/christian-grund/{{ projects[i].link }}"
+            target="_blank"
+          >
+            <button class="fill-button">Github</button></a
+          >
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="circle-1"></div>
-  <div class="circle-2"></div>
-  <div class="circle-3"></div>
-  <div class="circle-4"></div>
-  <div class="circle-5"></div>
-  <div class="circle-6"></div>
-  <div class="circle-7"></div>
-  <div class="circle-8"></div>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div class="circle-4"></div>
+    <div class="circle-5"></div>
+    <div class="circle-6"></div>
+    <div class="circle-7"></div>
+    <div class="circle-8"></div>
+  </div>
 </section>

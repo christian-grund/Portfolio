@@ -2,7 +2,6 @@
 
 section {
   width: 100%;
-  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,13 @@ section {
     $primary-color,
     $secondary-color
   );
+
+  .main {
+    width: 100%;
+    max-width: 1440px !important;
+    margin: auto;
+    position: relative;
+  }
 
   h3 {
     padding-top: 52px;

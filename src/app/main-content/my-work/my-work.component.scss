@@ -2,16 +2,22 @@
 @import "../../shared/style/mixins.scss";
 
 section {
-  position: relative;
   overflow: hidden;
-  max-width: 1440px;
   width: 100%;
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
-  padding: 100px;
+  box-sizing: border-box;
+
   margin-top: 1px;
-  margin: auto;
+  // margin: auto;
+
+  .main {
+    width: 100%;
+    max-width: 1440px !important;
+    margin: auto;
+    position: relative;
+    padding: 100px;
+  }
 }
 
 .header-about {
@@ -202,7 +208,7 @@ section {
   @include circle(180px, 180px, $primary-color, $secondary-color);
   position: absolute;
   top: 250px;
-  right: 70px;
+  right: 300px;
 }
 
 .circle-3 {
@@ -217,7 +223,7 @@ section {
   @include circle(650px, 650px, $primary-color, $secondary-color);
   position: absolute;
   top: 650px;
-  right: -200px;
+  right: 00px;
   z-index: -1;
 }
 
@@ -240,8 +246,8 @@ section {
 .circle-7 {
   @include circle(100px, 100px, $primary-color, $secondary-color);
   position: absolute;
-  top: 650px;
-  right: -200px;
+  top: 1550px;
+  right: 200px;
   z-index: -1;
 }
 

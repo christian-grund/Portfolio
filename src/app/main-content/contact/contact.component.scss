@@ -2,13 +2,18 @@
 @import "../../shared/style/mixins.scss";
 
 section {
-  position: relative;
-  max-width: 1440px;
   width: 100%;
-  padding: 100px;
   box-sizing: border-box;
   background: linear-gradient(to bottom, $color-white, $color-landingpage);
   margin: auto;
+
+  .main {
+    width: 100%;
+    max-width: 1440px !important;
+    margin: auto;
+    position: relative;
+    padding: 100px;
+  }
 }
 
 h3 {

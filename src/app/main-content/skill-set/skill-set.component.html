@@ -1,14 +1,16 @@
 <section>
-  <h3>{{ "skillSetHeadline" | translate }}</h3>
-  <p>{{ "skillSetText" | translate }}</p>
-  <div class="skill-set">
-    <div class="skill-icons">
-      <div class="skill-icon" *ngFor="let skill of skillSet; let i = index">
-        <img
-          src="./assets/img/icons/skillset/desktop/{{ skillSet[i].icon }}"
-          alt=""
-        />
-        <p>{{ skillSet[i].name }}</p>
+  <div class="main">
+    <h3>{{ "skillSetHeadline" | translate }}</h3>
+    <p>{{ "skillSetText" | translate }}</p>
+    <div class="skill-set">
+      <div class="skill-icons">
+        <div class="skill-icon" *ngFor="let skill of skillSet; let i = index">
+          <img
+            src="./assets/img/icons/skillset/desktop/{{ skillSet[i].icon }}"
+            alt=""
+          />
+          <p>{{ skillSet[i].name }}</p>
+        </div>
       </div>
     </div>
   </div>
