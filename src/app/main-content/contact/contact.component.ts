@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -19,9 +19,25 @@ export class ContactComponent {
     email: '',
     message: '',
   };
+  nameIsFocused: boolean = false;
+  emailIsFocused: boolean = false;
+  textareaIsFocused: boolean = false;
   mailTest = true;
   checkboxBackground: string =
     'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
+
+  @ViewChild('name') nameInput!: ElementRef;
+  showErrorMessage: boolean = false;
+
+  adjustPlaceholder() {
+    if (this.nameInput.nativeElement.classList.contains('error')) {
+      this.nameInput.nativeElement.placeholder = 'Your name / co';
+    }
+    // else {
+    //   this.nameInput.nativeElement.placeholder =
+    //     '{{ "enterName" | translate }}';
+    // }
+  }
 
   changeCheckboxBackground(hover: boolean) {
     // if (hover) {

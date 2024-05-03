@@ -30,6 +30,8 @@ h6 {
 .wrapper {
   display: flex;
   flex-direction: row;
+  gap: 100px;
+
   .text {
     display: flex;
     align-items: flex-start;
@@ -59,12 +61,30 @@ h6 {
     flex-direction: column;
     position: relative;
     justify-content: center;
+    gap: 24px;
 
-    input {
-      &:first-child {
-        margin-top: unset;
+    .input-container {
+      width: 100%;
+      margin-bottom: 16px; /* Füge hier den Abstand zwischen den Eingabefeldern hinzu */
+      position: relative;
+      height: 40px;
+
+      input {
+        &:first-child {
+          margin-top: unset;
+        }
       }
     }
+    .textarea-container {
+      width: 100%;
+      margin-bottom: 16px; /* Füge hier den Abstand zwischen den Eingabefeldern hinzu */
+      position: relative;
+      height: 175px;
+    }
+  }
+
+  .pb-12 {
+    padding-bottom: 12px;
   }
 
   .checkbox-privacy-policy {
@@ -126,7 +146,6 @@ h6 {
   color: $color-error;
   font-size: 14px;
   padding-top: 8px;
-  // padding-bottom: 16px;
 }
 
 // .error {
@@ -155,21 +174,33 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-  width: 100%;
+  width: 100% !important;
   padding: 15px 25px;
   border: 1px solid $primary-color;
   border-radius: 10px;
   box-sizing: border-box;
-  margin-top: 16px;
+  // margin-top: 16px;
   // margin-bottom: 16px;
   resize: vertical;
   font-size: 16px;
   padding-right: 50px;
-  // position: relative;
+
+  &::placeholder {
+    color: $color-black;
+    font-family: "Montserrat";
+  }
 
   &:focus {
     border: 1px solid $primary-color !important;
     outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:not(:focus)::placeholder {
+    transition: color 0.3s ease 0.3s; // Verzögerung der Platzhalterfarbe um 0.3s nach dem Eingabefeld verlieren
   }
 }
 
@@ -179,7 +210,7 @@ textarea.error {
   background-image: url("../../../assets/img/icons/input/input_error.svg");
   background-repeat: no-repeat;
   background-position: right 12px center;
-  background-size: 24px; /* Größe des Bildes anpassen */
+  background-size: 24px;
 }
 
 input[type="text"].success,
@@ -187,9 +218,33 @@ input[type="text"].success,
 textarea.success {
   background-image: url("../../../assets/img/icons/input/input_success.svg");
   background-repeat: no-repeat;
-  background-position: right 12px center; /* Zusätzlicher Abstand von 12px nach rechts */
-  background-size: 24px; /* Größe des Bildes anpassen */
+  background-position: right 12px center;
+  background-size: 24px;
 }
+
+.error-message-top {
+  position: absolute;
+  top: 26px;
+  left: 22px;
+  color: $color-error;
+  font-size: 16px;
+  padding: 0 4px;
+  background-color: $color-white;
+  transform: translateY(-10px);
+  opacity: 1;
+  transition: top 0.3s ease, font-size 0.3s ease;
+  pointer-events: none;
+
+  &.visible {
+    top: 0;
+    font-size: 13px;
+  }
+}
+
+// .input-container input:focus + .error-message-top {
+//   top: 0; // Zielposition oben
+//   opacity: 1; // Label sichtbar machen
+// }
 
 input[type="text"]:hover,
 [type="email"]:hover,

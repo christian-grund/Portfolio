@@ -13,62 +13,88 @@
 
       <div class="form">
         <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"> -->
-        <!-- <label for="name">Name</label> -->
-        <input
-          #name="ngModel"
-          [(ngModel)]="contactData.name"
-          type="text"
-          id="name"
-          name="name"
-          minlength="2"
-          [ngClass]="{
-            error: !name.valid && name.touched,
-            success: name.valid && name.touched
-          }"
-          placeholder="{{ 'enterName' | translate }}"
-          required
-        />
-        @if (!name.valid && name.touched) {
-        <span class="error-message">{{ "enterNameError" | translate }}</span>
-        }
+        <div class="input-container">
+          <input
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="name"
+            name="name"
+            minlength="2"
+            [ngClass]="{
+              error: !name.valid && name.touched,
+              success: name.valid && name.touched
+            }"
+            required
+            (focus)="nameIsFocused = true"
+            (blur)="nameIsFocused = false"
+          />
+          <label class="error-message-top" [class.visible]="nameIsFocused">{{
+            "enterName" | translate
+          }}</label>
 
-        <!-- <label for="email">Email</label> -->
-        <input
-          #email="ngModel"
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="email"
-          [ngClass]="{
-            error: !email.valid && email.touched,
-            success: email.valid && email.touched
-          }"
-          placeholder="{{ 'enterMail' | translate }}"
-          required
-          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-        />
-        @if (!email.valid && email.touched) {
-        <span class="error-message">{{ "enterMailError" | translate }}</span>
-        }
+          @if (!name.valid && name.touched) {
+          <span class="error-message">{{ "enterNameError" | translate }}</span>
+          }
+        </div>
 
-        <!-- <label for="message">Message</label> -->
-        <textarea
-          #message="ngModel"
-          [(ngModel)]="contactData.message"
-          minlength="4"
-          id="message"
-          name="message"
-          [ngClass]="{
-            error: !message.valid && message.touched,
-            success: message.valid && message.touched
-          }"
-          placeholder="{{ 'enterMessage' | translate }}"
-          style="height: 200px"
-          required
-        ></textarea>
-        @if (!message.valid && message.touched) {
-        <span class="error-message">{{ "enterMessageError" | translate }}</span>
-        }
+        <!-- placeholder="{{ 'enterMail' | translate }}" -->
+        <div class="input-container">
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            id="email"
+            name="email"
+            [ngClass]="{
+              error: !email.valid && email.touched,
+              success: email.valid && email.touched
+            }"
+            placeholder=""
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            (focus)="emailIsFocused = true"
+            (blur)="emailIsFocused = false"
+          />
+          <label class="error-message-top" [class.visible]="emailIsFocused">{{
+            "enterMail" | translate
+          }}</label>
+
+          @if (!email.valid && email.touched) {
+          <span class="error-message">{{ "enterMailError" | translate }}</span>
+          }
+        </div>
+
+        <!-- placeholder="{{ 'enterMessage' | translate }}" -->
+        <div class="textarea-container">
+          <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            minlength="4"
+            id="message"
+            name="message"
+            [ngClass]="{
+              error: !message.valid && message.touched,
+              success: message.valid && message.touched
+            }"
+            placeholder=""
+            style="height: 200px"
+            required
+            (focus)="textareaIsFocused = true"
+            (blur)="textareaIsFocused = false"
+          ></textarea>
+          <label
+            class="error-message-top"
+            [class.visible]="textareaIsFocused"
+            >{{ "enterMessage" | translate }}</label
+          >
+
+          @if (!message.valid && message.touched) {
+          <span class="error-message">{{
+            "enterMessageError" | translate
+          }}</span>
+          }
+        </div>
 
         <div
           class="checkbox-privacy-policy"
