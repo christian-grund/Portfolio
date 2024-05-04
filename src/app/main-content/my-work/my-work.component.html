@@ -5,45 +5,6 @@
       <p>{{ "portfolioDescription" | translate }}</p>
     </div>
 
-    <!-- [ngStyle]="{ 'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse' }" -->
-    <!-- <div class="projects">
-    <div
-      class="project"
-      *ngFor="let project of projectNames; let i = index"
-      [ngClass]="{ even: i % 2 === 0, odd: i % 2 !== 0 }"
-      (mouseenter)="onProjectHover(true, i)"
-      (mouseleave)="onProjectLeave(i)"
-    >
-      <div
-        class="project-img"
-        [ngStyle]="{
-          'justify-content': i % 2 === 0 ? 'flex-end' : 'flex-start'
-        }"
-      >
-        <img
-          src="./assets/img/pc_mockup/{{ projectImages[i] }}"
-          alt="{{ projectImages[i] }}"
-        />
-      </div>
-      <div
-        class="project-text"
-        [ngStyle]="{
-          'align-items': i % 2 === 0 ? 'flex-start' : 'flex-end',
-          'text-align': i % 2 === 0 ? 'start' : 'end',
-          'padding-left': i % 2 === 0 ? '44px' : '0',
-          'padding-right': i % 2 === 0 ? '0' : '60px'
-        }"
-      >
-        <h4>{{ project }}</h4>
-        <p>{{ projectLanguages[i] }}</p>
-        <p>
-          {{ projectDescriptions[i] }}
-        </p>
-        <button class="fill-button">Github</button>
-      </div>
-    </div>
-  </div> -->
-
     <div class="projects">
       <div
         class="project"

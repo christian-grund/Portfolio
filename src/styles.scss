@@ -88,48 +88,6 @@ button {
   box-sizing: border-box !important;
 }
 
-// .fill-button {
-//   position: relative;
-//   display: inline-block;
-//   background-color: transparent !important;
-//   overflow: hidden;
-//   transition: color 0.225s ease;
-// }
-
-// .fill-button:hover {
-//   color: $color-white !important;
-// }
-
-// .fill-button::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: -100%;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $color-white !important;
-//   z-index: -1;
-//   transition: left 0.225s ease;
-// }
-
-// .fill-button:hover::before {
-//   left: 0;
-//   background: linear-gradient(
-//     to bottom right,
-//     $primary-color,
-//     $secondary-color !important
-//   );
-// }
-
-// @keyframes fillFromLeft {
-//   from {
-//     width: 0;
-//   }
-//   to {
-//     width: 100%;
-//   }
-// }
-
 .fill-button {
   position: relative;
   display: inline-block;
@@ -142,6 +100,7 @@ button {
   cursor: pointer;
   overflow: hidden;
   transition: color 0.225s ease;
+  z-index: 5;
 }
 
 .fill-button:hover {
@@ -167,6 +126,7 @@ button {
     $primary-color,
     $secondary-color
   );
+  z-index: -1;
 }
 
 @keyframes fillFromLeft {

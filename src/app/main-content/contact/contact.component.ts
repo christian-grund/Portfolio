@@ -26,32 +26,6 @@ export class ContactComponent {
   mailTest: boolean = true;
   hovered: boolean = false;
 
-  // toggleChecked() {
-  //   const checkbox = document.getElementById(
-  //     'checkboxPrivatPolicy'
-  //   ) as HTMLInputElement;
-  //   const div = document.querySelector(
-  //     '.checkbox-privacy-policy'
-  //   ) as HTMLElement;
-
-  //   if (checkbox.checked) {
-  //     div.style.backgroundImage =
-  //       'url("../../../assets/img/icons/checkbox/checkbox_checked_hover.svg")';
-  //   } else {
-  //     div.style.backgroundImage = '';
-  //   }
-  // }
-
-  changeCheckboxBackground(hover: boolean) {
-    // if (hover) {
-    //   this.checkboxBackground =
-    //     'url(../../../assets/img/icons/checkbox/checkbox_default_hover.svg) no-repeat';
-    // } else {
-    //   this.checkboxBackground =
-    //     'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
-    // }
-  }
-
   enableButton() {
     // Your enableButton logic here
   }
