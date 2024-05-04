@@ -38,7 +38,6 @@
           }
         </div>
 
-        <!-- placeholder="{{ 'enterMail' | translate }}" -->
         <div class="input-container">
           <input
             #email="ngModel"
@@ -50,7 +49,6 @@
               error: !email.valid && email.touched,
               success: email.valid && email.touched
             }"
-            placeholder=""
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             (focus)="emailIsFocused = true"
@@ -65,7 +63,6 @@
           }
         </div>
 
-        <!-- placeholder="{{ 'enterMessage' | translate }}" -->
         <div class="textarea-container">
           <textarea
             #message="ngModel"
@@ -77,29 +74,26 @@
               error: !message.valid && message.touched,
               success: message.valid && message.touched
             }"
-            placeholder=""
             style="height: 200px"
             required
             (focus)="textareaIsFocused = true"
             (blur)="textareaIsFocused = false"
           ></textarea>
-          <label
-            class="error-message-top"
-            [class.visible]="textareaIsFocused"
-            >{{ "enterMessage" | translate }}</label
-          >
+          <label class="error-message-top" [class.visible]="textareaIsFocused"
+            >{{ "enterMessage" | translate }}
+          </label>
 
           @if (!message.valid && message.touched) {
-          <span class="error-message">{{
-            "enterMessageError" | translate
-          }}</span>
+          <span class="error-message">
+            {{ "enterMessageError" | translate }}
+          </span>
           }
         </div>
 
         <div
           class="checkbox-privacy-policy"
-          (mouseover)="changeCheckboxBackground(true)"
-          (mouseout)="changeCheckboxBackground(false)"
+          (mouseenter)="hovered = true"
+          (mouseleave)="hovered = false"
         >
           <input
             type="checkbox"
@@ -107,16 +101,12 @@
             name="checkboxPrivatPolicy"
             class="checkbox-privacy-policy"
           />
-          <label
-            for="checkboxPrivatPolicy"
-            [ngStyle]="{ 'background-image': checkboxBackground }"
-          ></label>
+          <label for="checkboxPrivatPolicy" [class.hovered]="hovered"> </label>
           <p class="accept-privacy-policy">
             {{ "iHaveRead" | translate }}
-            <a href="#" target="”_blank”">{{ "privacyPolicy" | translate }}</a
-            >{{ "iAgree" | translate }}
+            <a href="#" target="_blank">{{ "privacyPolicy" | translate }}</a>
+            {{ "iAgree" | translate }}
           </p>
-          <!-- <div class="passwordDontMatch" id="passwordDontMatch">Ups! your password don't match</div> -->
         </div>
 
         <div class="submit-btn">
@@ -137,8 +127,5 @@
     <div class="go-up">
       <a href="#landing_page" class="go-up-link"></a>
     </div>
-
-    <div class="circle-1"></div>
-    <div class="circle-2"></div>
   </div>
 </section>

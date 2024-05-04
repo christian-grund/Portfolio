@@ -22,22 +22,25 @@ export class ContactComponent {
   nameIsFocused: boolean = false;
   emailIsFocused: boolean = false;
   textareaIsFocused: boolean = false;
-  mailTest = true;
-  checkboxBackground: string =
-    'url(../../../assets/img/icons/checkbox/checkbox_default.svg) no-repeat';
-
-  @ViewChild('name') nameInput!: ElementRef;
   showErrorMessage: boolean = false;
+  mailTest: boolean = true;
+  hovered: boolean = false;
 
-  adjustPlaceholder() {
-    if (this.nameInput.nativeElement.classList.contains('error')) {
-      this.nameInput.nativeElement.placeholder = 'Your name / co';
-    }
-    // else {
-    //   this.nameInput.nativeElement.placeholder =
-    //     '{{ "enterName" | translate }}';
-    // }
-  }
+  // toggleChecked() {
+  //   const checkbox = document.getElementById(
+  //     'checkboxPrivatPolicy'
+  //   ) as HTMLInputElement;
+  //   const div = document.querySelector(
+  //     '.checkbox-privacy-policy'
+  //   ) as HTMLElement;
+
+  //   if (checkbox.checked) {
+  //     div.style.backgroundImage =
+  //       'url("../../../assets/img/icons/checkbox/checkbox_checked_hover.svg")';
+  //   } else {
+  //     div.style.backgroundImage = '';
+  //   }
+  // }
 
   changeCheckboxBackground(hover: boolean) {
     // if (hover) {
