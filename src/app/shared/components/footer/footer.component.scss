@@ -20,7 +20,6 @@ section {
     width: 100%;
     max-width: 1440px !important;
     margin: auto;
-    // position: relative;
 
     .logo {
       display: flex;
@@ -63,7 +62,7 @@ section {
 
     .imprint {
       position: absolute;
-      left: 50%; /* Horizontal zentrieren */
+      left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
@@ -94,5 +93,37 @@ section {
         opacity: 1;
       }
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    height: 380px;
+  }
+
+  .logo {
+    width: unset !important;
+  }
+
+  .top-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 40px;
+
+    .social-icons {
+      gap: 42px;
+
+      a {
+        &:not(:last-child) {
+          padding-right: unset !important;
+        }
+      }
+    }
+  }
+
+  .imprint {
+    bottom: 60px !important;
   }
 }
