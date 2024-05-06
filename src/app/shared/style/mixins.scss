@@ -8,3 +8,9 @@
   border-radius: 50%;
   background: linear-gradient(120deg, $primary-color, $secondary-color);
 }
+
+@mixin ball-img($size) {
+  background-image: url(../../../assets/img/background/ball.svg);
+  background-size: $size $size;
+  background-repeat: no-repeat;
+}

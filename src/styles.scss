@@ -218,14 +218,8 @@ button {
   .fill-button {
     text-align: center;
   }
-  .fill-button:hover::before {
-    // width: auto;
-    // left: 0;
-    // transform: skewX(0deg);
-  }
 
   .fill-button:hover {
-    // color: $primary-color;
     transform: scale(1) !important;
   }
 }
