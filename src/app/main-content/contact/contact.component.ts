@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,7 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  // http = inject(HttpClient);
+  http = inject(HttpClient);
   contactData = {
     name: '',
     email: '',
@@ -23,39 +23,46 @@ export class ContactComponent {
   emailIsFocused: boolean = false;
   textareaIsFocused: boolean = false;
   showErrorMessage: boolean = false;
-  mailTest: boolean = true;
   hovered: boolean = false;
+  privacyPolicyChecked: boolean = false;
+  mailTest: boolean = true;
 
-  enableButton() {
-    // Your enableButton logic here
+  togglePrivacyPolicy() {
+    console.log('privacyPolicyChecked', this.privacyPolicyChecked);
+    this.privacyPolicyChecked = !this.privacyPolicyChecked;
   }
 
-  // post = {
-  //   endPoint: 'https://deineDomain.de/sendMail.php',
-  //   body: (payload: any) => JSON.stringify(payload),
-  //   options: {
-  //     headers: {
-  //       'Content-Type': 'text/plain',
-  //       responseType: 'text',
-  //     },
-  //   },
-  // };
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted && !this.mailTest) {
-  //     console.log('contactData:', this.contactData);
-  //     this.http
-  //       .post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
-  //           ngForm.resetForm();
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-  //     ngForm.resetForm();
-  //   }
-  // }
+  post = {
+    // endPoint: 'https://deineDomain.de/sendMail.php', // Anpassen!!!
+    endPoint: 'https://verenaschranz.de/sendMail.php', // Anpassen!!!
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted && !this.mailTest) {
+      console.log('contactData:', this.contactData);
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log('ngForm.submitted && ngForm.form.valid && this.mailTest');
+      ngForm.resetForm();
+    } else if (!ngForm.form.valid) {
+      console.error('Form not valid!');
+    }
+  }
 }

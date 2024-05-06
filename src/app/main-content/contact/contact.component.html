@@ -11,8 +11,12 @@
         </p>
       </div>
 
-      <div class="form">
-        <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"> -->
+      <form
+        (ngSubmit)="onSubmit(contactForm)"
+        #contactForm="ngForm"
+        class="form"
+      >
+        <!-- Name -->
         <div class="input-container">
           <input
             #name="ngModel"
@@ -29,15 +33,18 @@
             (focus)="nameIsFocused = true"
             (blur)="nameIsFocused = false"
           />
-          <label class="error-message-top" [class.visible]="nameIsFocused">{{
-            "enterName" | translate
-          }}</label>
+          <label
+            class="error-message-top"
+            [class.visible]="nameIsFocused || contactData.name"
+            >{{ "enterName" | translate }}</label
+          >
 
           @if (!name.valid && name.touched) {
           <span class="error-message">{{ "enterNameError" | translate }}</span>
           }
         </div>
 
+        <!-- Email -->
         <div class="input-container">
           <input
             #email="ngModel"
@@ -54,15 +61,18 @@
             (focus)="emailIsFocused = true"
             (blur)="emailIsFocused = false"
           />
-          <label class="error-message-top" [class.visible]="emailIsFocused">{{
-            "enterMail" | translate
-          }}</label>
+          <label
+            class="error-message-top"
+            [class.visible]="emailIsFocused || contactData.email"
+            >{{ "enterMail" | translate }}</label
+          >
 
           @if (!email.valid && email.touched) {
           <span class="error-message">{{ "enterMailError" | translate }}</span>
           }
         </div>
 
+        <!-- Textarea -->
         <div class="textarea-container">
           <textarea
             #message="ngModel"
@@ -79,7 +89,9 @@
             (focus)="textareaIsFocused = true"
             (blur)="textareaIsFocused = false"
           ></textarea>
-          <label class="error-message-top" [class.visible]="textareaIsFocused"
+          <label
+            class="error-message-top"
+            [class.visible]="textareaIsFocused || contactData.message"
             >{{ "enterMessage" | translate }}
           </label>
 
@@ -90,18 +102,27 @@
           }
         </div>
 
+        <!-- Privacy policy checkbox -->
         <div
           class="checkbox-privacy-policy"
           (mouseenter)="hovered = true"
           (mouseleave)="hovered = false"
         >
+          <!-- #privacyPolicyChecked="ngModel"
+            [(ngModel)]="privacyPolicyChecked"
+            [checked]="false" -->
           <input
             type="checkbox"
             id="checkboxPrivatPolicy"
             name="checkboxPrivatPolicy"
             class="checkbox-privacy-policy"
+            required
+            [(ngModel)]="privacyPolicyChecked"
+            (click)="togglePrivacyPolicy()"
           />
-          <label for="checkboxPrivatPolicy" [class.hovered]="hovered"> </label>
+
+          <label for="checkboxPrivatPolicy" [class.hovered]="hovered"></label>
+
           <p class="accept-privacy-policy">
             {{ "iHaveRead" | translate }}
             <a href="#" target="_blank">{{ "privacyPolicy" | translate }}</a>
@@ -109,14 +130,19 @@
           </p>
         </div>
 
+        <!-- Submit button -->
         <div class="submit-btn">
-          <button class="fill-button">
+          <button
+            [ngClass]="{
+              'button-disabled': !contactForm.form.valid,
+              'fill-button': contactForm.form.valid
+            }"
+            [disabled]="!contactForm.form.valid"
+          >
             {{ "sayHello" | translate }}
           </button>
         </div>
-
-        <!-- </form> -->
-      </div>
+      </form>
     </div>
 
     <div class="circle-1"></div>

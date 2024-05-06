@@ -53,7 +53,7 @@ h4 {
 
 h5 {
   color: $primary-color;
-  font-weight: 400;
+  font-weight: 500;
   margin-block-start: 0 !important;
   margin-block-end: 0 !important;
 }
@@ -88,64 +88,151 @@ button {
   box-sizing: border-box !important;
 }
 
+// .fill-button {
+//   position: relative;
+//   display: inline-block;
+//   padding: 10px 20px;
+//   font-size: 23px;
+//   color: $primary-color;
+//   background-color: transparent;
+//   border: 2px solid $primary-color;
+//   border-radius: 10px;
+//   cursor: pointer;
+//   overflow: hidden;
+//   transition: color 0.225s ease;
+//   z-index: 5;
+// }
+
+// .fill-button:hover {
+//   color: $color-white !important;
+// }
+
+// .fill-button::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: -100%;
+//   width: 100%;
+//   height: 100%;
+//   background-color: $color-white;
+//   z-index: -1;
+//   transition: left 0.225s ease;
+// }
+
+// .fill-button:hover::before {
+//   left: 0;
+//   background: linear-gradient(
+//     to bottom right,
+//     $primary-color,
+//     $secondary-color
+//   );
+//   z-index: -1;
+// }
+
+// @keyframes fillFromLeft {
+//   from {
+//     width: 0;
+//   }
+//   to {
+//     width: 100%;
+//   }
+// }
+
+// a {
+//   text-decoration: none;
+// }
+
 .fill-button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 23px;
+  padding: 15px 30px;
   color: $primary-color;
-  background-color: transparent;
+
+  display: inline-block;
   border: 2px solid $primary-color;
-  border-radius: 10px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: color 0.225s ease;
-  z-index: 5;
-}
-
-.fill-button:hover {
-  color: $color-white !important;
-}
-
-.fill-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: $color-white;
-  z-index: -1;
-  transition: left 0.225s ease;
-}
-
-.fill-button:hover::before {
-  left: 0;
-  background: linear-gradient(
-    to bottom right,
-    $primary-color,
-    $secondary-color
-  );
-  z-index: -1;
-}
-
-@keyframes fillFromLeft {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-a {
+  position: relative;
   text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform-origin: left top;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      $primary-color,
+      $secondary-color
+    );
+    transition: width 0.3s, transform 0.3s;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 170%;
+    color: $color-white;
+    left: -40%;
+    transform: skewX(-30deg);
+  }
+
+  &:hover {
+    color: $color-white !important;
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    color: $primary-color;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    transition: none;
+
+    &:hover {
+      transform: none;
+      color: $primary-color;
+    }
+
+    &:before {
+      width: 0;
+      transition: width 0.3s, transform 0.3s;
+    }
+  }
+
+  &:not(:disabled) {
+    transition: transform 0.2s, color 0.2s;
+  }
+
+  &:not(:disabled):hover {
+    color: $color-white;
+    transform: scale(1.1);
+  }
 }
 
-// input[type="submit"] {
-//   background-color: transparent !important;
-// }
+@media (max-width: 720px) {
+  .fill-button {
+    text-align: center;
+  }
+  .fill-button:hover::before {
+    // width: auto;
+    // left: 0;
+    // transform: skewX(0deg);
+  }
 
-// input[type="submit"]:hover {
-//   background-color: red !important;
-// }
+  .fill-button:hover {
+    // color: $primary-color;
+    transform: scale(1) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  button,
+  .fill-button {
+    padding: 15px 18px 15px 18px !important;
+  }
+}

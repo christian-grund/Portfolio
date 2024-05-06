@@ -27,18 +27,18 @@ section {
   justify-content: start;
   flex-direction: column;
   width: 100%;
-  margin-top: 224px;
+  margin-top: 175px;
 
   .headline {
     padding-right: 100px;
     > h5 {
-      font-size: 60.5px;
-      line-height: 1.5;
+      font-size: 80px;
+      line-height: 1;
     }
     > h1 {
       font-size: 116px;
 
-      &:nth-child(2) {
+      &:first-child {
         font-size: 124px !important;
       }
     }
