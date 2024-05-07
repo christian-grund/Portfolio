@@ -6,13 +6,14 @@ section {
   box-sizing: border-box;
   background: linear-gradient(to bottom, $color-white, $color-landingpage);
   margin: auto;
+  padding: 100px;
+  z-index: 100;
 
   .main {
     width: 100%;
     max-width: 1440px !important;
     margin: auto;
     position: relative;
-    padding: 100px;
   }
 }
 
@@ -29,8 +30,8 @@ h6 {
 
 .wrapper {
   display: flex;
-  flex-direction: row;
   gap: 100px;
+  box-sizing: border-box;
 
   .text {
     display: flex;
@@ -57,10 +58,11 @@ h6 {
   .form {
     width: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-    justify-content: center;
+    z-index: 10;
     gap: 24px;
 
     .input-container {
@@ -86,10 +88,11 @@ h6 {
   .checkbox-privacy-policy {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 12px;
     padding-top: 16px;
+    width: 100%;
 
     input[type="checkbox"] {
       display: none;
@@ -98,14 +101,14 @@ h6 {
     input[type="checkbox"]:checked + label {
       background: url("../../../assets/img/icons/checkbox/checkbox_checked.svg")
         no-repeat;
-      background-size: 100%;
+      // background-size: 100%;
     }
 
     &:hover {
       input[type="checkbox"]:checked + label {
         background: url("../../../assets/img/icons/checkbox/checkbox_checked_hover.svg")
           no-repeat;
-        background-size: 100%;
+        // background-size: 100%;
       }
     }
 
@@ -114,11 +117,13 @@ h6 {
       padding: 0;
       background: url("../../../assets/img/icons/checkbox/checkbox_default.svg")
         no-repeat;
-      background-size: 100%;
+      // background-size: 100%;
       cursor: pointer;
       transition: background 0.3s;
       width: 24px;
       height: 24px;
+      min-width: 24px;
+      z-index: 1000;
 
       &.hovered {
         background-image: url("../../../assets/img/icons/checkbox/checkbox_default_hover.svg");
@@ -126,7 +131,7 @@ h6 {
     }
 
     .accept-privacy-policy {
-      display: inline-block;
+      // display: inline-block;
       font-size: 16px;
     }
 
@@ -174,23 +179,10 @@ textarea {
   font-size: 16px;
   padding-right: 50px;
 
-  // &::placeholder {
-  //   color: $color-black;
-  //   font-family: "Montserrat";
-  // }
-
   &:focus {
     border: 2px solid $primary-color !important;
     outline: none;
-
-    // &::placeholder {
-    //   color: transparent;
-    // }
   }
-
-  // &:not(:focus)::placeholder {
-  //   transition: color 0.3s ease 0.3s;
-  // }
 }
 
 input[type="text"].error,
@@ -255,8 +247,8 @@ textarea:hover {
 
 .go-up {
   position: absolute;
-  left: 100px;
-  bottom: 50px;
+  left: 0px;
+  bottom: 0px;
 
   .go-up-link {
     display: block;
@@ -272,16 +264,105 @@ textarea:hover {
   }
 }
 
-.circle-1 {
-  @include circle(204px, 204px, $primary-color, $secondary-color);
+.ball-big {
   position: absolute;
   top: 460px;
-  left: 242px;
+  left: 100px;
+
+  img {
+    width: 200px;
+    height: 200px;
+    z-index: 0;
+    transform: rotate(90deg);
+  }
 }
 
-.circle-2 {
-  @include circle(73px, 73px, $primary-color, $secondary-color);
+.ball-small {
   position: absolute;
-  bottom: 50px;
-  right: 75px;
+  bottom: -75px;
+  right: -50px;
+
+  img {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .wrapper {
+    gap: 50px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    padding: 100px 50px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+    .text {
+      width: 100%;
+    }
+
+    .form {
+      width: 100%;
+    }
+  }
+
+  .ball-big {
+    top: unset;
+    bottom: 360px;
+    left: 200px;
+
+    // img {
+    //   width: 150px;
+    //   height: 150px;
+    // }
+  }
+
+  .ball-small {
+    right: 0 !important;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  .go-up {
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 750px) {
+  section {
+    padding: 100px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 100px 12.5px;
+  }
+
+  .ball-big {
+    // top: 410px;
+    left: 100px;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .ball-small {
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
 }

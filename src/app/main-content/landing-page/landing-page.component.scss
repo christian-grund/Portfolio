@@ -3,12 +3,13 @@
 
 section {
   height: calc(100vh + 120px);
+  // height: calc(100vh + 8px);
   height: 100vh;
   display: flex;
   width: 100%;
   background: linear-gradient(to bottom, $color-white, $color-landingpage);
   overflow: hidden;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   margin-top: -120px;
 
   .main {
@@ -28,18 +29,20 @@ section {
   flex-direction: column;
   width: 100%;
   margin-top: 175px;
+  z-index: 1;
+  position: relative;
 
   .headline {
     padding-right: 100px;
-    > h5 {
+    h1 {
       font-size: 80px;
       line-height: 1;
     }
-    > h1 {
-      font-size: 116px;
+    h2 {
+      font-size: 124px;
 
-      &:first-child {
-        font-size: 124px !important;
+      &:last-child {
+        font-size: 116px !important;
       }
     }
   }
@@ -47,19 +50,26 @@ section {
 
 .aot-ball {
   position: absolute;
-  top: -171px;
-  left: -299px;
+  top: -168px;
+  left: -300px;
+  z-index: 0;
+
   img {
+    position: relative;
     width: 892px;
     height: 892px;
   }
 }
 
-.circle-top-left {
-  @include circle(60vw, 864px, #5988ff, #0043f0);
+.circle {
   position: absolute;
-  top: -10vh;
-  left: -15vw;
+  top: -72;
+  left: -200;
+
+  img {
+    width: 864px;
+    height: auto;
+  }
 }
 
 .aot-social-icons {
@@ -104,11 +114,54 @@ section {
 
 .portrait {
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
 
   img {
     height: 1150px;
     width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .aot-right {
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 146px;
+
+    .headline {
+      padding-left: 16px;
+      h1 {
+        font-size: 36px;
+        line-height: 1;
+        color: $color-white !important;
+      }
+      h2 {
+        font-size: 73px;
+        color: $color-white !important;
+        &:last-child {
+          font-size: 67px !important;
+        }
+      }
+    }
+  }
+
+  .portrait {
+    left: -12px;
+    img {
+      height: 620px;
+    }
+  }
+
+  .aot-ball {
+    top: -12px;
+    left: -221px;
+
+    img {
+      width: 612px;
+      height: 612px;
+    }
   }
 }

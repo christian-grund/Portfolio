@@ -11,6 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   underlineActive: number | null = null;
+  isOverlayActive: boolean = false;
 
   constructor(public translateService: TranslateService) {}
 
@@ -20,5 +21,9 @@ export class HeaderComponent {
 
   toggleUnderline(index: number): void {
     this.underlineActive = index;
+  }
+
+  toggleMenu() {
+    this.isOverlayActive = !this.isOverlayActive;
   }
 }

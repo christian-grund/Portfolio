@@ -1,26 +1,54 @@
-<nav>
-  <img class="header-logo" src="./assets/img/icons/logo.svg" alt="Logo" />
-  <div class="links">
-    <div class="link-wrapper">
-      <a (click)="toggleUnderline(1)" href="#about_me">{{
-        "about" | translate
-      }}</a>
-      <div class="underline" [class.active]="underlineActive === 1"></div>
+<section>
+  <nav>
+    <img class="logo" src="./assets/img/icons/logo/logo_white.svg" alt="Logo" />
+    <div class="links">
+      <div class="link-wrapper">
+        <a (click)="toggleUnderline(1)" href="#about_me">{{
+          "about" | translate
+        }}</a>
+        <div class="underline" [class.active]="underlineActive === 1"></div>
+      </div>
+      <div class="link-wrapper">
+        <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size">{{
+          "skillSet" | translate
+        }}</a>
+        <div class="underline" [class.active]="underlineActive === 2"></div>
+      </div>
+      <div class="link-wrapper">
+        <a (click)="toggleUnderline(3)" href="#portfolio">Portfolio</a>
+        <div class="underline" [class.active]="underlineActive === 3"></div>
+      </div>
+      <div class="language-change">
+        <a (click)="changeLanguage('de')">DE</a>
+        <p>|</p>
+        <a (click)="changeLanguage('en')">EN</a>
+      </div>
     </div>
-    <div class="link-wrapper">
-      <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size">{{
+    <div class="menu">
+      <div class="burger-icon" (click)="toggleMenu()"></div>
+    </div>
+  </nav>
+
+  <div class="overlay" [class.overlay-active]="isOverlayActive">
+    <div class="top">
+      <img
+        class="logo-blue"
+        src="./assets/img/icons/logo/logo_blue.svg"
+        alt=""
+      />
+      <a class="close-menu" (click)="toggleMenu()"></a>
+    </div>
+    <div class="mobile-links">
+      <a href="#about_me" (click)="toggleMenu()">{{ "about" | translate }}</a>
+      <a href="#skill_set" (click)="toggleMenu()">{{
         "skillSet" | translate
       }}</a>
-      <div class="underline" [class.active]="underlineActive === 2"></div>
-    </div>
-    <div class="link-wrapper">
-      <a (click)="toggleUnderline(3)" href="#my_work">Portfolio</a>
-      <div class="underline" [class.active]="underlineActive === 3"></div>
-    </div>
-    <div class="language-change">
-      <a (click)="changeLanguage('de')">DE</a>
-      <p>|</p>
-      <a (click)="changeLanguage('en')">EN</a>
+      <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
+      <div class="language-change">
+        <a (click)="changeLanguage('de'); toggleMenu()">DE</a>
+        <p>|</p>
+        <a (click)="changeLanguage('en'); toggleMenu()">EN</a>
+      </div>
     </div>
   </div>
-</nav>
+</section>

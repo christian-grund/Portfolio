@@ -2,6 +2,11 @@
 @import "./app/shared/style/montserrat.scss";
 @import "./app/shared/style/colors.scss";
 
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $primary-color $color-white;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,14 +15,20 @@ body {
   font-family: "Montserrat";
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+
   // display: flex;
   // justify-content: center;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color !important;
+}
+
 h1 {
   font-family: "Baloo 2";
-  font-weight: 900;
-  line-height: 0.9;
+  font-weight: 400;
+  line-height: 1;
   color: $primary-color;
   margin-block-start: 0 !important;
   margin-block-end: 0 !important;
