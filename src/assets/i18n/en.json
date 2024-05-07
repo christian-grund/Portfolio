@@ -30,6 +30,7 @@
  "iHaveRead": "I've read the",
  "privacyPolicy": "privacy policy",
  "iAgree": "and agree to the processing of my data as outlined.",
+ "acceptPrivacyPolicyError": "Please accept the privacy policy.",
  "sayHello": "Say hello ;)",
  "imprint": "Imprint"
 }

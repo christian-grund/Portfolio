@@ -88,67 +88,74 @@ h6 {
   .checkbox-privacy-policy {
     position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 12px;
+    // justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
     padding-top: 16px;
     width: 100%;
+    height: 64px;
 
-    input[type="checkbox"] {
-      display: none;
-    }
+    .privacy-policy-wrapper {
+      display: flex;
+      gap: 12px;
 
-    input[type="checkbox"]:checked + label {
-      background: url("../../../assets/img/icons/checkbox/checkbox_checked.svg")
-        no-repeat;
-      // background-size: 100%;
-    }
+      input[type="checkbox"] {
+        display: none;
+      }
 
-    &:hover {
       input[type="checkbox"]:checked + label {
-        background: url("../../../assets/img/icons/checkbox/checkbox_checked_hover.svg")
+        background: url("../../../assets/img/icons/checkbox/checkbox_checked.svg")
           no-repeat;
         // background-size: 100%;
       }
-    }
 
-    label {
-      display: inline-block;
-      padding: 0;
-      background: url("../../../assets/img/icons/checkbox/checkbox_default.svg")
-        no-repeat;
-      // background-size: 100%;
-      cursor: pointer;
-      transition: background 0.3s;
-      width: 24px;
-      height: 24px;
-      min-width: 24px;
-      z-index: 1000;
-
-      &.hovered {
-        background-image: url("../../../assets/img/icons/checkbox/checkbox_default_hover.svg");
+      &:hover {
+        input[type="checkbox"]:checked + label {
+          background: url("../../../assets/img/icons/checkbox/checkbox_checked_hover.svg")
+            no-repeat;
+          // background-size: 100%;
+        }
       }
-    }
 
-    .accept-privacy-policy {
-      // display: inline-block;
-      font-size: 16px;
-    }
+      label {
+        display: inline-block;
+        padding: 0;
+        background: url("../../../assets/img/icons/checkbox/checkbox_default.svg")
+          no-repeat;
+        // background-size: 100%;
+        cursor: pointer;
+        transition: background 0.3s;
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        z-index: 1000;
 
-    &:hover {
+        &.hovered {
+          background-image: url("../../../assets/img/icons/checkbox/checkbox_default_hover.svg");
+        }
+      }
+
+      .accept-privacy-policy {
+        // display: inline-block;
+        font-size: 16px;
+      }
+
+      &:hover {
+        a {
+          font-weight: 600 !important;
+          text-decoration: underline;
+          letter-spacing: 1;
+        }
+      }
+
       a {
-        font-weight: 600 !important;
-        text-decoration: underline;
-        letter-spacing: 1;
+        display: inline-block;
+        justify-content: center;
+        color: $primary-color;
+        font-weight: 300 !important;
+        width: 170px;
       }
-    }
-
-    a {
-      display: inline-block;
-      justify-content: center;
-      color: $primary-color;
-      font-weight: 300 !important;
-      width: 170px;
     }
   }
 }

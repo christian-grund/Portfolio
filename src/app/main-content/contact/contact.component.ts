@@ -25,11 +25,16 @@ export class ContactComponent {
   showErrorMessage: boolean = false;
   hovered: boolean = false;
   privacyPolicyChecked: boolean = false;
+  labelSelectedTwice: boolean = false;
   mailTest: boolean = true;
 
   togglePrivacyPolicy() {
     console.log('privacyPolicyChecked', this.privacyPolicyChecked);
     this.privacyPolicyChecked = !this.privacyPolicyChecked;
+  }
+
+  toggleLabel() {
+    this.labelSelectedTwice = !this.labelSelectedTwice;
   }
 
   post = {

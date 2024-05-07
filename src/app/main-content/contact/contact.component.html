@@ -108,26 +108,33 @@
           (mouseenter)="hovered = true"
           (mouseleave)="hovered = false"
         >
-          <!-- #privacyPolicyChecked="ngModel"
-            [(ngModel)]="privacyPolicyChecked"
-            [checked]="false" -->
-          <input
-            type="checkbox"
-            id="checkboxPrivatPolicy"
-            name="checkboxPrivatPolicy"
-            class="checkbox-privacy-policy"
-            required
-            [(ngModel)]="privacyPolicyChecked"
-            (click)="togglePrivacyPolicy()"
-          />
+          <div class="privacy-policy-wrapper">
+            <input
+              type="checkbox"
+              id="checkboxPrivatPolicy"
+              name="checkboxPrivatPolicy"
+              class="checkbox-privacy-policy"
+              required
+              [(ngModel)]="privacyPolicyChecked"
+              (click)="togglePrivacyPolicy()"
+            />
 
-          <label for="checkboxPrivatPolicy" [class.hovered]="hovered"></label>
+            <label
+              for="checkboxPrivatPolicy"
+              [class.hovered]="hovered"
+              (click)="toggleLabel()"
+            ></label>
 
-          <p class="accept-privacy-policy">
-            {{ "iHaveRead" | translate }}
-            <a href="#" target="_blank">{{ "privacyPolicy" | translate }}</a>
-            {{ "iAgree" | translate }}
-          </p>
+            <p class="accept-privacy-policy">
+              {{ "iHaveRead" | translate }}
+              <a href="#" target="_blank">{{ "privacyPolicy" | translate }}</a>
+              {{ "iAgree" | translate }}
+            </p>
+          </div>
+
+          <span class="error-message" *ngIf="labelSelectedTwice">
+            {{ "acceptPrivacyPolicyError" | translate }}
+          </span>
         </div>
 
         <!-- Submit button -->
