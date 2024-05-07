@@ -2,6 +2,9 @@
 
 section {
   position: relative;
+  overflow-x: hidden;
+  height: calc(100vh + 120px);
+  box-sizing: border-box;
 
   nav {
     height: 120px;
@@ -116,7 +119,6 @@ a {
   z-index: 10;
   height: 100vh;
   width: 100%;
-
   background: rgba(241, 245, 255, 0.5);
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
@@ -137,7 +139,6 @@ a {
       width: 48px;
       height: 52px;
       cursor: pointer;
-
       display: block;
       background-image: url("../../../../assets/img/icons/burger/close_final.svg");
       background-size: cover;
@@ -169,28 +170,22 @@ a {
   transform: translateX(0);
 }
 
-@media (max-width: 1000px) {
-  .logo {
-    padding-left: 50px !important;
-  }
+@media (max-width: 1340px) {
   .links {
-    padding-right: 50px !important;
-    gap: 20px !important;
-    .link-wrapper {
-      a {
-        font-size: 20px;
-      }
-    }
+    gap: 40px !important;
   }
 }
 
-@media (min-width: 751px) {
+@media (min-width: 1001px) {
   .menu {
     display: none;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
+  .logo {
+    padding-left: 50px !important;
+  }
   .links {
     display: none !important;
   }
@@ -204,6 +199,7 @@ a {
   .logo {
     padding-left: 16px !important;
   }
+
   .menu {
     display: flex;
     padding-right: 16px !important;
@@ -212,5 +208,9 @@ a {
       width: 40px !important;
       height: 44px !important;
     }
+  }
+
+  .top {
+    padding: 0 16px !important;
   }
 }
