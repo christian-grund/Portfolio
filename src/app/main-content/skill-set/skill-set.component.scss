@@ -8,7 +8,6 @@ section {
   flex-direction: column;
   box-sizing: border-box;
   margin: auto;
-  padding: 100px;
   background: linear-gradient(
     to bottom right,
     $primary-color,
@@ -18,8 +17,10 @@ section {
   .main {
     width: 100%;
     max-width: 1440px !important;
+    padding: 100px;
     margin: auto;
     position: relative;
+    box-sizing: border-box;
   }
 
   h3 {
@@ -145,8 +146,8 @@ section {
 }
 
 @media (max-width: 1000px) {
-  section {
-    padding: 100px 50px;
+  .main {
+    padding: 100px 50px !important;
   }
 
   .skill-icon {
@@ -161,8 +162,8 @@ section {
 }
 
 @media (max-width: 750px) {
-  section {
-    padding: 100px 25px;
+  .main {
+    padding: 100px 25px !important;
   }
 
   .skill-icons {
@@ -181,8 +182,8 @@ section {
 }
 
 @media (max-width: 500px) {
-  section {
-    padding: 50px 12.5px;
+  .main {
+    padding: 50px 12.5px !important;
   }
 
   .skill-icon {

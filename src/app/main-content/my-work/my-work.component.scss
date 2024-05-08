@@ -8,15 +8,13 @@ section {
   flex-direction: column;
   box-sizing: border-box;
 
-  margin-top: 1px;
-  // margin: auto;
-
   .main {
     width: 100%;
     max-width: 1440px !important;
     margin: auto;
     position: relative;
     padding: 100px;
+    box-sizing: border-box;
   }
 }
 
@@ -44,14 +42,6 @@ section {
     gap: 32px;
     padding-top: 64px;
 
-    // &.even {
-    //   align-items: flex-end; /* Ändern der Ausrichtung für gerade Elemente */
-    // }
-
-    // &.odd {
-    //   align-items: flex-start; /* Ändern der Ausrichtung für ungerade Elemente */
-    // }
-
     .project-img {
       display: flex;
       justify-content: center;
@@ -63,8 +53,6 @@ section {
       img {
         width: 500px;
         height: auto;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease;
       }
     }
 
@@ -75,12 +63,17 @@ section {
       width: 50%;
       gap: 16px;
       box-sizing: border-box;
-      // position: absolute;
-      // top: 154px;
-      // right: 0;
-      transform: translateX(-100%);
-      opacity: 0;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      &.odd {
+        align-items: flex-end;
+        padding-right: 110px;
+        text-align: right;
+      }
+
+      &.even {
+        align-items: flex-start;
+        padding-left: 84px;
+      }
 
       h4 {
         margin: 0;
@@ -96,165 +89,189 @@ section {
         }
       }
 
-      &.fade-in-left {
-        animation: fade-in-left 0.3s ease forwards;
+      .project-text-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
 
-      &.fade-in-right {
-        animation: fade-in-right 0.3s ease forwards;
-      }
+      // &.fade-in-left {
+      //   animation: fade-in-left 0.3s ease forwards;
+      // }
+
+      // &.fade-in-right {
+      //   animation: fade-in-right 0.3s ease forwards;
+      // }
     }
-    &:hover {
-      .project-img img {
-        filter: none; /* Filter entfernen, wenn über das Projekt-Element gehovert wird */
-      }
-    }
   }
-}
-
-@keyframes fade-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-in {
-  animation: fade-in 0.3s ease forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.left-position {
-  left: 0;
-  display: flex;
-  align-items: flex-end;
-  text-align: right;
-  padding-right: 100px;
-}
-
-.right-position {
-  right: 0;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 85px;
 }
 
 .circle-1 {
-  @include circle(110px, 110px, $primary-color, $secondary-color);
   position: absolute;
   top: 50px;
   left: 550px;
+
+  img {
+    width: 110px;
+    height: auto;
+  }
 }
 
 .circle-2 {
-  @include circle(180px, 180px, $primary-color, $secondary-color);
   position: absolute;
   top: 250px;
-  right: 300px;
+  right: 150px;
+
+  img {
+    width: 180px;
+    height: auto;
+  }
 }
 
 .circle-3 {
-  @include circle(400px, 400px, $primary-color, $secondary-color);
   position: absolute;
   top: 500px;
   left: -200px;
   z-index: -1;
+
+  img {
+    width: 400px;
+    height: auto;
+    transform: rotate(90deg);
+  }
 }
 
 .circle-4 {
-  @include circle(650px, 650px, $primary-color, $secondary-color);
   position: absolute;
-  top: 650px;
-  right: 00px;
+  top: 800px;
+  right: -150px;
   z-index: -1;
+
+  img {
+    width: 650px;
+    height: auto;
+  }
 }
 
 .circle-5 {
-  @include circle(50px, 50px, $primary-color, $secondary-color);
   position: absolute;
   top: 1000px;
   left: 100px;
   z-index: -1;
+
+  img {
+    width: 50px;
+    height: auto;
+  }
 }
 
 .circle-6 {
-  @include circle(240px, 240px, $primary-color, $secondary-color);
   position: absolute;
-  top: 1300px;
+  top: 1350px;
   left: 150px;
   z-index: -1;
+
+  img {
+    width: 240px;
+    height: auto;
+    transform: rotate(90deg);
+  }
 }
 
 .circle-7 {
-  @include circle(100px, 100px, $primary-color, $secondary-color);
   position: absolute;
   top: 1550px;
-  right: 200px;
+  right: 50px;
   z-index: -1;
+
+  img {
+    width: 100px;
+    height: auto;
+  }
 }
 
 .circle-8 {
-  @include circle(180px, 180px, $primary-color, $secondary-color);
   position: absolute;
   bottom: 50px;
   left: 40%;
   z-index: -1;
+
+  img {
+    width: 180px;
+    height: auto;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 1250px) {
+  .header-about {
+    align-items: center;
+    width: 100%;
+  }
+
+  .project {
+    align-items: center;
+    flex-direction: column !important;
+    padding-top: 80px !important;
+
+    .project-img {
+      img {
+        width: 30vw;
+        height: auto;
+        min-width: 300px;
+      }
+    }
+
+    .project-text {
+      width: 600px !important;
+      text-align: center !important;
+
+      &.odd {
+        align-items: center !important;
+        padding-right: unset !important;
+      }
+
+      &.even {
+        align-items: center !important;
+        padding-left: unset !important;
+      }
+
+      .project-text-buttons {
+        width: 100%;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 40px !important;
+      }
+    }
+  }
+
+  .circle-1 {
+    top: 16px;
+  }
+
+  .circle-2 {
+    top: 300px;
+  }
+
+  .circle-8 {
+    left: 12%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 100px 50px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 100px 25px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 50px 12.5px !important;
+  }
 }

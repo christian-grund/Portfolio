@@ -80,14 +80,6 @@ section {
   }
 }
 
-// .ball-small {
-//   @include ball-img(82px);
-//   display: inline-block;
-//   position: absolute;
-//   top: 60px;
-//   right: 20%;
-// }
-
 @media (max-width: 1400px) {
   h2 {
     font-size: 110px;
@@ -103,10 +95,6 @@ section {
 @media (max-width: 1200px) {
   h2 {
     font-size: 90px;
-  }
-
-  section {
-    padding: 180px 50px;
   }
 }
 

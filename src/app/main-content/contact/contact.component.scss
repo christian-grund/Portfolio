@@ -6,14 +6,15 @@ section {
   box-sizing: border-box;
   background: linear-gradient(to bottom, $color-white, $color-landingpage);
   margin: auto;
-  padding: 100px;
   z-index: 100;
 
   .main {
     width: 100%;
     max-width: 1440px !important;
+    padding: 100px;
     margin: auto;
     position: relative;
+    box-sizing: border-box;
   }
 }
 
@@ -254,8 +255,8 @@ textarea:hover {
 
 .go-up {
   position: absolute;
-  left: 0px;
-  bottom: 0px;
+  left: 100px;
+  bottom: 50px;
 
   .go-up-link {
     display: block;
@@ -273,8 +274,8 @@ textarea:hover {
 
 .ball-big {
   position: absolute;
-  top: 420px;
-  left: 100px;
+  top: 460px;
+  left: 260px;
 
   img {
     width: 200px;
@@ -286,8 +287,8 @@ textarea:hover {
 
 .ball-small {
   position: absolute;
-  bottom: 60px;
-  right: -50px;
+  bottom: 140px;
+  right: 100px;
 
   img {
     width: 72px;
@@ -302,7 +303,7 @@ textarea:hover {
 }
 
 @media (max-width: 1000px) {
-  section {
+  .main {
     padding: 100px 50px;
   }
 
@@ -335,14 +336,14 @@ textarea:hover {
 }
 
 @media (max-width: 750px) {
-  section {
-    padding: 100px 25px;
+  .main {
+    padding: 100px 25px !important;
   }
 }
 
 @media (max-width: 500px) {
-  section {
-    padding: 100px 12.5px;
+  .main {
+    padding: 100px 12.5px !important;
   }
 
   .ball-big {
