@@ -371,5 +371,14 @@ textarea:hover {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+  .input-container {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 350px) {
+  .checkbox-privacy-policy {
+    margin-bottom: 12px;
+  }
 }

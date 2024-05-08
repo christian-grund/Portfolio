@@ -25,7 +25,7 @@ export class ContactComponent {
   showErrorMessage: boolean = false;
   hovered: boolean = false;
   privacyPolicyChecked: boolean = false;
-  labelSelectedTwice: boolean = false;
+  clickCounter: number = 0;
   mailTest: boolean = true;
 
   togglePrivacyPolicy() {
@@ -34,7 +34,7 @@ export class ContactComponent {
   }
 
   toggleLabel() {
-    this.labelSelectedTwice = !this.labelSelectedTwice;
+    this.clickCounter++;
   }
 
   post = {

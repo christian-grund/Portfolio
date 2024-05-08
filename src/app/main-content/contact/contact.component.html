@@ -39,9 +39,9 @@
             >{{ "enterName" | translate }}</label
           >
 
-          @if (!name.valid && name.touched) {
-          <span class="error-message">{{ "enterNameError" | translate }}</span>
-          }
+          <span class="error-message" *ngIf="!name.valid && name.touched">{{
+            "enterNameError" | translate
+          }}</span>
         </div>
 
         <!-- Email -->
@@ -67,9 +67,9 @@
             >{{ "enterMail" | translate }}</label
           >
 
-          @if (!email.valid && email.touched) {
-          <span class="error-message">{{ "enterMailError" | translate }}</span>
-          }
+          <span class="error-message" *ngIf="!email.valid && email.touched">{{
+            "enterMailError" | translate
+          }}</span>
         </div>
 
         <!-- Textarea -->
@@ -95,11 +95,9 @@
             >{{ "enterMessage" | translate }}
           </label>
 
-          @if (!message.valid && message.touched) {
-          <span class="error-message">
+          <span class="error-message" *ngIf="!message.valid && message.touched">
             {{ "enterMessageError" | translate }}
           </span>
-          }
         </div>
 
         <!-- Privacy policy checkbox -->
@@ -132,7 +130,10 @@
             </p>
           </div>
 
-          <span class="error-message" *ngIf="labelSelectedTwice">
+          <span
+            class="error-message"
+            *ngIf="clickCounter % 2 === 0 && clickCounter > 0"
+          >
             {{ "acceptPrivacyPolicyError" | translate }}
           </span>
         </div>
