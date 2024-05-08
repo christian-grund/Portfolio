@@ -273,7 +273,7 @@ textarea:hover {
 
 .ball-big {
   position: absolute;
-  top: 460px;
+  top: 420px;
   left: 100px;
 
   img {
@@ -286,7 +286,7 @@ textarea:hover {
 
 .ball-small {
   position: absolute;
-  bottom: -75px;
+  bottom: 60px;
   right: -50px;
 
   img {
@@ -320,22 +320,13 @@ textarea:hover {
 
   .ball-big {
     top: unset;
-    bottom: 360px;
-    left: 200px;
-
-    // img {
-    //   width: 150px;
-    //   height: 150px;
-    // }
+    bottom: 366px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .ball-small {
     right: 0 !important;
-
-    img {
-      width: 56px;
-      height: 56px;
-    }
   }
 
   .go-up {
@@ -355,8 +346,6 @@ textarea:hover {
   }
 
   .ball-big {
-    // top: 410px;
-    left: 100px;
     img {
       width: 150px;
       height: 150px;
@@ -374,6 +363,21 @@ textarea:hover {
 @media (max-width: 450px) {
   .input-container {
     padding-bottom: 8px;
+  }
+
+  .go-up {
+    bottom: -60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ball-small {
+    bottom: 60px;
+
+    img {
+      width: 48px;
+      height: auto;
+    }
   }
 }
 
