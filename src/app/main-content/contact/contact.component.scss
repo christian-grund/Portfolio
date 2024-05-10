@@ -288,7 +288,7 @@ textarea:hover {
 .ball-small {
   position: absolute;
   bottom: 140px;
-  right: 100px;
+  right: 80px;
 
   img {
     width: 72px;
@@ -299,6 +299,10 @@ textarea:hover {
 @media (max-width: 1250px) {
   .wrapper {
     gap: 50px !important;
+  }
+
+  .ball-big {
+    top: 520px;
   }
 }
 
@@ -321,23 +325,39 @@ textarea:hover {
 
   .ball-big {
     top: unset;
-    bottom: 366px;
+    bottom: 430px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .ball-small {
-    right: 0 !important;
+    bottom: 16px !important;
+    right: 24px !important;
   }
 
   .go-up {
-    bottom: -50px;
+    bottom: 112.5px !important;
+    left: 100px;
+  }
+}
+
+@media (max-width: 850px) {
+  h3 {
+    font-size: 45px;
+  }
+
+  h6 {
+    font-size: 23px;
   }
 }
 
 @media (max-width: 750px) {
   .main {
     padding: 100px 25px !important;
+  }
+
+  .go-up {
+    left: 24px !important;
   }
 }
 
@@ -347,6 +367,7 @@ textarea:hover {
   }
 
   .ball-big {
+    bottom: 470px;
     img {
       width: 150px;
       height: 150px;
@@ -363,27 +384,24 @@ textarea:hover {
 
 @media (max-width: 450px) {
   .input-container {
-    padding-bottom: 8px;
+    padding-bottom: 16px;
   }
 
   .go-up {
-    bottom: -60px;
+    bottom: 28px !important;
   }
-}
 
-@media (max-width: 400px) {
-  .ball-small {
-    bottom: 60px;
-
-    img {
-      width: 48px;
-      height: auto;
-    }
+  .ball-big {
+    bottom: 484px;
   }
 }
 
 @media (max-width: 350px) {
   .checkbox-privacy-policy {
     margin-bottom: 12px;
+  }
+
+  .ball-big {
+    bottom: 496px;
   }
 }

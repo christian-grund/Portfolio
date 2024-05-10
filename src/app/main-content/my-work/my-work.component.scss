@@ -35,6 +35,8 @@ section {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  z-index: 10;
+  position: relative;
 
   .project {
     position: relative;
@@ -91,8 +93,21 @@ section {
 
       .project-text-buttons {
         display: flex;
-        flex-direction: column;
-        gap: 16px;
+        gap: 48px;
+        padding-top: 12px;
+
+        a {
+          button {
+            width: 140px !important;
+          }
+
+          &:first-child {
+            button {
+              background-color: $primary-color !important;
+              color: $color-white !important;
+            }
+          }
+        }
       }
 
       // &.fade-in-left {
@@ -205,7 +220,7 @@ section {
 
 @media (max-width: 1250px) {
   .header-about {
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
 
@@ -223,7 +238,8 @@ section {
     }
 
     .project-text {
-      width: 600px !important;
+      width: 100% !important;
+      max-width: 600px !important;
       text-align: center !important;
 
       &.odd {
@@ -238,9 +254,8 @@ section {
 
       .project-text-buttons {
         width: 100%;
-        flex-direction: row !important;
         justify-content: center !important;
-        gap: 40px !important;
+        padding-top: 24px;
       }
     }
   }
@@ -264,6 +279,14 @@ section {
   }
 }
 
+@media (max-width: 850px) {
+  .header-about {
+    h3 {
+      font-size: 64px;
+    }
+  }
+}
+
 @media (max-width: 750px) {
   .main {
     padding: 100px 25px !important;
@@ -273,5 +296,17 @@ section {
 @media (max-width: 500px) {
   .main {
     padding: 50px 12.5px !important;
+  }
+
+  .header-about {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .project-text-buttons {
+    gap: 16px !important;
   }
 }
