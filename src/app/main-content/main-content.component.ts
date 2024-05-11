@@ -19,6 +19,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     SkillSetComponent,
     MyWorkComponent,
     ContactComponent,
+
     TranslateModule,
   ],
   templateUrl: './main-content.component.html',

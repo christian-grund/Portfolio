@@ -1,11 +1,12 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, HttpClientModule],
+  imports: [TranslateModule, HttpClientModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

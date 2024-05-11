@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {
+  RouterLink,
+  RouterLinkActive,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -13,6 +18,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   imports: [
     CommonModule,
     RouterOutlet,
+    RouterModule,
+    RouterLink,
+    RouterLinkActive,
     HeaderComponent,
     MainContentComponent,
     FooterComponent,
