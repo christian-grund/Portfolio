@@ -124,7 +124,7 @@ section {
 .circle-1 {
   position: absolute;
   top: 50px;
-  left: 550px;
+  right: 550px;
 
   img {
     width: 110px;
@@ -158,12 +158,12 @@ section {
 
 .circle-4 {
   position: absolute;
-  top: 800px;
+  top: 650px;
   right: -150px;
   z-index: -1;
 
   img {
-    width: 650px;
+    width: 550px;
     height: auto;
   }
 }
@@ -208,7 +208,7 @@ section {
 .circle-8 {
   position: absolute;
   bottom: 50px;
-  left: 40%;
+  left: 700px;
   z-index: -1;
 
   img {
@@ -261,15 +261,41 @@ section {
   }
 
   .circle-1 {
-    top: 16px;
+    top: 20px;
+
+    img {
+      width: 80px;
+    }
   }
 
   .circle-2 {
     top: 300px;
   }
 
+  .circle-4 {
+    top: 780px;
+
+    img {
+      width: 450px;
+    }
+  }
+
+  .circle-6 {
+    top: 1375px;
+    left: 50px;
+
+    img {
+      width: 200px;
+    }
+  }
+
+  .circle-7 {
+    top: 1900px;
+  }
+
   .circle-8 {
     left: 12%;
+    bottom: 324px;
   }
 }
 
@@ -290,6 +316,62 @@ section {
 @media (max-width: 750px) {
   .main {
     padding: 100px 25px !important;
+  }
+
+  .circle-1 {
+    top: 16px;
+    left: 250px;
+    img {
+      width: 45px;
+    }
+  }
+
+  .circle-2 {
+    top: 250px;
+    right: 36px;
+
+    img {
+      width: 70px;
+    }
+  }
+
+  .circle-3 {
+    top: 300px;
+    left: -112px;
+
+    img {
+      width: 224px;
+    }
+  }
+
+  .circle-4 {
+    top: 775px;
+    right: -120px;
+
+    img {
+      width: 280px;
+    }
+  }
+
+  .circle-5 {
+    left: 32px;
+  }
+
+  .circle-6 {
+    left: 18px;
+    z-index: -1;
+
+    img {
+      width: 136px;
+    }
+  }
+
+  .circle-7 {
+    top: 2020px;
+  }
+
+  .circle-8 {
+    display: none;
   }
 }
 

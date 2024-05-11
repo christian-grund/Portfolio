@@ -28,7 +28,7 @@ section {
     text-align: center;
   }
 
-  p {
+  .skill-set-text {
     color: $color-white;
     font-size: 20px;
     text-align: center;
@@ -182,6 +182,12 @@ section {
 }
 
 @media (max-width: 500px) {
+  section {
+    p {
+      padding: unset;
+    }
+  }
+
   .main {
     padding: 50px 12.5px !important;
   }
@@ -197,12 +203,12 @@ section {
   }
 
   .skill-icon {
-    width: 160px !important;
+    width: 155px !important;
   }
 }
 
 @media (max-width: 350px) {
   .skill-icon {
-    width: 81px !important;
+    width: 140px !important;
   }
 }
