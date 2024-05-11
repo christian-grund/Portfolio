@@ -1,4 +1,49 @@
+@import "../shared/style/montserrat.scss";
+@import "../shared/style/colors.scss";
+
 .imprint {
   padding: 100px;
   margin-top: calc(-100vh - 120px);
+  position: relative;
+  color: $color-black !important;
+
+  h1 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 700;
+    color: $color-black;
+    padding: 16px 0;
+  }
+
+  h2 {
+    font-family: "Montserrat";
+    font-size: 24px;
+    color: $color-black;
+    padding: 12px 0;
+  }
+
+  h3 {
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: $primary-color;
+    color: $color-black;
+    padding: 8px 0;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .imprint {
+    padding: 50px 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .imprint {
+    padding: 24px 24px;
+  }
 }
