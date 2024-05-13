@@ -362,7 +362,7 @@ textarea:hover {
 
 @media (max-width: 500px) {
   .main {
-    padding: 100px 12.5px !important;
+    padding: 50px 12.5px 100px 12.5px !important;
   }
 
   .ball-big {
@@ -382,16 +382,22 @@ textarea:hover {
 }
 
 @media (max-width: 450px) {
-  .input-container {
-    padding-bottom: 16px;
-  }
+  // .input-container {
+  //   padding-bottom: 20px;
+  // }
 
   .go-up {
     bottom: 28px !important;
   }
 
   .ball-big {
-    bottom: 484px;
+    bottom: 464px;
+  }
+}
+
+@media (max-width: 400px) {
+  .error-message {
+    font-size: 13px;
   }
 }
 

@@ -80,6 +80,27 @@ section {
   }
 }
 
+.favicon {
+  position: absolute;
+  bottom: 100px;
+  left: 500px;
+  background-color: $primary-color;
+  border-radius: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+
+  p {
+    color: $color-white;
+    font-size: 52px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
 @media (max-width: 1400px) {
   h2 {
     font-size: 110px;

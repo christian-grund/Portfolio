@@ -26,7 +26,7 @@ export class ContactComponent {
   hovered: boolean = false;
   privacyPolicyChecked: boolean = false;
   clickCounter: number = 0;
-  mailTest: boolean = true;
+  mailTest: boolean = false;
 
   togglePrivacyPolicy() {
     console.log('privacyPolicyChecked', this.privacyPolicyChecked);
@@ -38,8 +38,8 @@ export class ContactComponent {
   }
 
   post = {
-    // endPoint: 'https://deineDomain.de/sendMail.php', // Anpassen!!!
-    endPoint: 'https://verenaschranz.de/sendMail.php', // Anpassen!!!
+    // endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://christian-grund.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -50,8 +50,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted && !this.mailTest) {
-      console.log('contactData:', this.contactData);
+    if (ngForm.valid && ngForm.submitted) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -63,11 +62,14 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log('ngForm.submitted && ngForm.form.valid && this.mailTest');
       ngForm.resetForm();
-    } else if (!ngForm.form.valid) {
-      console.error('Form not valid!');
+      this.clickCounter = 0;
     }
+    // else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    //   console.log('ngForm.submitted && ngForm.form.valid && this.mailTest');
+    // }
+    // else if (!ngForm.form.valid) {
+    //   console.error('Form not valid!');
+    // }
   }
 }
