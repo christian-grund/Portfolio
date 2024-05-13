@@ -21,9 +21,17 @@
         <div class="underline" [class.active]="underlineActive === 3"></div>
       </div>
       <div class="language-change">
-        <a (click)="changeLanguage('de')">DE</a>
+        <a
+          (click)="changeLanguage('en')"
+          [ngClass]="{ active: selectedLanguage === 'en' }"
+          >EN</a
+        >
         <p>|</p>
-        <a (click)="changeLanguage('en')">EN</a>
+        <a
+          (click)="changeLanguage('de')"
+          [ngClass]="{ active: selectedLanguage === 'de' }"
+          >DE</a
+        >
       </div>
     </div>
     <div class="menu">
@@ -47,9 +55,17 @@
       }}</a>
       <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
       <div class="language-change">
-        <a (click)="changeLanguage('de'); toggleMenu()">DE</a>
+        <a
+          (click)="changeLanguage('en'); toggleMenu()"
+          [ngClass]="{ active: selectedLanguage === 'en' }"
+          >EN</a
+        >
         <p>|</p>
-        <a (click)="changeLanguage('en'); toggleMenu()">EN</a>
+        <a
+          (click)="changeLanguage('de'); toggleMenu()"
+          [ngClass]="{ active: selectedLanguage === 'de' }"
+          >DE</a
+        >
       </div>
     </div>
   </div>
