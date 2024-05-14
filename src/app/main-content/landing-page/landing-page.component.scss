@@ -2,7 +2,6 @@
 @import "../../shared/style/mixins.scss";
 
 section {
-  // height: calc(100vh + 120px);
   height: 100vh;
   display: flex;
   width: 100%;
@@ -56,7 +55,6 @@ section {
 
   img {
     position: relative;
-    width: 100vw;
     width: 892px;
     height: auto;
   }
@@ -120,6 +118,7 @@ section {
     img {
       position: relative;
       width: 62vw;
+      height: auto;
     }
   }
 }
@@ -186,54 +185,37 @@ section {
   }
 }
 
-@media (max-width: 700px) {
-  // .social-icons {
-  //   display: none;
-  // }
-}
-
 @media (max-width: 600px) {
-  .headline {
-    h1 {
-      font-size: 50px !important;
-    }
-    h2 {
-      font-size: 90px !important;
-      &:last-child {
-        font-size: 84px !important;
+  .aot-right {
+    margin-top: 10vh;
+
+    .headline {
+      h1 {
+        font-size: 8.8vw !important;
+      }
+      h2 {
+        font-size: 15.5vw !important;
+        &:last-child {
+          font-size: 14.5vw !important;
+        }
       }
     }
   }
 
   .circle {
+    top: -15vw !important;
+    left: -20vw !important;
     img {
-      width: 720px !important;
+      width: 115vw !important;
       height: auto !important;
     }
   }
 }
 
 @media (max-width: 500px) {
-  .headline {
-    h1 {
-      font-size: 40px !important;
-    }
-    h2 {
-      font-size: 71.5px !important;
-      &:last-child {
-        font-size: 67px !important;
-      }
-    }
-  }
-
   .circle {
     top: -12px;
     left: -221px;
-
-    img {
-      width: 620px !important;
-      height: auto !important;
-    }
   }
 
   .social-icons {
@@ -242,64 +224,14 @@ section {
 }
 
 @media (max-width: 400px) {
-  .headline {
-    h1 {
-      font-size: 36px !important;
-    }
-    h2 {
-      font-size: 62px !important;
-      &:last-child {
-        font-size: 58px !important;
-      }
-    }
-  }
-
-  .circle {
-    img {
-      width: 570px !important;
-      height: auto !important;
-    }
-  }
-
   .portrait {
     left: -20px;
-    // img {
-    //   height: 575px !important;
-    // }
   }
 }
 
 @media (max-width: 375px) {
-  // .portrait {
-  //   img {
-  //     height: 385px !important;
-  //     width: auto;
-  //   }
-  // }
-
   .social-icons {
     display: none;
-  }
-}
-
-@media (max-width: 350px) {
-  .headline {
-    h1 {
-      font-size: 33px !important;
-    }
-    h2 {
-      font-size: 58px !important;
-      &:last-child {
-        font-size: 55px !important;
-      }
-    }
-  }
-
-  .circle {
-    img {
-      width: 540px !important;
-      height: auto !important;
-    }
   }
 }
 
