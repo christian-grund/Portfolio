@@ -27,6 +27,7 @@ export class ContactComponent {
   privacyPolicyChecked: boolean = false;
   clickCounter: number = 0;
   mailTest: boolean = false;
+  isContainerVisible: boolean = false;
 
   togglePrivacyPolicy() {
     console.log('privacyPolicyChecked', this.privacyPolicyChecked);
@@ -35,6 +36,10 @@ export class ContactComponent {
 
   toggleLabel() {
     this.clickCounter++;
+  }
+
+  toggleContainer() {
+    this.isContainerVisible = !this.isContainerVisible;
   }
 
   post = {
@@ -51,6 +56,7 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
+      this.toggleContainer();
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -62,14 +68,20 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-      ngForm.resetForm();
-      this.clickCounter = 0;
+      setTimeout(() => {
+        this.toggleContainer();
+        ngForm.resetForm();
+        this.clickCounter = 0;
+      }, 2500);
     }
     // else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
     //   console.log('ngForm.submitted && ngForm.form.valid && this.mailTest');
-    // }
-    // else if (!ngForm.form.valid) {
-    //   console.error('Form not valid!');
+    //   this.toggleContainer();
+    //   setTimeout(() => {
+    //     this.toggleContainer();
+    //     ngForm.resetForm();
+    //     this.clickCounter = 0;
+    //   }, 2500);
     // }
   }
 }

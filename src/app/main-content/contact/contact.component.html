@@ -152,11 +152,16 @@
             {{ "sayHello" | translate }}
           </button>
         </div>
+
+        <div class="mail-success" [ngClass]="{ show: isContainerVisible }">
+          <div class="bg-img">
+            <div class="success-text">
+              <p>Thank you!</p>
+            </div>
+          </div>
+        </div>
       </form>
     </div>
-
-    <!-- <div class="circle-1"></div> -->
-    <!-- <div class="circle-2"></div> -->
 
     <div class="ball-big">
       <img src="./assets/img/background/ball.svg" alt="Ball big" />

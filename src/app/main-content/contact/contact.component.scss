@@ -62,7 +62,7 @@ h6 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    position: relative !important;
     z-index: 10;
     gap: 24px;
 
@@ -295,6 +295,48 @@ textarea:hover {
   }
 }
 
+.mail-success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: right 0.5s;
+  z-index: 115;
+  display: none; // Standardmäßig ausblenden
+
+  .bg-img {
+    position: relative;
+    width: 35vw;
+    height: 35vw;
+    max-width: 500px;
+    max-height: 500px;
+    background: url("../../../assets/img/background/ball.svg") center center
+      no-repeat;
+    background-size: cover;
+
+    .success-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $color-white;
+      font-size: 72px;
+      font-weight: bold;
+    }
+  }
+
+  &.show {
+    display: block; // Bei Anzeige der Klasse .show einblenden
+  }
+}
+
+@media (max-width: 1440px) {
+  .success-text {
+    font-size: 5vw !important;
+  }
+}
+
 @media (max-width: 1250px) {
   .wrapper {
     gap: 50px !important;
@@ -319,6 +361,15 @@ textarea:hover {
 
     .form {
       width: 100%;
+    }
+  }
+
+  .bg-img {
+    width: 75vw !important;
+    height: 75vw !important;
+
+    .success-text {
+      font-size: 10vw !important;
     }
   }
 
