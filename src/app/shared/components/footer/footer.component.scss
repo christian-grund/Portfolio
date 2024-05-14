@@ -24,7 +24,12 @@ section {
     .logo {
       display: flex;
       justify-content: flex-start;
-      width: 154px;
+      width: 120px;
+
+      img {
+        width: 112px;
+        height: auto;
+      }
     }
 
     .top-content {

@@ -146,6 +146,14 @@ section {
 @media (max-width: 500px) {
   section {
     padding: 100px 25px 50px 25px;
+
+    .right {
+      span {
+        font-size: 20px !important;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+    }
   }
 
   .ball-big {
