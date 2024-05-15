@@ -62,13 +62,13 @@
       <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
       <div class="language-change">
         <a
-          (click)="changeLanguage('en')"
+          (click)="changeLanguage('en'); toggleMenu()"
           [ngClass]="{ active: selectedLanguage === 'en' }"
           >EN</a
         >
         <p>|</p>
         <a
-          (click)="changeLanguage('de')"
+          (click)="changeLanguage('de'); toggleMenu()"
           [ngClass]="{ active: selectedLanguage === 'de' }"
           >DE</a
         >
