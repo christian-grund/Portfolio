@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   RouterLink,
@@ -32,7 +32,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Portfolio';
-  selectedLanguage!: string;
+  @Input() selectedLanguage!: string;
 
   constructor(public translate: TranslateService) {
     translate.setDefaultLang('en');
