@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillSetComponent } from './skill-set/skill-set.component';
@@ -25,4 +25,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent {}
+export class MainContentComponent {
+  @Input() selectedLanguage!: string;
+}

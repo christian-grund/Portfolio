@@ -32,6 +32,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Portfolio';
+  selectedLanguage!: string;
 
   constructor(public translate: TranslateService) {
     translate.setDefaultLang('en');

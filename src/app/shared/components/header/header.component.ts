@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -15,14 +15,16 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
   underlineActive: number | null = null;
   isOverlayActive: boolean = false;
-  selectedLanguage: string = 'en';
+  // selectedLanguage: string = 'en';
+
+  @Input() selectedLanguage: string = 'en';
 
   constructor(public translateService: TranslateService) {}
 
   changeLanguage(langCode: string) {
     this.translateService.use(langCode);
     this.selectedLanguage = langCode;
-    console.log(this.selectedLanguage);
+    // console.log(this.selectedLanguage);
   }
 
   toggleUnderline(index: number): void {

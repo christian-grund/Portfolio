@@ -1,7 +1,7 @@
 <section>
   <div class="main">
     <div class="aot-right">
-      <div class="headline">
+      <div [ngClass]="getHeadlineClass()">
         <h1>{{ "helloIAm" | translate }}</h1>
         <h2>FRONTEND</h2>
         <h2>{{ "developer" | translate }}</h2>
@@ -24,8 +24,9 @@
       /></a>
     </div>
 
+    <!-- {{ "scroll" | translate }}  -->
     <div class="scroll">
-      <span>{{ "scroll" | translate }}</span>
+      <span>Sprache: {{ selectedLanguage }}</span>
       <div></div>
     </div>
 
