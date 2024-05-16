@@ -33,15 +33,6 @@ export class MyWorkComponent {
       translatedDescription: '',
     },
     {
-      mockup: 'simple_crm.png',
-      name: 'Simple CRM',
-      projectLanguage: 'Angular | Firebase',
-      description: 'simpleCRMDescription',
-      link: '',
-      liveTest: '#',
-      translatedDescription: '',
-    },
-    {
       mockup: 'pokedex.png',
       name: 'Pokédex',
       projectLanguage: 'JavaScript | HTML | CSS | Api',

@@ -113,33 +113,477 @@ section {
   }
 }
 
-/* Wende die Animation auf jeden Buchstaben an */
+.h1-hello-i-am {
+  span {
+    display: flex;
+    font-size: 71.5px;
+    line-height: 1;
+    display: inline-block;
+    animation: moveUpAndDown 0.4s linear forwards;
+
+    &:nth-child(2) {
+      animation-delay: 0.075s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.225s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 0.375s;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 0.45s;
+    }
+
+    &:nth-child(10) {
+      animation-delay: 0.525s;
+    }
+
+    &:nth-child(11) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(13) {
+      animation-delay: 0.675s;
+    }
+
+    &:nth-child(14) {
+      animation-delay: 0.75s;
+    }
+
+    &:nth-child(15) {
+      animation-delay: 0.825s;
+    }
+
+    &:nth-child(16) {
+      animation-delay: 0.9s;
+    }
+
+    &:nth-child(17) {
+      animation-delay: 0.975s;
+    }
+
+    &:nth-child(18) {
+      animation-delay: 1.05s;
+    }
+
+    &:nth-child(19) {
+      animation-delay: 1.125s;
+    }
+
+    &:nth-child(20) {
+      animation-delay: 1.2s;
+    }
+
+    &:nth-child(21) {
+      animation-delay: 1.275s;
+    }
+  }
+}
+
 .h2-frontend {
-  display: inline-block;
-  font-size: 24px; /* Stelle die Schriftgröße entsprechend ein */
+  display: flex;
+
+  span {
+    font-size: 124px;
+    display: inline-block;
+    animation: moveDownAndUp 0.4s linear forwards;
+
+    &:nth-child(8) {
+      animation-delay: 1.4s;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 1.5s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 1.6s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 1.7s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 1.8s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.9s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    &:nth-child(1) {
+      animation-delay: 2.1s;
+    }
+  }
 }
 
-.h2-frontend span {
-  display: inline-block;
-  animation: moveUpAndDown 1s ease-in-out infinite; /* Verwende die definierte Animation */
-}
+.h2-developer {
+  display: flex;
 
-/* Füge einen kleinen Abstand zwischen den Buchstaben hinzu */
-.h2-frontend span:not(:last-child) {
-  margin-right: 4px;
+  span {
+    font-size: 116px;
+    display: inline-block;
+    animation: moveUpAndDown 0.4s linear forwards;
+
+    &:nth-child(1) {
+      animation-delay: 2.2s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 2.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 2.4s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 2.5s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 2.6s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 2.7s;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 2.8s;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 2.9s;
+    }
+
+    &:nth-child(9) {
+      animation-delay: 3s;
+    }
+  }
 }
 
 @keyframes moveUpAndDown {
   0% {
-    transform: translateY(0);
+    transform: translateY(150px) scaleY(0.9s);
+  }
+  5% {
+    opacity: 0.7s;
   }
   50% {
-    transform: translateY(
-      -10px
-    ); /* Hier kannst du die Höhe ändern, je nachdem wie hoch die Buchstaben wandern sollen */
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(17px) scaleY(0.9);
+  }
+  75% {
+    transform: translateY(22px) scaleY(0.9);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moveDownAndUp {
+  0% {
+    transform: translateY(-150px) scaleY(0.9s);
+  }
+  5% {
+    opacity: 0.7s;
+  }
+  50% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(-17px) scaleY(0.9);
+  }
+  75% {
+    transform: translateY(-22px) scaleY(0.9);
+  }
+  100% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+}
+
+// .h2-typewrite {
+//   border-right: 6px solid $primary-color;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   position: relative; /* Füge die Position hinzu, um die Lösch-Animation zu steuern */
+//   animation: typewriter 4.5s steps(10, end) infinite,
+//     blink-caret 0.75s step-end infinite;
+// }
+
+// @keyframes typewriter {
+//   0% {
+//     width: 0;
+//   }
+
+//   25%,
+//   100% {
+//     width: 100%;
+//   }
+// }
+
+// /* Lösch-Animation */
+// @keyframes delete-typewriter {
+//   from {
+//     width: 100%;
+//   }
+//   to {
+//     width: 0;
+//   }
+// }
+
+// /* Der Typewriter-Cursor-Effekt */
+// @keyframes blink-caret {
+//   from,
+//   to {
+//     border-color: transparent;
+//   }
+//   50% {
+//     border-color: $primary-color;
+//   }
+// }
+
+// /* Steuere die Lösch-Animation */
+// .h2-typewrite::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   height: 100%;
+//   width: 100%;
+//   background: white;
+//   animation: delete-typewriter 1.5s steps(10, end) infinite;
+//   animation-delay: 4.5s; /* Starte die Lösch-Animation nach der Typewriter-Animation */
+// }
+
+// h2 {
+//   position: relative;
+// }
+
+// h2 > span {
+//   opacity: 0;
+// }
+
+// .text_1.animate,
+// .text_2.animate,
+// .text_3.animate {
+//   animation-duration: 3s;
+//   animation-timing-function: steps(25, end);
+//   animation-iteration-count: infinite;
+// }
+
+// .text_1.animate {
+//   animation-name: text1;
+// }
+
+// .text_2.animate {
+//   animation-name: text2;
+// }
+
+// .text_3.animate {
+//   animation-name: text3;
+// }
+
+// .text_3 {
+//   letter-spacing: -1.2px;
+// }
+
+// .text_1,
+// .text_2,
+// .text_3 {
+//   overflow: hidden;
+//   white-space: nowrap;
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .text_1::after,
+// .text_2::after,
+// .text_3::after {
+//   content: "|";
+//   position: absolute;
+//   right: 0;
+//   animation: caret infinite;
+//   animation-duration: 0.75s;
+//   animation-timing-function: steps(1, end);
+// }
+
+// @keyframes caret {
+//   0%,
+//   100% {
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes text1 {
+//   0%,
+//   33%,
+//   66%,
+//   100% {
+//     width: 0;
+//   }
+//   5%,
+//   25% {
+//     width: 100%;
+//     opacity: 1; /* Text 1 ist während der Animation sichtbar */
+//   }
+// }
+
+// @keyframes text2 {
+//   0%,
+//   33%,
+//   66%,
+//   100% {
+//     width: 0;
+//   }
+//   40%,
+//   60% {
+//     width: 100%;
+//     opacity: 1; /* Text 2 ist während der Animation sichtbar */
+//   }
+// }
+
+// @keyframes text3 {
+//   0%,
+//   33%,
+//   66%,
+//   100% {
+//     width: 0;
+//   }
+//   75%,
+//   95% {
+//     width: 100%;
+//     opacity: 1; /* Text 3 ist während der Animation sichtbar */
+//   }
+// }
+
+// .text_4 {
+//   opacity: 0;
+//   animation: fadeIn 1s forwards; /* Animation für das Einblenden */
+//   animation-delay: 9s; /* Verzögerung nach Abschluss der Animationen für Text 1-3 */
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+.typewrite {
+  line-height: 0.8;
+}
+
+.text_1 {
+  animation: text1;
+  letter-spacing: -1.5px;
+}
+.text_2 {
+  animation: text2;
+}
+.text_3 {
+  animation: text3;
+  letter-spacing: -2.5px;
+}
+.text_1,
+.text_2,
+.text_3 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  // padding-right: 14px;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+.text_1::after,
+.text_2::after,
+.text_3::after {
+  content: "|";
+  font-size: unset;
+  font-size: 70%;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text1 {
+  0%,
+  33%,
+  66%,
+  100% {
+    width: 0;
+  }
+  5%,
+  25% {
+    width: 100%;
+  }
+}
+
+@keyframes text2 {
+  0%,
+  33%,
+  66%,
+  100% {
+    width: 0;
+  }
+  40%,
+  60% {
+    width: 90%;
+  }
+}
+
+@keyframes text3 {
+  0%,
+  33%,
+  66%,
+  100% {
+    width: 0;
+  }
+  75%,
+  95% {
+    width: 100%;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
@@ -153,10 +597,12 @@ section {
   }
 }
 
-// and (max-height: 900px)
 @media (max-width: 1340px) {
   .headline {
     h1 {
+      font-size: 55px !important;
+    }
+    .h1-hello-i-am {
       font-size: 55px !important;
     }
     h2 {
@@ -166,6 +612,14 @@ section {
         font-size: unset;
         font-size: 89px !important;
       }
+    }
+    .h2-frontend {
+      font-size: 95px !important;
+    }
+
+    .h2-developer {
+      font-size: unset;
+      font-size: 89px !important;
     }
   }
 }
