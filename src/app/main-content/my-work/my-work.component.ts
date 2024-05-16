@@ -19,7 +19,7 @@ export class MyWorkComponent {
       projectLanguage: 'JavaScript | HTML | CSS',
       description: 'joinDescription',
       link: 'JOIN',
-      liveTest: 'http://christian-grund.developerakademie.net/Join/logIn.html',
+      liveTest: 'https://join.christian-grund.dev',
       translatedDescription: '',
     },
     {
@@ -28,8 +28,7 @@ export class MyWorkComponent {
       projectLanguage: 'JavaScript | HTML | CSS',
       description: 'polloLocoDescription',
       link: 'El-Pollo-Loco',
-      liveTest:
-        'http://christian-grund.developerakademie.net/El%20Pollo%20Loco/el_pollo_locco.html',
+      liveTest: 'https://polloloco.christian-grund.dev',
       translatedDescription: '',
     },
     {
@@ -38,8 +37,7 @@ export class MyWorkComponent {
       projectLanguage: 'JavaScript | HTML | CSS | Api',
       description: 'pokedexDescription',
       link: 'Pokedex',
-      liveTest:
-        'https://christian-grund.developerakademie.net/Pokedex/pokedex.html',
+      liveTest: 'https://pokedex.christian-grund.dev',
       translatedDescription: '',
     },
   ];
