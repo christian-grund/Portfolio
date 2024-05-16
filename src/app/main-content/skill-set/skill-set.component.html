@@ -1,7 +1,11 @@
 <section>
   <div class="main">
-    <h3>{{ "skillSetHeadline" | translate }}</h3>
-    <p class="skill-set-text">{{ "skillSetText" | translate }}</p>
+    <h3 data-aos="fade-left" data-aos-duration="1000">
+      {{ "skillSetHeadline" | translate }}
+    </h3>
+    <p class="skill-set-text" data-aos="fade-right" data-aos-duration="1000">
+      {{ "skillSetText" | translate }}
+    </p>
     <div class="skill-set">
       <div class="skill-icons">
         <div class="skill-icon" *ngFor="let skill of skillSet; let i = index">

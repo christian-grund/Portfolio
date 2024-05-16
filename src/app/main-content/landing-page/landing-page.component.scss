@@ -113,6 +113,36 @@ section {
   }
 }
 
+/* Wende die Animation auf jeden Buchstaben an */
+.h2-frontend {
+  display: inline-block;
+  font-size: 24px; /* Stelle die Schriftgröße entsprechend ein */
+}
+
+.h2-frontend span {
+  display: inline-block;
+  animation: moveUpAndDown 1s ease-in-out infinite; /* Verwende die definierte Animation */
+}
+
+/* Füge einen kleinen Abstand zwischen den Buchstaben hinzu */
+.h2-frontend span:not(:last-child) {
+  margin-right: 4px;
+}
+
+@keyframes moveUpAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -10px
+    ); /* Hier kannst du die Höhe ändern, je nachdem wie hoch die Buchstaben wandern sollen */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1440px) {
   .circle {
     img {
@@ -189,7 +219,7 @@ section {
   .aot-right {
     margin-top: 10vh;
 
-    .headline-en {
+    .headline {
       h1 {
         font-size: 8.8vw !important;
       }
