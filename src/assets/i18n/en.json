@@ -51,6 +51,23 @@
 "imprintGenerator": "imprint generator",
 "of": "of",
 "lawFirm": "Hasselbach Law Firm, Frankfurt.",
-"createdLogo": "Created my free logo at"
+"createdLogo": "Created my free logo at", 
+"privacyPolicy-h1": "Privacy Policy",
+"privacyPolicy-p": "Responsible for data processing on this website is me, Christian Grund, reachable at ",
+"privacyPolicy-h2-collection": "Collection and Storage of Personal Data",
+"privacyPolicy-p-collection": "This website does not collect or store any personal data. There are no contact forms, no registration options, and no comment functionality.",
+"privacyPolicy-h2-cookies": "Cookies",
+"privacyPolicy-p-cookies": "This website does not use cookies.",
+"privacyPolicy-h2-logfiles": "Server Log Files",
+"privacyPolicy-p-logfiles": "No information is automatically stored in server log files when you visit this website.",
+"privacyPolicy-h2-analytics": "Analytics Tools",
+"privacyPolicy-p-analytics": "This website does not use analytics tools.",
+"privacyPolicy-h2-datasharing": "Data Sharing",
+"privacyPolicy-p-datasharing": "No personal data is shared with third parties.",
+"privacyPolicy-h2-rights": "Rights of the Data Subject",
+"privacyPolicy-p-rights": "As no personal data is collected, the rights to information, correction, deletion, and objection do not apply.",
+"privacyPolicy-h2-changes": "Changes to the Privacy Policy",
+"privacyPolicy-p-changes": "I reserve the right to adjust this privacy policy if necessary.",
+"privacyPolicy-p-date": "Last updated: 18.05.2024"
 }
 

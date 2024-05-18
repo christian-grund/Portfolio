@@ -1,13 +1,13 @@
 @import "../shared/style/montserrat.scss";
 @import "../shared/style/colors.scss";
 
-.imprint {
+.data-privacy {
   padding: 100px;
   margin-top: calc(-100vh - 120px);
   position: relative;
   color: $color-black !important;
 
-  h1 {
+  .dp-h1 {
     font-family: "Montserrat";
     font-size: 40px;
     font-weight: 700;
@@ -15,23 +15,14 @@
     padding: 16px 0;
   }
 
-  h2 {
-    font-family: "Montserrat";
-    font-size: 24px;
-    color: $primary-color;
-    padding: 12px 0;
-  }
-
-  h3 {
+  .dp-h2 {
     font-family: "Montserrat";
     font-size: 20px;
+    font-weight: 700;
     color: $primary-color;
     padding: 8px 0;
-  }
-
-  .p-blue {
-    color: $primary-color;
-    font-weight: bold;
+    margin-top: 24px !important;
+    padding: 12px 0;
   }
 
   a {
@@ -45,13 +36,13 @@
 }
 
 @media (max-width: 1000px) {
-  .imprint {
+  .data-privcy {
     padding: 50px 50px;
   }
 }
 
 @media (max-width: 500px) {
-  .imprint {
+  .data-privcy {
     padding: 24px 24px;
   }
 }

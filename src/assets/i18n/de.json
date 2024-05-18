@@ -50,6 +50,22 @@
 "imprintGenerator": "Impressum Generator",
 "of": "der",
 "lawFirm": "Kanzlei Hasselbach, Frankfurt",
-"createdLogo": "Das kostenlose Logo wurde erstellt bei"
-
+"createdLogo": "Das kostenlose Logo wurde erstellt bei",
+"privacyPolicy-h1": "Datenschutzerklärung",
+"privacyPolicy-p": "Verantwortlich für die Datenverarbeitung auf dieser Webseite bin ich, Christian Grund, erreichbar unter ",
+"privacyPolicy-h2-collection": "Erhebung und Speicherung personenbezogener Daten",
+"privacyPolicy-p-collection": "Auf dieser Webseite werden keine personenbezogenen Daten erhoben oder gespeichert. Es gibt keine Kontaktformulare, keine Möglichkeit zur Registrierung und keine Kommentarfunktion.",
+"privacyPolicy-h2-cookies": "Cookies",
+"privacyPolicy-p-cookies": "Diese Webseite verwendet keine Cookies.",
+"privacyPolicy-h2-logfiles": "Server-Log-Dateien",
+"privacyPolicy-p-logfiles": "Beim Besuch dieser Webseite werden automatisch keine Informationen in Server-Log-Dateien gespeichert.",
+"privacyPolicy-h2-analytics": "Analyse-Tools",
+"privacyPolicy-p-analytics": "Diese Webseite verwendet keine Analyse-Tools.",
+"privacyPolicy-h2-datasharing": "Weitergabe von Daten",
+"privacyPolicy-p-datasharing": "Es werden keine personenbezogenen Daten an Dritte weitergegeben.",
+"privacyPolicy-h2-rights": "Rechte der betroffenen Person",
+"privacyPolicy-p-rights": "Da keine personenbezogenen Daten erhoben werden, entfallen die Rechte auf Auskunft, Berichtigung, Löschung und Widerspruch.",
+"privacyPolicy-h2-changes": "Änderungen der Datenschutzerklärung",
+"privacyPolicy-p-changes": "Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf anzupassen.",
+"privacyPolicy-p-date": "Stand: 18.05.2024"
 }

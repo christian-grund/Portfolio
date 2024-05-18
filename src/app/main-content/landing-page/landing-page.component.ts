@@ -18,8 +18,6 @@ export class LandingPageComponent implements OnChanges {
     if (changes['language']) {
       this.selectedLanguage = changes['language'].currentValue;
       console.log('language ngOnChanges:', this.selectedLanguage);
-    } else {
-      console.log('Did not work');
     }
   }
 
