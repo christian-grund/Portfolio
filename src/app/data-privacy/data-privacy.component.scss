@@ -1,36 +1,45 @@
 @import "../shared/style/montserrat.scss";
 @import "../shared/style/colors.scss";
 
-.data-privacy {
-  padding: 100px;
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
   margin-top: calc(-100vh - 120px);
-  position: relative;
-  color: $color-black !important;
+  box-sizing: border-box;
 
-  .dp-h1 {
-    font-family: "Montserrat";
-    font-size: 40px;
-    font-weight: 700;
-    color: $primary-color;
-    padding: 16px 0;
-  }
+  .data-privacy {
+    position: relative;
+    // box-sizing: border-box;
+    color: $color-black !important;
+    min-height: calc(100vh - 120px);
+    padding: 100px;
+    flex: 1 !important;
 
-  .dp-h2 {
-    font-family: "Montserrat";
-    font-size: 20px;
-    font-weight: 700;
-    color: $primary-color;
-    padding: 8px 0;
-    margin-top: 24px !important;
-    padding: 12px 0;
-  }
+    .dp-h1 {
+      font-family: "Montserrat";
+      font-size: 40px;
+      font-weight: 700;
+      color: $primary-color;
+      padding: 16px 0;
+    }
 
-  a {
-    color: $primary-color;
-    text-decoration: none;
+    .dp-h2 {
+      font-family: "Montserrat";
+      font-size: 20px;
+      font-weight: 700;
+      color: $primary-color;
+      padding: 8px 0;
+      margin-top: 24px !important;
+      padding: 12px 0;
+    }
 
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

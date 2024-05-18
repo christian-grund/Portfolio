@@ -63,9 +63,15 @@
 "privacyPolicy-p-analytics": "Diese Webseite verwendet keine Analyse-Tools.",
 "privacyPolicy-h2-datasharing": "Weitergabe von Daten",
 "privacyPolicy-p-datasharing": "Es werden keine personenbezogenen Daten an Dritte weitergegeben.",
-"privacyPolicy-h2-rights": "Rechte der betroffenen Person",
-"privacyPolicy-p-rights": "Da keine personenbezogenen Daten erhoben werden, entfallen die Rechte auf Auskunft, Berichtigung, Löschung und Widerspruch.",
+"privacyPolicy-h2-externallinks": "Externe Links",
+"privacyPolicy-p-externallinks": "Diese Webseite kann Links zu externen Seiten enthalten, auf die diese Datenschutzerklärung nicht zutrifft. Bitte überprüfe die Datenschutzerklärung der jeweiligen externen Webseite.",
+"privacyPolicy-h2-security": "Sicherheit",
+"privacyPolicy-p-security": "Ich bemühe mich, angemessene Sicherheitsmaßnahmen zu treffen, um deine persönlichen Daten zu schützen. Bitte beachte jedoch, dass keine Übertragungsmethode über das Internet oder elektronische Speicherung 100% sicher ist.",
+"privacyPolicy-h2-children": "Kinder",
+"privacyPolicy-p-children": "Diese Webseite richtet sich nicht an Personen unter 16 Jahren und sammelt wissentlich keine persönlichen Daten von Personen unter 16 Jahren. Wenn du feststellst, dass dein Kind uns persönliche Daten ohne deine Zustimmung zur Verfügung gestellt hat, kontaktiere uns bitte, damit wir diese Informationen löschen können.",
 "privacyPolicy-h2-changes": "Änderungen der Datenschutzerklärung",
 "privacyPolicy-p-changes": "Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf anzupassen.",
+"privacyPolicy-h2-contact": "Kontakt",
+"privacyPolicy-p-contact": "Bei Fragen oder Bedenken bezüglich dieser Datenschutzerklärung kontaktiere mich bitte unter ",
 "privacyPolicy-p-date": "Stand: 18.05.2024"
 }

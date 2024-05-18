@@ -64,10 +64,15 @@
 "privacyPolicy-p-analytics": "This website does not use analytics tools.",
 "privacyPolicy-h2-datasharing": "Data Sharing",
 "privacyPolicy-p-datasharing": "No personal data is shared with third parties.",
-"privacyPolicy-h2-rights": "Rights of the Data Subject",
-"privacyPolicy-p-rights": "As no personal data is collected, the rights to information, correction, deletion, and objection do not apply.",
+"privacyPolicy-h2-externallinks": "External Links",
+"privacyPolicy-p-externallinks": "This website may contain links to external sites that are not governed by this privacy policy. Please review the privacy policy of the respective external website.",
+"privacyPolicy-h2-security": "Security",
+"privacyPolicy-p-security": "I endeavor to take reasonable security measures to protect your personal data. However, please note that no transmission method over the Internet or electronic storage is 100% secure.",
+"privacyPolicy-h2-children": "Children",
+"privacyPolicy-p-children": "This website is not directed at individuals under 16 years of age and does not knowingly collect any personal data from individuals under 16 years of age. If you become aware that your child has provided us with personal information without your consent, please contact us to delete that information.",
 "privacyPolicy-h2-changes": "Changes to the Privacy Policy",
-"privacyPolicy-p-changes": "I reserve the right to adjust this privacy policy if necessary.",
+"privacyPolicy-p-changes": "This privacy policy may be updated to reflect changes in the way personal data is handled. Any changes will be posted on this page.",
+"privacyPolicy-h2-contact": "Contact",
+"privacyPolicy-p-contact": "For questions or concerns regarding this privacy policy, please contact me at ",
 "privacyPolicy-p-date": "Last updated: 18.05.2024"
 }
-
