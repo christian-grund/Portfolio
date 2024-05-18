@@ -8,10 +8,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // position: absolute;
-  // bottom: 0;
-
-  // margin: auto;
+  position: relative;
   background: linear-gradient(
     to bottom right,
     $primary-color,
@@ -22,12 +19,11 @@ section {
     width: 100%;
     max-width: 1440px !important;
     margin: auto;
-    position: relative;
 
     .logo {
       display: flex;
       justify-content: flex-start;
-      width: 120px;
+      width: 154px;
 
       img {
         width: 64px;
@@ -74,9 +70,10 @@ section {
       transform: translateX(-50%);
       display: flex;
       justify-content: center;
-      flex-direction: row;
-      gap: 16px;
-      bottom: 75px;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      bottom: 40px;
       cursor: pointer;
 
       .textsites-wrapper {
@@ -95,7 +92,7 @@ section {
           font-weight: bold;
         }
         .imprint-underline {
-          width: 50px;
+          width: 70px;
           height: 0;
           margin-top: 4px;
           border: 1px solid $color-white;
@@ -109,7 +106,24 @@ section {
           opacity: 1;
         }
 
-        .separate-bar {
+        .imprint-underline-dp {
+          width: 132px;
+          height: 0;
+          margin-top: 4px;
+          border: 1px solid $color-white;
+          transition: transform 0.2s ease;
+          transform: translateX(-25%);
+          opacity: 0;
+        }
+
+        &:hover .imprint-underline-dp {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      .separate-bar {
+        .separate-bar-p {
+          color: $color-white !important;
         }
       }
     }
