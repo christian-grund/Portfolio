@@ -7,7 +7,7 @@ import { MyWorkComponent } from './my-work/my-work.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import AOS from 'aos';
+// import AOS from 'aos';
 // import * as AOS from 'aos';
 // import 'aos/dist/aos.css';
 // import 'aos/dist/aos.js';

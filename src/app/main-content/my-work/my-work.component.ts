@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import AOS from 'aos';
+// import AOS from 'aos';
 
 @Component({
   selector: 'app-my-work',
@@ -44,7 +44,7 @@ export class MyWorkComponent {
 
   constructor(private translateService: TranslateService) {
     this.translateProjectDescriptions();
-    AOS.init();
+    // AOS.init();
   }
 
   translateProjectDescriptions(): void {

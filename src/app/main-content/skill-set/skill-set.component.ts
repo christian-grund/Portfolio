@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+// import AOS from 'aos';
 
 @Component({
   selector: 'app-skill-set',
@@ -25,6 +25,6 @@ export class SkillSetComponent {
   ];
 
   constructor() {
-    AOS.init();
+    // AOS.init();
   }
 }

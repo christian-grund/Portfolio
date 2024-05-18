@@ -23,10 +23,20 @@
     </div>
 
     <div class="imprint">
-      <a routerLink="imprint" (click)="scrollToTop()"
-        ><p>{{ "imprint" | translate }}</p></a
-      >
-      <div class="imprint-underline"></div>
+      <div class="textsites-wrapper">
+        <a routerLink="imprint" (click)="scrollToTop()"
+          ><p>{{ "imprint" | translate }}</p></a
+        >
+        <div class="imprint-underline"></div>
+      </div>
+
+      <div class="separate-bar"><p>|</p></div>
+      <div class="textsites-wrapper">
+        <a routerLink="imprint" (click)="scrollToTop()"
+          ><p>{{ "data-privacy1" | translate }}</p></a
+        >
+        <div class="imprint-underline"></div>
+      </div>
     </div>
   </div>
 </section>

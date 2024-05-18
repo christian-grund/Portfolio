@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+// import AOS from 'aos';
 // import 'aos/dist/aos.css';
 // import 'aos/dist/aos.js';
 
@@ -17,6 +17,6 @@ export class AboutMeComponent {
   // }
 
   constructor() {
-    AOS.init();
+    // AOS.init();
   }
 }
