@@ -72,7 +72,7 @@ export class ContactComponent {
         this.toggleContainer();
         ngForm.resetForm();
         this.clickCounter = 0;
-      }, 2500);
+      }, 5000);
     }
     // else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
     //   console.log('ngForm.submitted && ngForm.form.valid && this.mailTest');

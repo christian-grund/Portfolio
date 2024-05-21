@@ -1,16 +1,16 @@
 @import "../../style/colors.scss";
 
 section {
-  position: relative;
+  position: absolute;
+  width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
-  // height: 100vh;
 
   .site-wrapper {
-    // height: 120px;
     width: 100%;
     background-color: $primary-color;
-    position: relative; /* Ändere dies, um sicherzustellen, dass es nicht fixed oder sticky ist */
+    position: relative;
+    // height: 120px;
     z-index: 1000;
 
     nav {

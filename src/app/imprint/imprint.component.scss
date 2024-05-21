@@ -2,8 +2,7 @@
 @import "../shared/style/colors.scss";
 
 .imprint {
-  padding: 100px;
-  // margin-top: -120px;
+  padding: 200px 100px 100px 100px;
   position: relative;
   color: $color-black !important;
 
@@ -46,12 +45,12 @@
 
 @media (max-width: 1000px) {
   .imprint {
-    padding: 50px 50px;
+    padding: 130px 50px 50px 50px;
   }
 }
 
 @media (max-width: 500px) {
   .imprint {
-    padding: 24px 24px;
+    padding: 84px 24px 24px 24px;
   }
 }

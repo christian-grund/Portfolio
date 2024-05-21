@@ -10,7 +10,7 @@ section {
   position: relative;
   overflow-x: hidden !important;
   overflow-y: hidden;
-  margin-top: -120px;
+  // margin-top: -120px;
 
   .main {
     width: 100%;
@@ -289,9 +289,9 @@ section {
 
 // and (max-height: 900px)
 @media (max-width: 1000px) {
-  section {
-    margin-top: -100px !important;
-  }
+  // section {
+  //   margin-top: -100px !important;
+  // }
 
   .circle {
     top: -42px;
@@ -337,9 +337,9 @@ section {
 }
 
 @media (max-width: 600px) {
-  section {
-    margin-top: -80px !important;
-  }
+  // section {
+  //   margin-top: -80px !important;
+  // }
 
   .aot-right {
     margin-top: 10vh;
