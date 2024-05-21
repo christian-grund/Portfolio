@@ -16,9 +16,9 @@ export class HeaderComponent {
   underlineActive: number | null = null;
   isOverlayActive: boolean = false;
   buttonActive = false;
-  // selectedLanguage: string = 'en';
+  selectedLanguage: string = 'en';
 
-  @Input() selectedLanguage: string = 'en';
+  // @Input() selectedLanguage: string = 'en';
 
   constructor(public translateService: TranslateService) {}
 

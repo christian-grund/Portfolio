@@ -7,6 +7,34 @@
         alt="Logo"
       />
 
+      <div class="language-change-middle">
+        <div class="language-change">
+          <div class="language-link-wrapper">
+            <a
+              (click)="changeLanguage('en')"
+              [ngClass]="{ active: selectedLanguage === 'en' }"
+              >EN</a
+            >
+            <div
+              class="underline-language"
+              [ngClass]="{ active: selectedLanguage === 'en' }"
+            ></div>
+          </div>
+          <p>|</p>
+          <div class="language-link-wrapper">
+            <a
+              (click)="changeLanguage('de')"
+              [ngClass]="{ active: selectedLanguage === 'de' }"
+              >DE</a
+            >
+            <div
+              class="underline-language"
+              [ngClass]="{ active: selectedLanguage === 'de' }"
+            ></div>
+          </div>
+        </div>
+      </div>
+
       <div class="links">
         <div class="link-wrapper">
           <a (click)="toggleUnderline(1)" href="#about_me">{{
@@ -16,33 +44,46 @@
         </div>
 
         <div class="link-wrapper">
-          <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size">{{
-            "skillSet" | translate
-          }}</a>
+          <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size"
+            >Skills</a
+          >
           <div class="underline" [class.active]="underlineActive === 2"></div>
         </div>
 
         <div class="link-wrapper">
-          <a (click)="toggleUnderline(3)" routerLink="" href="#portfolio"
-            >Portfolio</a
-          >
+          <a (click)="toggleUnderline(3)" href="#portfolio">Portfolio</a>
           <div class="underline" [class.active]="underlineActive === 3"></div>
         </div>
 
-        <div class="language-change">
-          <a
-            (click)="changeLanguage('en')"
-            [ngClass]="{ active: selectedLanguage === 'en' }"
-            >EN</a
-          >
-          <p>|</p>
-          <a
-            (click)="changeLanguage('de')"
-            [ngClass]="{ active: selectedLanguage === 'de' }"
-            >DE</a
-          >
+        <div class="language-change-right">
+          <div class="language-change">
+            <div class="language-link-wrapper">
+              <a
+                (click)="changeLanguage('en')"
+                [ngClass]="{ active: selectedLanguage === 'en' }"
+                >EN</a
+              >
+              <div
+                class="underline-language"
+                [ngClass]="{ active: selectedLanguage === 'en' }"
+              ></div>
+            </div>
+            <p>|</p>
+            <div class="language-link-wrapper">
+              <a
+                (click)="changeLanguage('de')"
+                [ngClass]="{ active: selectedLanguage === 'de' }"
+                >DE</a
+              >
+              <div
+                class="underline-language"
+                [ngClass]="{ active: selectedLanguage === 'de' }"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="menu">
         <div class="box">
           <div
@@ -67,19 +108,6 @@
         <a href="#portfolio" (click)="toggleMenu(); toggleButton()"
           >Portfolio</a
         >
-        <div class="language-change">
-          <a
-            (click)="changeLanguage('en'); toggleMenu(); toggleButton()"
-            [ngClass]="{ active: selectedLanguage === 'en' }"
-            >EN</a
-          >
-          <p>|</p>
-          <a
-            (click)="changeLanguage('de'); toggleMenu(); toggleButton()"
-            [ngClass]="{ active: selectedLanguage === 'de' }"
-            >DE</a
-          >
-        </div>
       </div>
     </div>
   </div>

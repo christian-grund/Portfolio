@@ -61,6 +61,11 @@ section {
             display: block;
           }
         }
+
+        .link-wrapper:nth-child(2) .underline {
+          width: 35px;
+        }
+
         .link-wrapper:first-child a:hover {
           font-size: 23px !important; // Größere Schriftgröße für den letzten Link bei Hover
           font-weight: bold !important;
@@ -80,27 +85,52 @@ section {
   }
 }
 
+.language-change-middle {
+  display: none;
+}
+
+.language-change-right {
+  display: block;
+}
+
 .language-change {
   display: flex;
   align-items: center;
   color: $color-white;
   gap: 12px;
 
-  a.active {
-    font-weight: bold;
-    color: $color-white;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    a:hover {
+  .language-link-wrapper {
+    position: relative;
+    a.active {
       font-weight: bold;
+      color: $color-white;
     }
-  }
 
-  p {
-    color: $color-white;
+    &:hover {
+      cursor: pointer;
+
+      a:hover {
+        font-weight: bold;
+      }
+    }
+
+    p {
+      color: $color-white;
+    }
+
+    .underline-language {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 30px;
+      height: 0;
+      border: 2px solid $color-white;
+      display: none;
+    }
+
+    .underline-language.active {
+      display: block;
+    }
   }
 }
 
@@ -330,11 +360,23 @@ span + span {
   .menu {
     display: none;
   }
+
+  .language-change-middle {
+    display: none;
+  }
 }
 
 @media (max-width: 1000px) {
   nav {
     height: 100px !important;
+  }
+
+  .language-change-middle {
+    display: block;
+  }
+
+  .language-change-right {
+    display: none;
   }
 
   .logo {
