@@ -15,6 +15,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
   underlineActive: number | null = null;
   isOverlayActive: boolean = false;
+  buttonActive = false;
   // selectedLanguage: string = 'en';
 
   @Input() selectedLanguage: string = 'en';
@@ -33,5 +34,9 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.isOverlayActive = !this.isOverlayActive;
+  }
+
+  toggleButton() {
+    this.buttonActive = !this.buttonActive;
   }
 }

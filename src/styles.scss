@@ -17,10 +17,15 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  display: flex;
+}
 
-  // display: flex;
-  // justify-content: center;
+app-header {
+  // position: fixed;
+  // width: 100%;
+  // z-index: 100;
+  position: sticky; /* Ändere position auf sticky */
+  top: 0; /* Damit bleibt die Navbar am oberen Bildschirmrand */
+  z-index: 100; /* Erhöhe die z-Index-Eigenschaft, um sicherzustellen, dass die Navbar über anderen Elementen liegt */
 }
 
 ::-webkit-scrollbar-thumb {

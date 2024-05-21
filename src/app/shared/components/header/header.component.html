@@ -1,73 +1,87 @@
 <section>
-  <nav>
-    <img class="logo" src="./assets/img/icons/logo/logo_white.svg" alt="Logo" />
+  <div class="site-wrapper">
+    <nav>
+      <img
+        class="logo"
+        src="./assets/img/icons/logo/logo_white.svg"
+        alt="Logo"
+      />
 
-    <div class="links">
-      <div class="link-wrapper">
-        <a (click)="toggleUnderline(1)" href="#about_me">{{
+      <div class="links">
+        <div class="link-wrapper">
+          <a (click)="toggleUnderline(1)" href="#about_me">{{
+            "about" | translate
+          }}</a>
+          <div class="underline" [class.active]="underlineActive === 1"></div>
+        </div>
+
+        <div class="link-wrapper">
+          <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size">{{
+            "skillSet" | translate
+          }}</a>
+          <div class="underline" [class.active]="underlineActive === 2"></div>
+        </div>
+
+        <div class="link-wrapper">
+          <a (click)="toggleUnderline(3)" routerLink="" href="#portfolio"
+            >Portfolio</a
+          >
+          <div class="underline" [class.active]="underlineActive === 3"></div>
+        </div>
+
+        <div class="language-change">
+          <a
+            (click)="changeLanguage('en')"
+            [ngClass]="{ active: selectedLanguage === 'en' }"
+            >EN</a
+          >
+          <p>|</p>
+          <a
+            (click)="changeLanguage('de')"
+            [ngClass]="{ active: selectedLanguage === 'de' }"
+            >DE</a
+          >
+        </div>
+      </div>
+      <div class="menu">
+        <div class="box">
+          <div
+            class="btn"
+            (click)="toggleMenu(); toggleButton()"
+            [ngClass]="{ active: buttonActive, 'not-active': !buttonActive }"
+          >
+            <span [ngClass]="{ 'icon-active': buttonActive }"></span>
+            <span [ngClass]="{ 'icon-active': buttonActive }"></span>
+            <span [ngClass]="{ 'icon-active': buttonActive }"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="overlay" [class.overlay-active]="isOverlayActive">
+      <div class="mobile-links">
+        <a href="#about_me" (click)="toggleMenu(); toggleButton()">{{
           "about" | translate
         }}</a>
-        <div class="underline" [class.active]="underlineActive === 1"></div>
-      </div>
-
-      <div class="link-wrapper">
-        <a (click)="toggleUnderline(2)" href="#skill_set" class="font-size">{{
+        <a href="#skill_set" (click)="toggleMenu(); toggleButton()">{{
           "skillSet" | translate
         }}</a>
-        <div class="underline" [class.active]="underlineActive === 2"></div>
-      </div>
-      <div class="link-wrapper">
-        <a (click)="toggleUnderline(3)" routerLink="" href="#portfolio"
+        <a href="#portfolio" (click)="toggleMenu(); toggleButton()"
           >Portfolio</a
         >
-        <div class="underline" [class.active]="underlineActive === 3"></div>
-      </div>
-      <div class="language-change">
-        <a
-          (click)="changeLanguage('en')"
-          [ngClass]="{ active: selectedLanguage === 'en' }"
-          >EN</a
-        >
-        <p>|</p>
-        <a
-          (click)="changeLanguage('de')"
-          [ngClass]="{ active: selectedLanguage === 'de' }"
-          >DE</a
-        >
-      </div>
-    </div>
-    <div class="menu">
-      <div class="burger-icon" (click)="toggleMenu()"></div>
-    </div>
-  </nav>
-
-  <div class="overlay" [class.overlay-active]="isOverlayActive">
-    <div class="top">
-      <img
-        class="logo-blue"
-        src="./assets/img/icons/logo/logo-cg-blue.png"
-        alt=""
-      />
-      <!-- <a class="close-menu" (click)="toggleMenu()"></a> -->
-    </div>
-    <div class="mobile-links">
-      <a href="#about_me" (click)="toggleMenu()">{{ "about" | translate }}</a>
-      <a href="#skill_set" (click)="toggleMenu()">{{
-        "skillSet" | translate
-      }}</a>
-      <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
-      <div class="language-change">
-        <a
-          (click)="changeLanguage('en'); toggleMenu()"
-          [ngClass]="{ active: selectedLanguage === 'en' }"
-          >EN</a
-        >
-        <p>|</p>
-        <a
-          (click)="changeLanguage('de'); toggleMenu()"
-          [ngClass]="{ active: selectedLanguage === 'de' }"
-          >DE</a
-        >
+        <div class="language-change">
+          <a
+            (click)="changeLanguage('en'); toggleMenu(); toggleButton()"
+            [ngClass]="{ active: selectedLanguage === 'en' }"
+            >EN</a
+          >
+          <p>|</p>
+          <a
+            (click)="changeLanguage('de'); toggleMenu(); toggleButton()"
+            [ngClass]="{ active: selectedLanguage === 'de' }"
+            >DE</a
+          >
+        </div>
       </div>
     </div>
   </div>

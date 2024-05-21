@@ -6,12 +6,11 @@ section {
   display: flex;
   width: 100%;
   background: linear-gradient(to bottom, $color-white, $color-landingpage);
-  overflow-x: hidden !important;
   box-sizing: border-box;
-  margin-top: calc(-100vh - 120px);
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: hidden;
+  margin-top: calc(-100vh);
 
   .main {
     width: 100%;
