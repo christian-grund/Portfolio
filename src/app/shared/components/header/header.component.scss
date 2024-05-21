@@ -3,19 +3,18 @@
 section {
   position: relative;
   overflow-x: hidden;
-  // height: calc(100vh + 120px);
   box-sizing: border-box;
-  height: 100vh; /* Setze die Höhe der section auf 100vh */
+  // height: 100vh;
 
   .site-wrapper {
-    height: 120px;
+    // height: 120px;
     width: 100%;
     background-color: $primary-color;
-    // position: relative;
-    // z-index: 100;
+    position: relative; /* Ändere dies, um sicherzustellen, dass es nicht fixed oder sticky ist */
+    z-index: 1000;
 
     nav {
-      height: 100%;
+      height: 120px;
       width: 100%;
       max-width: 1440px;
       margin-left: auto;
@@ -24,11 +23,9 @@ section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // position: absolute;
       position: relative;
-      z-index: 1000;
+      z-index: 100;
       overflow-x: hidden;
-      // background-color: $primary-color;
 
       .logo {
         width: 64px;
@@ -123,12 +120,13 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 10;
   height: 100vh;
   width: 100%;
   background: rgb(241, 245, 255);
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
+  display: none; /* Standardmäßig ausgeblendet */
 
   .top {
     height: 120px;
@@ -165,6 +163,7 @@ a {
 
 .overlay-active {
   transform: translateX(0);
+  display: block; /* Nur wenn aktiv anzeigen */
 }
 
 .btn {
@@ -309,9 +308,14 @@ span + span {
 }
 
 @media (max-width: 1000px) {
+  nav {
+    height: 100px !important;
+  }
+
   .logo {
     padding-left: 50px !important;
   }
+
   .links {
     display: none !important;
   }
@@ -322,22 +326,24 @@ span + span {
 }
 
 @media (max-width: 600px) {
-  .menu {
-    display: flex;
-    padding-right: 16px !important;
+  nav {
+    height: 80px !important;
+  }
 
-    .burger-icon {
-      width: 40px !important;
-      height: 44px !important;
-    }
+  .btn {
+    width: 40px !important;
+  }
+
+  .menu {
+    padding-right: 16px !important;
+  }
+
+  .logo {
+    padding-left: 16px !important;
   }
 }
 
 @media (max-width: 400px) {
-  .logo {
-    padding-left: 16px !important;
-  }
-
   .top {
     padding: 0 16px !important;
   }

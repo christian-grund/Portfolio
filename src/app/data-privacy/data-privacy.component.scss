@@ -4,7 +4,7 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: calc(-100vh - 120px);
+  // margin-top: -120px;
   box-sizing: border-box;
 
   .data-privacy {
@@ -45,13 +45,13 @@
 }
 
 @media (max-width: 1000px) {
-  .data-privcy {
-    padding: 50px 50px;
+  .data-privacy {
+    padding: 50px !important;
   }
 }
 
 @media (max-width: 500px) {
-  .data-privcy {
-    padding: 24px 24px;
+  .data-privacy {
+    padding: 24px !important;
   }
 }
