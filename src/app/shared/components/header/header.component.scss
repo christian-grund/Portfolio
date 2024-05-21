@@ -214,6 +214,29 @@ span + span {
   background-color: #5988ff; /* Farbe, wenn aktiv */
 }
 
+.overlay-rotate-device {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: $primary-color;
+  z-index: 1000;
+}
+
+.overlay-rotate-device img {
+  height: 50vh;
+}
+
+.overlay-rotate-device p {
+  font-size: 10vh;
+}
+
 @keyframes top {
   0% {
     top: 0;
@@ -346,5 +369,11 @@ span + span {
 @media (max-width: 400px) {
   .top {
     padding: 0 16px !important;
+  }
+}
+
+@media (max-height: 650px) {
+  .overlay-rotate-device {
+    display: flex !important;
   }
 }
