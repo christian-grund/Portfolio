@@ -23,9 +23,6 @@
     <h2 class="dp-h2">{{ "privacyPolicy-h2-datasharing" | translate }}</h2>
     <p class="dp-p">{{ "privacyPolicy-p-datasharing" | translate }}</p>
 
-    <!-- <h2 class="dp-h2">{{ "privacyPolicy-h2-rights" | translate }}</h2>
-    <p class="dp-p">{{ "privacyPolicy-p-rights" | translate }}</p> -->
-
     <h2 class="dp-h2">{{ "privacyPolicy-h2-changes" | translate }}</h2>
     <p class="dp-p">{{ "privacyPolicy-p-changes" | translate }}</p>
 
@@ -34,9 +31,6 @@
 
     <h2 class="dp-h2">{{ "privacyPolicy-h2-security" | translate }}</h2>
     <p class="dp-p">{{ "privacyPolicy-p-security" | translate }}</p>
-
-    <!-- <h2 class="dp-h2">{{ "privacyPolicy-h2-children" | translate }}</h2>
-    <p class="dp-p">{{ "privacyPolicy-p-children" | translate }}</p> -->
 
     <h2 class="dp-h2">{{ "privacyPolicy-h2-changes" | translate }}</h2>
     <p class="dp-p">{{ "privacyPolicy-p-changes" | translate }}</p>
@@ -51,5 +45,13 @@
     <br /><br />
 
     <p class="dp-p">{{ "privacyPolicy-p-date" | translate }}</p>
+  </div>
+
+  <div class="go-back">
+    <a routerLink="/home" class="go-back-link"></a>
+  </div>
+
+  <div class="go-up">
+    <a (click)="scrollToTop()" class="go-up-link"></a>
   </div>
 </div>

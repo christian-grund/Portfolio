@@ -5,6 +5,7 @@ import { DataPrivacyComponent } from './data-privacy/data-privacy.component';
 
 export const routes: Routes = [
   { path: '', component: MainContentComponent },
+  { path: 'home', component: MainContentComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'data-privacy', component: DataPrivacyComponent },
 ];

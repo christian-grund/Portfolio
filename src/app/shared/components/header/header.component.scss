@@ -231,10 +231,12 @@ span + span {
 
 .overlay-rotate-device img {
   height: 50vh;
+  filter: brightness(0) invert(1);
 }
 
 .overlay-rotate-device p {
   font-size: 10vh;
+  color: $color-white;
 }
 
 @keyframes top {
@@ -358,11 +360,11 @@ span + span {
   }
 
   .menu {
-    padding-right: 16px !important;
+    padding-right: 24px !important;
   }
 
   .logo {
-    padding-left: 16px !important;
+    padding-left: 24px !important;
   }
 }
 
