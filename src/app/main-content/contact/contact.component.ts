@@ -30,7 +30,6 @@ export class ContactComponent {
   isContainerVisible: boolean = false;
 
   togglePrivacyPolicy() {
-    console.log('privacyPolicyChecked', this.privacyPolicyChecked);
     this.privacyPolicyChecked = !this.privacyPolicyChecked;
   }
 
@@ -72,16 +71,7 @@ export class ContactComponent {
         this.toggleContainer();
         ngForm.resetForm();
         this.clickCounter = 0;
-      }, 5000);
+      }, 4000);
     }
-    // else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    //   console.log('ngForm.submitted && ngForm.form.valid && this.mailTest');
-    //   this.toggleContainer();
-    //   setTimeout(() => {
-    //     this.toggleContainer();
-    //     ngForm.resetForm();
-    //     this.clickCounter = 0;
-    //   }, 2500);
-    // }
   }
 }

@@ -11,7 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
-  circles = [1, 2, 3, 4, 5, 6, 7, 8];
+  circles = [1, 2, 3, 4, 5, 6];
   projects = [
     {
       mockup: 'join.png',
@@ -44,7 +44,6 @@ export class MyWorkComponent {
 
   constructor(private translateService: TranslateService) {
     this.translateProjectDescriptions();
-    // AOS.init();
   }
 
   translateProjectDescriptions(): void {

@@ -17,12 +17,10 @@ export class LandingPageComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['language']) {
       this.selectedLanguage = changes['language'].currentValue;
-      console.log('language ngOnChanges:', this.selectedLanguage);
     }
   }
 
   getHeadlineClass(): string {
-    console.log('language getHeadlineClass:', this.selectedLanguage);
     return this.selectedLanguage === 'de' ? 'headline-de' : 'headline-en';
   }
 }

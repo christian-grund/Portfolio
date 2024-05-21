@@ -298,11 +298,11 @@ textarea:hover {
 .mail-success {
   position: absolute;
   top: 50%;
-  left: 200%; /* Startposition außerhalb des Bildschirms */
+  left: 200%;
   transform: translate(-50%, -50%);
   transition: left 0.5s;
   z-index: 115;
-  display: none; /* Standardmäßig ausblenden */
+  display: none;
 
   .bg-img {
     position: relative;
@@ -327,23 +327,23 @@ textarea:hover {
   }
 
   &.show {
-    display: block; /* Bei Anzeige der Klasse .show einblenden */
-    animation: slideIn 5s forwards; /* Animation hinzufügen */
+    display: block;
+    animation: slideIn 4s forwards;
   }
 }
 
 @keyframes slideIn {
   0% {
-    left: 200%; /* Startposition außerhalb des Bildschirms */
+    left: 200%;
   }
   20% {
-    left: 50%; /* Endposition in der Mitte des Bildschirms */
+    left: 50%;
   }
   80% {
-    left: 50%; /* Bleibt in der Mitte des Bildschirms */
+    left: 50%;
   }
   100% {
-    left: 200%; /* Endposition außerhalb des Bildschirms */
+    left: 200%;
   }
 }
 

@@ -114,10 +114,6 @@ section {
       }
     }
 
-    p {
-      color: $color-white;
-    }
-
     .underline-language {
       position: absolute;
       bottom: -4px;
@@ -131,6 +127,10 @@ section {
     .underline-language.active {
       display: block;
     }
+  }
+  p {
+    color: $color-white;
+    font-size: 23px;
   }
 }
 
