@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-// import AOS from 'aos';
 
 @Component({
   selector: 'app-skill-set',
@@ -23,8 +22,4 @@ export class SkillSetComponent {
     { icon: 'api.svg', name: 'Rest-Api' },
     { icon: 'material_design.svg', name: 'Material Design' },
   ];
-
-  constructor() {
-    // AOS.init();
-  }
 }

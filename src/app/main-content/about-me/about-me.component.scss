@@ -23,10 +23,7 @@ section {
     width: 50%;
     max-width: fit-content;
     display: flex;
-    // justify-content: space-between;
     align-items: flex-start;
-    // align-content: space-between;
-    // flex-wrap: wrap;
     text-align: left !important;
     height: 100%;
     flex-direction: column;
@@ -179,9 +176,5 @@ section {
     display: flex;
     justify-content: center;
     width: 100%;
-    // a {
-    //   width: 200px !important;
-    //   padding: 15px 15px !important;
-    // }
   }
 }

@@ -1,5 +1,4 @@
 @import "../../shared/style/colors.scss";
-@import "../../shared/style/mixins.scss";
 
 section {
   width: 100%;
@@ -89,7 +88,6 @@ h6 {
   .checkbox-privacy-policy {
     position: relative;
     display: flex;
-    // justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     box-sizing: border-box;
@@ -108,14 +106,12 @@ h6 {
       input[type="checkbox"]:checked + label {
         background: url("../../../assets/img/icons/checkbox/checkbox_checked.svg")
           no-repeat;
-        // background-size: 100%;
       }
 
       &:hover {
         input[type="checkbox"]:checked + label {
           background: url("../../../assets/img/icons/checkbox/checkbox_checked_hover.svg")
             no-repeat;
-          // background-size: 100%;
         }
       }
 
@@ -124,7 +120,6 @@ h6 {
         padding: 0;
         background: url("../../../assets/img/icons/checkbox/checkbox_default.svg")
           no-repeat;
-        // background-size: 100%;
         cursor: pointer;
         transition: background 0.3s;
         width: 24px;
@@ -138,7 +133,6 @@ h6 {
       }
 
       .accept-privacy-policy {
-        // display: inline-block;
         font-size: 16px;
       }
 

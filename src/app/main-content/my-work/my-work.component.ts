@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-// import AOS from 'aos';
 
 @Component({
   selector: 'app-my-work',
@@ -53,31 +52,6 @@ export class MyWorkComponent {
         .subscribe((translatedDesc: string) => {
           project.translatedDescription = translatedDesc;
         });
-    }
-  }
-
-  onProjectHover(isHovering: boolean, index: number): void {
-    const projectText = document.querySelectorAll('.project-text')[
-      index
-    ] as HTMLElement;
-    if (isHovering) {
-      const fadeClass = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
-      const positionClass =
-        index % 2 === 0 ? 'right-position' : 'left-position';
-      projectText.classList.add(fadeClass, positionClass);
-      clearTimeout(Number(projectText.dataset['timer']));
-    } else {
-      projectText.classList.remove(
-        'fade-in-left',
-        'fade-in-right',
-        'left-position',
-        'right-position'
-      );
-      projectText.dataset['timer'] = String(
-        setTimeout(() => {
-          projectText.classList.add('fade-out');
-        }, 300)
-      );
     }
   }
 }

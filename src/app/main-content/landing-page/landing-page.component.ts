@@ -1,12 +1,6 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language/language.service';
 
@@ -24,7 +18,6 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   constructor(private languageService: LanguageService) {}
 
   ngOnInit() {
-    // Abonniere das Observable, um Sprachänderungen zu verfolgen
     this.langSubscription = this.languageService.currentLang$.subscribe(
       (lang) => {
         this.currentLanguage = lang;
@@ -34,7 +27,6 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // Kündige das Abonnement, um Speicherlecks zu vermeiden
     if (this.langSubscription) {
       this.langSubscription.unsubscribe();
     }

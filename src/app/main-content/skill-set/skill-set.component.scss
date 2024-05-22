@@ -67,8 +67,7 @@ section {
       }
 
       &:hover img {
-        // transform: translateY(-12px);
-        animation: carousel 0.3s linear; /* Karussellanimation beim Hovern */
+        animation: carousel 0.3s linear;
       }
 
       p {
