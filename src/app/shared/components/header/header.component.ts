@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../../services/language/language.service';
 
 @Component({
   selector: 'app-header',
@@ -16,17 +17,23 @@ export class HeaderComponent {
   underlineActive: number | null = null;
   isOverlayActive: boolean = false;
   buttonActive = false;
-  selectedLanguage: string = 'en';
+  selectedLanguage: string = 'de';
 
-  // @Input() selectedLanguage: string = 'en';
-
-  constructor(public translateService: TranslateService) {}
+  constructor(
+    private translateService: TranslateService,
+    private languageService: LanguageService
+  ) {}
 
   changeLanguage(langCode: string) {
-    // this.translateService.use(langCode);
-    this.translateService.use(langCode).subscribe(() => {
-      console.log(`Language changed to: ${langCode}`);
-    });
+    this.translateService.use(langCode);
+    // this.translateService.use(langCode).subscribe(() => {
+    //   console.log(`Language changed to: ${langCode}`);
+    //   console.log(
+    //     'translateService.currentLang',
+    //     this.translateService.currentLang
+    //   );
+    this.languageService.changeLanguage(langCode);
+    // });
     this.selectedLanguage = langCode;
   }
 

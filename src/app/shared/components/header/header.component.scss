@@ -10,7 +10,6 @@ section {
     width: 100%;
     background-color: $primary-color;
     position: relative;
-    // height: 120px;
     z-index: 1000;
 
     nav {
@@ -134,11 +133,6 @@ section {
   }
 }
 
-.menu {
-  display: flex;
-  padding-right: 50px !important;
-}
-
 a {
   text-decoration: none;
   font-weight: 400;
@@ -194,6 +188,11 @@ a {
 .overlay-active {
   transform: translateX(0);
   display: block; /* Nur wenn aktiv anzeigen */
+}
+
+.menu {
+  display: flex;
+  padding-right: 50px !important;
 }
 
 .btn {
@@ -390,6 +389,10 @@ span + span {
   .overlay {
     display: block !important;
   }
+
+  .menu {
+    transform: scale(0.85);
+  }
 }
 
 @media (max-width: 600px) {
@@ -397,22 +400,33 @@ span + span {
     height: 80px !important;
   }
 
-  .btn {
-    width: 40px !important;
-  }
-
   .menu {
     padding-right: 24px !important;
+    transform: scale(0.7);
   }
 
   .logo {
     padding-left: 24px !important;
+  }
+
+  .language-link-wrapper {
+    a {
+      font-size: 18px;
+    }
+
+    .underline-language {
+      width: 22px !important;
+    }
   }
 }
 
 @media (max-width: 400px) {
   .top {
     padding: 0 16px !important;
+  }
+
+  .menu {
+    transform: scale(0.6);
   }
 }
 

@@ -110,6 +110,12 @@ p {
   }
 }
 
+@media (max-width: 450px) {
+  #contact {
+    scroll-margin-top: 40px;
+  }
+}
+
 button {
   padding-block: 0;
   padding-inline: 0;

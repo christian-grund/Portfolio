@@ -1,7 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { LanguageService } from '../../shared/services/language/language.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,51 +17,26 @@ import { Subscription } from 'rxjs';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent implements OnInit {
-  // @Input() language!: string;
-  // currentLanguage: string = '';
-  // @Input() selectedLanguage!: string;
-
+export class LandingPageComponent implements OnInit, OnDestroy {
   private langSubscription!: Subscription;
+  currentLanguage: string = 'de';
 
-  constructor(public translateService: TranslateService) {}
+  constructor(private languageService: LanguageService) {}
 
   ngOnInit() {
-    // this.langSubscription = this.translateService.currentLang$.subscribe(lang => {
-    //   console.log('Current language:', lang);
-    // });
+    // Abonniere das Observable, um Sprachänderungen zu verfolgen
+    this.langSubscription = this.languageService.currentLang$.subscribe(
+      (lang) => {
+        this.currentLanguage = lang;
+        console.log('Current language in landing page:', this.currentLanguage);
+      }
+    );
   }
 
   ngOnDestroy() {
+    // Kündige das Abonnement, um Speicherlecks zu vermeiden
     if (this.langSubscription) {
       this.langSubscription.unsubscribe();
     }
   }
-
-  // ngOnChanges(changes: SimpleChanges) {
-  //   if (changes['translateService']) {
-  //     console.log("changes['translateService']");
-  //     this.getCurrentLanguage();
-  //   } else {
-  //     console.log('no changes!');
-  //   }
-  // }
-
-  getCurrentLanguage() {
-    const currentLanguage = this.translateService.currentLang;
-    const defaultLanguage = this.translateService.defaultLang;
-
-    console.log('landingPage translateService.currentLang', currentLanguage); // Oder setze es auf eine Variable, zeige es im Template an etc.
-    console.log('landingPage translateService.defaultLang', defaultLanguage); // Oder setze es auf eine Variable, zeige es im Template an etc.
-  }
-
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   // if (changes['language']) {
-  //   //   this.selectedLanguage = changes['language'].currentValue;
-  //   // }
-  // }
-
-  // getHeadlineClass(): string {
-  //   return this.selectedLanguage === 'de' ? 'headline-de' : 'headline-en';
-  // }
 }

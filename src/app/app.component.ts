@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
   @Input() selectedLanguage!: string;
 
   constructor(public translate: TranslateService) {
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('de');
   }
 
   ngOnInit(): void {
