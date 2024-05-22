@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../../shared/services/language/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit, OnDestroy {
   http = inject(HttpClient);
   contactData = {
     name: '',
@@ -29,6 +31,25 @@ export class ContactComponent {
   clickCounter: number = 0;
   mailTest: boolean = false;
   isContainerVisible: boolean = false;
+  currentLanguage: string = 'de';
+
+  private langSubscription!: Subscription;
+
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit() {
+    this.langSubscription = this.languageService.currentLang$.subscribe(
+      (lang) => {
+        this.currentLanguage = lang;
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    if (this.langSubscription) {
+      this.langSubscription.unsubscribe();
+    }
+  }
 
   togglePrivacyPolicy() {
     this.privacyPolicyChecked = !this.privacyPolicyChecked;

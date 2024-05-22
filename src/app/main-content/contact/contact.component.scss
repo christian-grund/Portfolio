@@ -149,6 +149,17 @@ h6 {
         justify-content: center;
         color: $primary-color;
         font-weight: 300 !important;
+
+        span {
+          &.english {
+            display: block;
+            width: 113px;
+          }
+          &.german {
+            display: block;
+            width: 183px;
+          }
+        }
       }
     }
   }

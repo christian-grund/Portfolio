@@ -126,7 +126,13 @@
             <p class="accept-privacy-policy">
               {{ "iHaveRead" | translate }}
               <a routerLink="data-privacy" (click)="scrollToTop()"
-                ><span>{{ "privacyPolicy" | translate }}</span></a
+                ><span
+                  [ngClass]="{
+                    english: currentLanguage === 'en',
+                    german: currentLanguage === 'de'
+                  }"
+                  >{{ "privacyPolicy" | translate }}</span
+                ></a
               >
               {{ "iAgree" | translate }}
             </p>

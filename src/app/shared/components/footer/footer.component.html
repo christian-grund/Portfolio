@@ -1,9 +1,7 @@
 <section>
   <div class="main">
     <div class="top-content">
-      <div class="logo">
-        <img src="./assets/img/icons/logo/logo_white.svg" alt="" />
-      </div>
+      <p class="logo">&lt;/CG&gt;</p>
       <p>© Christian Grund 2024</p>
       <div class="social-icons">
         <a href="https://github.com/christian-grund/" target="_blank"
@@ -27,7 +25,13 @@
         <a routerLink="imprint" (click)="scrollToTop()"
           ><p>{{ "imprint" | translate }}</p></a
         >
-        <div class="imprint-underline"></div>
+        <div
+          class="imprint-underline"
+          [ngClass]="{
+            english: currentLanguage === 'en',
+            german: currentLanguage === 'de'
+          }"
+        ></div>
       </div>
     </div>
   </div>
