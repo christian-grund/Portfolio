@@ -118,3 +118,11 @@
     bottom: 24px;
   }
 }
+
+@media (max-width: 350px) {
+  .imprint {
+    h1 {
+      font-size: 38px !important;
+    }
+  }
+}

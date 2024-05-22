@@ -20,6 +20,12 @@
       font-weight: 700;
       color: $primary-color;
       padding: 16px 0;
+      // -moz-hyphens: auto;
+      // -o-hyphens: auto;
+      // -webkit-hyphens: auto;
+      // -ms-hyphens: auto;
+      // hyphens: auto !important;
+      word-wrap: break-word;
     }
 
     .dp-h2 {
@@ -102,6 +108,12 @@
     position: absolute;
     right: 50px;
     bottom: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 38px !important;
   }
 }
 

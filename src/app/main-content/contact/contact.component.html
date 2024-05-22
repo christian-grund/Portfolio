@@ -125,7 +125,7 @@
 
             <p class="accept-privacy-policy">
               {{ "iHaveRead" | translate }}
-              <a href="#" target="_blank"
+              <a routerLink="data-privacy" (click)="scrollToTop()"
                 ><span>{{ "privacyPolicy" | translate }}</span></a
               >
               {{ "iAgree" | translate }}

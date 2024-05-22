@@ -23,7 +23,10 @@ export class HeaderComponent {
   constructor(public translateService: TranslateService) {}
 
   changeLanguage(langCode: string) {
-    this.translateService.use(langCode);
+    // this.translateService.use(langCode);
+    this.translateService.use(langCode).subscribe(() => {
+      console.log(`Language changed to: ${langCode}`);
+    });
     this.selectedLanguage = langCode;
   }
 

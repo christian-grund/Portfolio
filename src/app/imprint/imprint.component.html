@@ -45,20 +45,24 @@
 
   <p>
     {{ "imprintFrom" | translate }}
-    <a href="https://www.impressum-generator.de">{{
-      "imprintGenerator" | translate
-    }}</a>
+    <a
+      href="https://www.impressum-generator.de"
+      target="_blank"
+      rel="nofollow"
+      >{{ "imprintGenerator" | translate }}</a
+    >
     {{ "of" | translate }}
     <a
       href="https://www.kanzlei-hasselbach.de/standorte/frankfurt/"
       rel="nofollow"
+      target="_blank"
       >{{ "lawFirm" | translate }}</a
     >
   </p>
-  <br /><br />
+  <!-- <br /><br />
 
   {{ "createdLogo" | translate }}
-  <a href="https://logomakr.com" target="_blank">LogoMakr.com.</a>
+  <a href="https://logomakr.com" target="_blank">LogoMakr.com.</a> -->
 
   <div class="go-back">
     <a routerLink="/home" class="go-back-link"></a>

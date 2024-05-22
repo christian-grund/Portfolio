@@ -339,7 +339,7 @@ textarea:hover {
   20% {
     left: 50%;
   }
-  80% {
+  75% {
     left: 50%;
   }
   100% {
@@ -462,6 +462,14 @@ textarea:hover {
   .error-message {
     font-size: 13px;
   }
+
+  .form {
+    gap: 36px !important;
+  }
+
+  .submit-btn {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -471,5 +479,9 @@ textarea:hover {
 
   .ball-big {
     bottom: 496px;
+  }
+
+  .submit-btn {
+    margin-top: 48px;
   }
 }

@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule],
+  imports: [FormsModule, CommonModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -39,6 +40,10 @@ export class ContactComponent {
 
   toggleContainer() {
     this.isContainerVisible = !this.isContainerVisible;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   post = {
