@@ -21,7 +21,6 @@ export class LandingPageComponent implements OnInit, OnDestroy {
     this.langSubscription = this.languageService.currentLang$.subscribe(
       (lang) => {
         this.currentLanguage = lang;
-        console.log('Current language in landing page:', this.currentLanguage);
       }
     );
   }

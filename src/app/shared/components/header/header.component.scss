@@ -66,17 +66,17 @@ section {
         }
 
         .link-wrapper:first-child a:hover {
-          font-size: 23px !important; // Größere Schriftgröße für den letzten Link bei Hover
+          font-size: 23px !important;
           font-weight: bold !important;
         }
 
         .link-wrapper:nth-child(2) a:hover {
-          font-size: 21.4px !important; // Größere Schriftgröße für den zweiten Link bei Hover
+          font-size: 21.4px !important;
           font-weight: bold;
         }
 
         .link-wrapper:nth-child(3) a:hover {
-          font-size: 21.6px !important; // Größere Schriftgröße für den letzten Link bei Hover
+          font-size: 21.6px !important;
           font-weight: bold;
         }
       }
@@ -150,7 +150,7 @@ a {
   background: rgb(241, 245, 255);
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
-  display: none; /* Standardmäßig ausgeblendet */
+  display: none;
 
   .top {
     height: 120px;
@@ -187,7 +187,7 @@ a {
 
 .overlay-active {
   transform: translateX(0);
-  display: block; /* Nur wenn aktiv anzeigen */
+  display: block;
 }
 
 .menu {
@@ -240,7 +240,7 @@ span + span {
 }
 
 .icon-active {
-  background-color: #5988ff; /* Farbe, wenn aktiv */
+  background-color: #5988ff;
 }
 
 .overlay-rotate-device {

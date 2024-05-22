@@ -69,7 +69,7 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          // complete: () => console.info('send post complete'),
         });
       setTimeout(() => {
         this.toggleContainer();

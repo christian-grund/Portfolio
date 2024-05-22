@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language/language.service';
@@ -26,14 +25,7 @@ export class HeaderComponent {
 
   changeLanguage(langCode: string) {
     this.translateService.use(langCode);
-    // this.translateService.use(langCode).subscribe(() => {
-    //   console.log(`Language changed to: ${langCode}`);
-    //   console.log(
-    //     'translateService.currentLang',
-    //     this.translateService.currentLang
-    //   );
     this.languageService.changeLanguage(langCode);
-    // });
     this.selectedLanguage = langCode;
   }
 

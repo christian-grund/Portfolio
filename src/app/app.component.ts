@@ -34,7 +34,6 @@ import 'aos/dist/aos.css';
 })
 export class AppComponent implements OnInit {
   title = 'Portfolio';
-  @Input() selectedLanguage!: string;
 
   constructor(public translate: TranslateService) {
     translate.setDefaultLang('de');

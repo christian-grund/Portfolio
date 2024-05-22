@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class LanguageService {
-  private currentLangSubject = new BehaviorSubject<string>('de'); // Standardmäßig auf 'de'
+  private currentLangSubject = new BehaviorSubject<string>('de');
   currentLang$ = this.currentLangSubject.asObservable();
 
   getCurrentLang(): string {

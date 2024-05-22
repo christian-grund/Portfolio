@@ -1,6 +1,5 @@
 @import "./app/shared/style/baloo.scss";
 @import "./app/shared/style/montserrat.scss";
-@import "./app/shared/style/londrina.scss";
 @import "./app/shared/style/colors.scss";
 
 * {
@@ -20,9 +19,9 @@ body {
 }
 
 app-header {
-  position: sticky; /* Ändere position auf sticky */
-  top: 0; /* Damit bleibt die Navbar am oberen Bildschirmrand */
-  z-index: 100; /* Erhöhe die z-Index-Eigenschaft, um sicherzustellen, dass die Navbar über anderen Elementen liegt */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 ::-webkit-scrollbar-thumb {
