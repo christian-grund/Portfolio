@@ -20,12 +20,15 @@ section {
     max-width: 1440px !important;
     margin: auto;
 
-    .logo {
-      font-size: 36px !important;
-      font-weight: 800 !important;
-      font-family: "Playfair Display";
-      color: $color-white;
-      width: 154px;
+    a {
+      text-decoration: none;
+      .logo {
+        font-size: 36px !important;
+        font-weight: 800 !important;
+        font-family: "Playfair Display";
+        color: $color-white;
+        width: 154px;
+      }
     }
 
     .top-content {

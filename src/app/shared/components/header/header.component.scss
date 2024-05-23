@@ -26,12 +26,14 @@ section {
       z-index: 100;
       overflow-x: hidden;
 
-      .logo {
-        font-size: 36px;
-        font-weight: 800;
-        font-family: "Playfair Display";
-        padding-left: 50px;
-        color: $color-white;
+      a {
+        .logo {
+          font-size: 36px;
+          font-weight: 800;
+          font-family: "Playfair Display";
+          padding-left: 100px;
+          color: $color-white;
+        }
       }
 
       .links {
@@ -194,7 +196,9 @@ a {
 
 .menu {
   display: flex;
+  justify-content: flex-end;
   padding-right: 50px !important;
+  width: 100px;
 }
 
 .btn {
@@ -381,7 +385,7 @@ span + span {
   }
 
   .logo {
-    padding-left: 24px !important;
+    padding-left: 50px !important;
   }
 
   .links {
@@ -392,8 +396,8 @@ span + span {
     display: block !important;
   }
 
-  .menu {
-    transform: scale(0.85);
+  .menu .box {
+    transform: scale(0.7);
   }
 }
 
@@ -404,12 +408,16 @@ span + span {
 
   .menu {
     padding-right: 24px !important;
-    transform: scale(0.7);
+    width: 70px;
+    .box {
+      transform: scale(0.5);
+    }
   }
 
   .logo {
     font-size: 23px !important;
     font-weight: 700 !important;
+    padding-left: 24px !important;
   }
 
   .language-link-wrapper {

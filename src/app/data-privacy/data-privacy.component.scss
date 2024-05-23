@@ -2,13 +2,18 @@
 @import "../shared/style/colors.scss";
 
 .page-wrapper {
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+  margin: auto;
   padding-top: 120px;
-  position: relative;
 
   .data-privacy {
+    width: 100%;
+    max-width: 1440px !important;
     position: relative;
     box-sizing: border-box;
     color: $color-black !important;

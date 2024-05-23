@@ -67,7 +67,7 @@ section {
       }
 
       &:hover img {
-        animation: carousel 0.3s linear;
+        animation: carousel 0.4s linear;
       }
 
       p {
@@ -198,16 +198,25 @@ section {
 
 @media (max-width: 400px) {
   .skill-icons {
-    height: 760px !important;
+    height: 550px !important;
   }
 
   .skill-icon {
-    width: 155px !important;
+    width: 98px !important;
+
+    img {
+      width: 50px !important;
+      height: 55px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
   }
 }
 
-@media (max-width: 350px) {
-  .skill-icon {
-    width: 140px !important;
-  }
-}
+// @media (max-width: 350px) {
+//   .skill-icon {
+//     width: 140px !important;
+//   }
+// }

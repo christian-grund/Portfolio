@@ -44,6 +44,7 @@ section {
 
     h2 {
       font-size: 124px;
+      line-height: 0.75;
     }
 
     .headline-h2 {
@@ -88,9 +89,9 @@ section {
       animation-delay: 0.5s;
     }
 
-    &:hover img {
-      animation: slideLeft 0.5s ease forwards;
-    }
+    // &:hover img {
+    //   animation: slideLeft 0.5s ease forwards;
+    // }
   }
 }
 
@@ -100,15 +101,6 @@ section {
   }
   to {
     transform: translateY(0) rotate(360deg);
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-24px);
   }
 }
 
