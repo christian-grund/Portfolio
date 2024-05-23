@@ -83,15 +83,17 @@ section {
   z-index: 10;
 
   a {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+
     img {
       transform: translateY(100px);
       animation: slideInSocial 1s ease forwards;
       animation-delay: 0.5s;
     }
-
-    // &:hover img {
-    //   animation: slideLeft 0.5s ease forwards;
-    // }
   }
 }
 

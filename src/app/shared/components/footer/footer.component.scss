@@ -174,3 +174,9 @@ section {
     font-size: 23px !important;
   }
 }
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 20px !important;
+  }
+}
