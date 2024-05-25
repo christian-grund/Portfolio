@@ -145,9 +145,7 @@ h6 {
 
       &:hover {
         a {
-          font-weight: 600 !important;
           text-decoration: underline;
-          letter-spacing: 1;
         }
       }
 
@@ -156,15 +154,14 @@ h6 {
         justify-content: center;
         color: $primary-color;
         font-weight: 300 !important;
+        text-decoration: none;
 
         span {
           &.english {
             display: block;
-            width: 113px;
           }
           &.german {
             display: block;
-            width: 183px;
           }
         }
       }
