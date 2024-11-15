@@ -137,7 +137,6 @@ button {
 .fill-button {
   padding: 15px 30px;
   color: $primary-color;
-
   display: inline-block;
   border: 2px solid $primary-color;
   position: relative;
@@ -221,4 +220,13 @@ button {
   .fill-button {
     padding: 15px 18px 15px 18px !important;
   }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

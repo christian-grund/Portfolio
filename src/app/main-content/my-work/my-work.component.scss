@@ -99,6 +99,7 @@ section {
 
         a {
           button {
+            height: 80px !important;
             width: 144px !important;
           }
 
@@ -151,12 +152,12 @@ section {
 
 .circle-4 {
   position: absolute;
-  top: 650px;
+  top: 820px;
   right: -150px;
   z-index: -1;
 
   img {
-    width: 550px;
+    width: 450px;
     height: auto;
   }
 }

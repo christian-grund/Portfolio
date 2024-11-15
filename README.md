@@ -1,27 +1,58 @@
-# Portfolio
+# Portfolio Website - Christian Grund
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+## Overview
 
-## Development server
+This is the source code for my personal portfolio website, which showcases my projects, skills, and professional experience. The site is designed to provide visitors with an engaging and comprehensive overview of my work as a developer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Live Site**: [https://christian-grund.dev](https://christian-grund.dev/)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **About Me**: A section that highlights my background, skills, and personal journey in tech.
+- **Technologies**: Information on the technologies I specialize in and have experience with.
+- **Project Showcase**: Detailed descriptions and links to my key projects.
+- **Contact Form**: An integrated form to allow visitors to get in touch with me directly.
+- **Responsive Design**: Ensures optimal viewing on various devices, from desktops to mobile phones.
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **TypeScript**: Strongly typed programming language used for building the site.
+- **Angular**: Framework for developing dynamic web applications.
+- **HTML5**: Structure of the web pages.
+- **SCSS**: Custom styling and responsive design elements.
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the portfolio site locally:
 
-## Running end-to-end tests
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/christian-grund/Portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio-site
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Serve the application locally:
+   ```bash
+   ng serve
+   ```
+5. Open your web browser and go to `http://localhost:4200/` to view the site.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## How to Use
 
-## Further help
+- **Navigation**: Use the header menu to explore different sections of the site.
+- **Projects**: Click on project links to view detailed information or visit live demos.
+- **Contact**: Fill out the form in the contact section to send me a message.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+
+For inquiries or feedback, reach out to me at mail@christian-grund.dev or create an issue in the repository.
+
+---
+
+Explore my work, and don’t hesitate to reach out if you'd like to collaborate or have any questions!

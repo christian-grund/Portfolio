@@ -1,18 +1,43 @@
 <section>
   <div class="main">
-    <h3 data-aos="fade-right" data-aos-duration="1000">Skills</h3>
-    <p class="skill-set-text">
-      {{ "skillSetText" | translate }}
-    </p>
-    <div class="skill-set">
-      <div class="skill-icons">
-        <div class="skill-icon" *ngFor="let skill of skillSet; let i = index">
-          <img
-            src="./assets/img/icons/skillset/desktop/{{ skillSet[i].icon }}"
-            alt=""
-          />
-          <p>{{ skillSet[i].name }}</p>
+    <div class="wrapper">
+      <h3 data-aos="fade-right" data-aos-duration="1000">Skills</h3>
+      <p class="skill-set-text">
+        {{ "skillSetText" | translate }}
+      </p>
+      <div class="skill-set-container">
+        <div class="skill-set">
+          <div class="skills-frontend">
+            <div class="skill-icons show">
+              <div class="skill-icon" *ngFor="let skill of skillSetFrontend">
+                <img
+                  src="./assets/img/icons/skillset/frontend/{{ skill.icon }}"
+                  alt=""
+                />
+                <p>{{ skill.name }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="skills-backend">
+            <div class="skill-icons show">
+              <div class="skill-icon" *ngFor="let skill of skillSetBackend">
+                <img
+                  src="./assets/img/icons/skillset/backend/{{ skill.icon }}"
+                  alt=""
+                />
+                <p>{{ skill.name }}</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="buttons">
+        <button class="fill-button" (click)="toggleSkills('frontend')">
+          Frontend
+        </button>
+        <button class="fill-button" (click)="toggleSkills('backend')">
+          Backend
+        </button>
       </div>
     </div>
   </div>
