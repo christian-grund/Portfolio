@@ -24,6 +24,7 @@ export class SkillSetComponent {
     { icon: 'css.svg', name: 'CSS' },
     { icon: 'api.svg', name: 'Rest-Api' },
     { icon: 'material_design.svg', name: 'Material Design' },
+    { icon: 'continually_learning.png', name: 'Continually Learning' },
   ];
 
   skillSetBackend = [

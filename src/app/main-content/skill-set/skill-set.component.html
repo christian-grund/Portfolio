@@ -9,12 +9,44 @@
         <div class="skill-set">
           <div class="skills-frontend">
             <div class="skill-icons show">
-              <div class="skill-icon" *ngFor="let skill of skillSetFrontend">
+              <div
+                class="skill-icon"
+                *ngFor="let skill of skillSetFrontend; let i = index"
+                [ngClass]="{
+                  'last-skill': i === skillSetFrontend.length - 1
+                }"
+              >
                 <img
                   src="./assets/img/icons/skillset/frontend/{{ skill.icon }}"
                   alt=""
                 />
                 <p>{{ skill.name }}</p>
+                <div class="popup-window">
+                  <p>{{ "eagerToLearn" | translate }}</p>
+                  <div class="interest-icons">
+                    <div class="interest">
+                      <img
+                        src="./assets/img/icons/skillset/interest/react.svg"
+                        alt="React"
+                      />
+                      <p>React</p>
+                    </div>
+                    <div class="interest">
+                      <img
+                        src="./assets/img/icons/skillset/interest/vue.svg"
+                        alt="Vue"
+                      />
+                      <p>Vue.js</p>
+                    </div>
+                    <div class="interest">
+                      <img
+                        src="./assets/img/icons/skillset/interest/csharp.svg"
+                        alt="CSharp"
+                      />
+                      <p>C#</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

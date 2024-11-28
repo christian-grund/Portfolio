@@ -72,7 +72,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 450px;
+  height: 500px;
   box-sizing: border-box;
   flex-wrap: wrap;
   padding-bottom: 80px;
@@ -84,6 +84,7 @@ section {
     padding-top: 48px;
     gap: 10px;
     width: 242px;
+    position: relative;
 
     img {
       width: 70px;
@@ -103,6 +104,64 @@ section {
 
     &:hover p {
       font-weight: bold;
+    }
+
+    &.last-skill {
+      img {
+        filter: brightness(0.73) grayscale(100%) contrast(80%);
+      }
+
+      p {
+        color: #bbbbbb;
+      }
+
+      &:hover {
+        p {
+          color: $color-white;
+        }
+
+        img {
+          filter: unset;
+        }
+
+        .popup-window {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .popup-window {
+      position: absolute;
+      top: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-white;
+      padding: 16px;
+      border-radius: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 1000;
+
+      p {
+        color: $primary-color;
+      }
+
+      .interest-icons {
+        display: flex;
+        padding: 8px 32px 0 32px;
+
+        .interest {
+          img {
+            height: 50px;
+            width: auto;
+            object-fit: cover;
+            transform: unset !important;
+            padding: 8px;
+          }
+        }
+      }
     }
   }
 }
@@ -233,8 +292,21 @@ section {
     padding: 50px 12.5px !important;
   }
 
+  .popup-window {
+    top: -100px !important;
+    padding: 12px !important;
+  }
+
+  .interest img {
+    height: 40px !important;
+    width: auto !important;
+    padding: 4px !important;
+  }
+}
+
+@media (max-width: 450px) {
   .skill-icon {
-    width: 120px !important;
+    width: 110px !important;
   }
 }
 
@@ -244,7 +316,7 @@ section {
   }
 
   .skill-icon {
-    width: 98px !important;
+    width: 96px !important;
 
     img {
       width: 50px !important;
@@ -254,6 +326,25 @@ section {
     p {
       font-size: 14px !important;
     }
+  }
+
+  .popup-window {
+    top: -100x !important;
+    padding: 12px !important;
+
+    p {
+      font-size: 12px !important;
+    }
+  }
+
+  .interest img {
+    height: 32px !important;
+    width: auto !important;
+    padding: 4px !important;
+  }
+
+  .interest-icons {
+    padding: 4px 12px 0 12px !important;
   }
 
   .buttons {

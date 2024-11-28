@@ -152,7 +152,7 @@ section {
 
 .circle-4 {
   position: absolute;
-  top: 820px;
+  top: 1650px;
   right: -150px;
   z-index: -1;
 
@@ -164,7 +164,7 @@ section {
 
 .circle-5 {
   position: absolute;
-  top: 1000px;
+  top: 1250px;
   left: 100px;
   z-index: -1;
 
@@ -176,8 +176,8 @@ section {
 
 .circle-6 {
   position: absolute;
-  top: 1300px;
-  left: 100px;
+  top: 2100px;
+  left: 0px;
   z-index: -1;
 
   img {
@@ -238,20 +238,29 @@ section {
   }
 
   .circle-2 {
-    top: 300px;
+    top: 375px;
+  }
+
+  .circle-3 {
+    top: 1100px;
   }
 
   .circle-4 {
-    top: 780px;
+    top: 1850px;
 
     img {
       width: 450px;
     }
   }
 
+  .circle-5 {
+    top: 2700px;
+  }
+
   .circle-6 {
-    top: 1375px;
-    left: 50px;
+    top: 3300px;
+    left: unset;
+    right: 50px;
 
     img {
       width: 200px;
@@ -262,6 +271,19 @@ section {
 @media (max-width: 1000px) {
   .main {
     padding: 100px 50px !important;
+  }
+
+  .circle-4 {
+    top: 1650px;
+
+    img {
+      width: 280px;
+    }
+  }
+
+  .circle-6 {
+    top: unset;
+    bottom: 350px;
   }
 }
 
@@ -287,7 +309,7 @@ section {
   }
 
   .circle-2 {
-    top: 250px;
+    top: 400px;
     right: 36px;
 
     img {
@@ -296,7 +318,7 @@ section {
   }
 
   .circle-3 {
-    top: 300px;
+    top: 1100px;
     left: -112px;
 
     img {
@@ -305,12 +327,7 @@ section {
   }
 
   .circle-4 {
-    top: 775px;
     right: -120px;
-
-    img {
-      width: 280px;
-    }
   }
 
   .circle-5 {
@@ -318,7 +335,7 @@ section {
   }
 
   .circle-6 {
-    left: 18px;
+    right: 18px;
     z-index: -1;
 
     img {
@@ -329,7 +346,14 @@ section {
 
 @media (max-width: 550px) {
   .circle-4 {
-    top: 840px;
+    img {
+      width: 200px;
+    }
+  }
+
+  .project-text-buttons {
+    flex-direction: column;
+    gap: 16px !important;
   }
 }
 
@@ -343,14 +367,22 @@ section {
       font-size: 16px;
     }
   }
-
-  .circle-4 {
-    top: 775px;
-  }
 }
 
 @media (max-width: 400px) {
   .project-text-buttons {
     gap: 16px !important;
+  }
+
+  .circle-2 {
+    right: 12px;
+  }
+
+  .circle-3 img {
+    width: 180px;
+  }
+
+  .circle-6 {
+    bottom: 400px;
   }
 }

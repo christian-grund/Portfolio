@@ -33,13 +33,18 @@
           <p>{{ projects[i].description | translate }}</p>
 
           <div class="project-text-buttons">
-            <a href="{{ projects[i].liveTest }}" target="_blank">
+            <a
+              *ngIf="projects[i].liveTest !== ''"
+              href="{{ projects[i].liveTest }}"
+              target="_blank"
+            >
               <button class="fill-button">
                 Live <br />
                 {{ "liveTest" | translate }}
               </button></a
             >
             <a
+              *ngIf="projects[i].link_frontend !== ''"
               href="https://github.com/christian-grund/{{
                 projects[i].link_frontend
               }}"
