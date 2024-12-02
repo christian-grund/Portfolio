@@ -99,8 +99,11 @@ section {
 
         a {
           button {
-            height: 80px !important;
-            width: 144px !important;
+            height: 80px;
+          }
+
+          .live-test-button {
+            width: 144px;
           }
 
           &:first-child {
@@ -344,6 +347,12 @@ section {
   }
 }
 
+@media (max-width: 600px) {
+  .project-text-buttons {
+    gap: 32px !important;
+  }
+}
+
 @media (max-width: 550px) {
   .circle-4 {
     img {
@@ -352,8 +361,16 @@ section {
   }
 
   .project-text-buttons {
-    flex-direction: column;
-    gap: 16px !important;
+    a {
+      button {
+        height: unset !important;
+      }
+    }
+  }
+
+  .live-test-button {
+    width: unset !important;
+    width: 90px !important;
   }
 }
 
@@ -371,7 +388,7 @@ section {
 
 @media (max-width: 400px) {
   .project-text-buttons {
-    gap: 16px !important;
+    gap: 12px !important;
   }
 
   .circle-2 {
@@ -380,6 +397,10 @@ section {
 
   .circle-3 img {
     width: 180px;
+  }
+
+  .circle-4 {
+    top: 1800px;
   }
 
   .circle-6 {

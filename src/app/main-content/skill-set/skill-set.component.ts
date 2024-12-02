@@ -24,7 +24,7 @@ export class SkillSetComponent {
     { icon: 'css.svg', name: 'CSS' },
     { icon: 'api.svg', name: 'Rest-Api' },
     { icon: 'material_design.svg', name: 'Material Design' },
-    { icon: 'continually_learning.png', name: 'Continually Learning' },
+    { icon: 'continually_learning.svg', name: 'Continually Learning' },
   ];
 
   skillSetBackend = [
@@ -38,6 +38,7 @@ export class SkillSetComponent {
     { icon: 'docker.svg', name: 'Docker' },
     { icon: 'cloud.svg', name: 'Google Cloud' },
     { icon: 'heroku.svg', name: 'Heroku' },
+    { icon: 'continually_learning.svg', name: 'Continually Learning' },
   ];
 
   toggleSkills(type: string): void {

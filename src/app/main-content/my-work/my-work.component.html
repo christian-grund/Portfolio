@@ -38,9 +38,9 @@
               href="{{ projects[i].liveTest }}"
               target="_blank"
             >
-              <button class="fill-button">
-                Live <br />
-                {{ "liveTest" | translate }}
+              <button class="fill-button live-test-button">
+                <!-- <p class="live-test-button"></p> -->
+                Live<br />{{ "liveTest" | translate }}
               </button></a
             >
             <a
@@ -50,7 +50,7 @@
               }}"
               target="_blank"
             >
-              <button class="fill-button">Github Frontend</button></a
+              <button class="fill-button">Github<br />Frontend</button></a
             >
             <a
               *ngIf="projects[i].link_backend !== ''"
@@ -59,7 +59,7 @@
               }}"
               target="_blank"
             >
-              <button class="fill-button">Github Backend</button></a
+              <button class="fill-button">Github<br />Backend</button></a
             >
           </div>
         </div>

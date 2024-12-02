@@ -107,12 +107,13 @@ section {
     }
 
     &.last-skill {
-      img {
-        filter: brightness(0.73) grayscale(100%) contrast(80%);
+      .last-skill-img {
+        filter: brightness(0) saturate(100%) invert(88%) sepia(99%)
+          saturate(1360%) hue-rotate(326deg) brightness(103%) contrast(98%);
       }
 
       p {
-        color: #bbbbbb;
+        color: rgb(255, 214, 0);
       }
 
       &:hover {
@@ -121,7 +122,7 @@ section {
         }
 
         img {
-          filter: unset;
+          filter: unset !important;
         }
 
         .popup-window {
@@ -133,7 +134,7 @@ section {
 
     .popup-window {
       position: absolute;
-      top: -140px;
+      top: -150px;
       left: 50%;
       transform: translateX(-50%);
       background-color: $color-white;
@@ -150,15 +151,27 @@ section {
 
       .interest-icons {
         display: flex;
+        justify-content: center;
         padding: 8px 32px 0 32px;
+        width: 262px;
+        box-sizing: border-box;
+        gap: 16px;
 
         .interest {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
           img {
             height: 50px;
             width: auto;
             object-fit: cover;
             transform: unset !important;
             padding: 8px;
+          }
+
+          p {
+            height: 19px !important;
           }
         }
       }
@@ -234,8 +247,18 @@ section {
 }
 
 @media (max-width: 1100px) {
+  .skill-icons {
+    height: 550px;
+  }
+
   .skill-icon {
     width: 154px !important;
+
+    .skill-icon-p {
+      height: 38px !important;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -271,7 +294,7 @@ section {
 
 @media (max-width: 670px) {
   .skill-icons {
-    height: 675px !important;
+    height: 725px !important;
   }
 }
 
@@ -293,8 +316,12 @@ section {
   }
 
   .popup-window {
-    top: -100px !important;
+    top: -128px !important;
     padding: 12px !important;
+  }
+
+  .interest-icons {
+    width: 232px !important;
   }
 
   .interest img {
@@ -304,7 +331,7 @@ section {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 465px) {
   .skill-icon {
     width: 110px !important;
   }
@@ -312,7 +339,7 @@ section {
 
 @media (max-width: 400px) {
   .skill-icons {
-    height: 550px !important;
+    height: 650px !important;
   }
 
   .skill-icon {
@@ -330,7 +357,7 @@ section {
 
   .popup-window {
     top: -100x !important;
-    padding: 12px !important;
+    padding: 16px !important;
 
     p {
       font-size: 12px !important;
@@ -345,14 +372,17 @@ section {
 
   .interest-icons {
     padding: 4px 12px 0 12px !important;
+    width: unset !important;
+    gap: 8px !important;
   }
 
   .buttons {
     gap: 24px;
-
-    button {
-      font-size: 14px;
-      padding: 12px 15px;
-    }
   }
+}
+
+.adjust-font-height {
+  display: flex;
+  align-items: center;
+  height: 32px;
 }

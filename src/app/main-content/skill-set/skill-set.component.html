@@ -17,10 +17,11 @@
                 }"
               >
                 <img
+                  class="last-skill-img"
                   src="./assets/img/icons/skillset/frontend/{{ skill.icon }}"
                   alt=""
                 />
-                <p>{{ skill.name }}</p>
+                <p class="skill-icon-p">{{ skill.name }}</p>
                 <div class="popup-window">
                   <p>{{ "eagerToLearn" | translate }}</p>
                   <div class="interest-icons">
@@ -38,13 +39,6 @@
                       />
                       <p>Vue.js</p>
                     </div>
-                    <div class="interest">
-                      <img
-                        src="./assets/img/icons/skillset/interest/csharp.svg"
-                        alt="CSharp"
-                      />
-                      <p>C#</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -52,12 +46,45 @@
           </div>
           <div class="skills-backend">
             <div class="skill-icons show">
-              <div class="skill-icon" *ngFor="let skill of skillSetBackend">
+              <div
+                class="skill-icon"
+                *ngFor="let skill of skillSetBackend; let i = index"
+                [ngClass]="{
+                  'last-skill': i === skillSetBackend.length - 1
+                }"
+              >
                 <img
+                  class="last-skill-img"
                   src="./assets/img/icons/skillset/backend/{{ skill.icon }}"
                   alt=""
                 />
-                <p>{{ skill.name }}</p>
+                <p
+                  class="skill-icon-p"
+                  [ngClass]="{
+                    'adjust-font-height': i === skillSetBackend.length - 2
+                  }"
+                >
+                  {{ skill.name }}
+                </p>
+                <div class="popup-window">
+                  <p>{{ "eagerToLearn" | translate }}</p>
+                  <div class="interest-icons">
+                    <div class="interest">
+                      <img
+                        src="./assets/img/icons/skillset/interest/csharp.svg"
+                        alt="CSharp"
+                      />
+                      <p>C#</p>
+                    </div>
+                    <div class="interest">
+                      <img
+                        src="./assets/img/icons/skillset/interest/netcore.svg"
+                        alt=".NET Core"
+                      />
+                      <p>.NET Core</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

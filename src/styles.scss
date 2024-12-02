@@ -12,6 +12,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Montserrat";
   margin: 0;
@@ -215,18 +220,10 @@ button {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   button,
   .fill-button {
-    padding: 15px 18px 15px 18px !important;
+    font-size: 14px !important;
+    padding: 12px 15px !important;
   }
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
