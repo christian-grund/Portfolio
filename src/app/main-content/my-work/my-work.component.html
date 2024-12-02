@@ -14,10 +14,18 @@
         }"
       >
         <div class="project-img" data-aos="fade-right" data-aos-duration="1000">
-          <img
+          <!-- <img
             [src]="'./assets/img/pc_mockup/' + projects[i].mockup"
             [alt]="projects[i].mockup"
-          />
+          /> -->
+          <video
+            #videoPlayer
+            class="video-background"
+            (mouseenter)="playVideo()"
+            (mouseleave)="pauseVideo()"
+            (ended)="replayVideo()"
+            src="../../../assets/video/epl.mp4"
+          ></video>
         </div>
 
         <div
