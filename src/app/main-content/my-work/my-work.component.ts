@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,9 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
-  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
   circles = [1, 2, 3, 4, 5, 6];
-
   projects = [
     {
       mockup: 'videoflix.png',
@@ -70,6 +68,11 @@ export class MyWorkComponent {
     this.translateProjectDescriptions();
   }
 
+  /**
+   * Translates the description of each project in the `projects` array
+   * using the translation service and assigns the translated description
+   * to the `translatedDescription` property of the project.
+   */
   translateProjectDescriptions(): void {
     for (const project of this.projects) {
       this.translateService
@@ -78,21 +81,5 @@ export class MyWorkComponent {
           project.translatedDescription = translatedDesc;
         });
     }
-  }
-
-  playVideo() {
-    const videoPlayer = this.videoPlayer.nativeElement;
-    videoPlayer.play();
-  }
-
-  pauseVideo() {
-    const videoPlayer = this.videoPlayer.nativeElement;
-    videoPlayer.pause();
-  }
-
-  replayVideo() {
-    const videoPlayer = this.videoPlayer.nativeElement;
-    videoPlayer.currentTime = 0;
-    videoPlayer.play();
   }
 }

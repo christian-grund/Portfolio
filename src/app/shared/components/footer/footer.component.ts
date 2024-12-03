@@ -21,6 +21,10 @@ export class FooterComponent implements OnInit, OnDestroy {
     private elementRef: ElementRef
   ) {}
 
+  /**
+   * Initializes the component by subscribing to the current language stream
+   * from the LanguageService and updates the `currentLanguage` property.
+   */
   ngOnInit() {
     this.langSubscription = this.languageService.currentLang$.subscribe(
       (lang) => {
@@ -29,12 +33,20 @@ export class FooterComponent implements OnInit, OnDestroy {
     );
   }
 
+  /**
+   * Cleans up the component by unsubscribing from the language subscription
+   * to prevent memory leaks.
+   */
   ngOnDestroy() {
     if (this.langSubscription) {
       this.langSubscription.unsubscribe();
     }
   }
 
+  /**
+   * Smoothly scrolls the window to the top of the page.
+   * Uses the `elementRef` to access the window reference.
+   */
   scrollToTop() {
     const windowRef = this.elementRef.nativeElement.ownerDocument.defaultView;
 

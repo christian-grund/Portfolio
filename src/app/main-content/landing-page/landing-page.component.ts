@@ -17,6 +17,10 @@ export class LandingPageComponent implements OnInit, OnDestroy {
 
   constructor(private languageService: LanguageService) {}
 
+  /**
+   * Initializes the component by subscribing to the current language stream
+   * from the LanguageService and updates the currentLanguage property.
+   */
   ngOnInit() {
     this.langSubscription = this.languageService.currentLang$.subscribe(
       (lang) => {
@@ -25,6 +29,10 @@ export class LandingPageComponent implements OnInit, OnDestroy {
     );
   }
 
+  /**
+   * Cleans up the component by unsubscribing from the language subscription
+   * to prevent memory leaks.
+   */
   ngOnDestroy() {
     if (this.langSubscription) {
       this.langSubscription.unsubscribe();

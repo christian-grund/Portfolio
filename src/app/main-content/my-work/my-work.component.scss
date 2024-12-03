@@ -51,16 +51,10 @@ section {
       box-sizing: border-box;
       position: relative;
 
-      // img {
-      //   width: 500px;
-      //   height: auto;
-      //   transition: transform 0.4s ease-in-out;
-      // }
-
-      video {
+      img {
         width: 500px;
         height: auto;
-        // transition: transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
       }
     }
 

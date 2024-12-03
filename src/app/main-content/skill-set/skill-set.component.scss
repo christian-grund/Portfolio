@@ -45,27 +45,27 @@ section {
 .skill-set-container {
   overflow: hidden;
   width: 100%;
-  position: relative; // Layout-Steuerung
+  position: relative;
 
   .skill-set {
     display: flex;
-    transition: transform 0.5s ease-in-out; // Übergangsanimation
-    width: 200%; // Doppelte Breite für beide Container nebeneinander
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
   }
 
   .skills-frontend,
   .skills-backend {
-    width: 50%; // Jeder Container nimmt die Hälfte der Gesamtbreite ein
+    width: 50%;
     box-sizing: border-box;
   }
 }
 
 .skill-set-container .skill-set {
-  transform: translateX(0); // Anfangsposition: Frontend ist sichtbar
+  transform: translateX(0);
 }
 
 .skill-set-container.show-backend .skill-set {
-  transform: translateX(-50%); // Verschiebt die Ansicht, um Backend anzuzeigen
+  transform: translateX(-50%);
 }
 
 .skill-icons {
@@ -110,6 +110,8 @@ section {
       .last-skill-img {
         filter: brightness(0) saturate(100%) invert(88%) sepia(99%)
           saturate(1360%) hue-rotate(326deg) brightness(103%) contrast(98%);
+        height: 80px;
+        width: 75px;
       }
 
       p {
@@ -353,6 +355,11 @@ section {
     p {
       font-size: 14px !important;
     }
+  }
+
+  .last-skill img {
+    width: 55px !important;
+    height: 60px !important;
   }
 
   .popup-window {

@@ -13,6 +13,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 export class SkillSetComponent {
   showFrontend: boolean = true;
 
+  /**
+   * Array of frontend skills with associated icons and names.
+   */
   skillSetFrontend = [
     { icon: 'angular.svg', name: 'Angular' },
     { icon: 'typescript.svg', name: 'TypeScript' },
@@ -27,6 +30,9 @@ export class SkillSetComponent {
     { icon: 'continually_learning.svg', name: 'Continually Learning' },
   ];
 
+  /**
+   * Array of backend skills with associated icons and names.
+   */
   skillSetBackend = [
     { icon: 'linux.svg', name: 'Linux' },
     { icon: 'terminal.svg', name: 'Terminal' },
@@ -41,6 +47,13 @@ export class SkillSetComponent {
     { icon: 'continually_learning.svg', name: 'Continually Learning' },
   ];
 
+  /**
+   * Toggles between frontend and backend skill sets in the UI.
+   * Adds or removes the 'show-backend' class from the skill set container
+   * depending on the selected skill type.
+   *
+   * @param {string} type - The type of skills to display ('frontend' or 'backend').
+   */
   toggleSkills(type: string): void {
     const container = document.querySelector('.skill-set-container');
     if (type === 'frontend') {
