@@ -28,6 +28,7 @@ export class SkillSetComponent {
     { icon: 'api.svg', name: 'Rest-Api' },
     { icon: 'material_design.svg', name: 'Material Design' },
     { icon: 'continually_learning.svg', name: 'Continually Learning' },
+    { icon: 'challenge_me.svg', name: 'Challenge me' },
   ];
 
   /**
@@ -42,9 +43,10 @@ export class SkillSetComponent {
     { icon: 'redis.svg', name: 'Redis' },
     { icon: 'postgresql.svg', name: 'PostgreSQL' },
     { icon: 'docker.svg', name: 'Docker' },
-    { icon: 'cloud.svg', name: 'Google Cloud' },
     { icon: 'heroku.svg', name: 'Heroku' },
+    { icon: 'cloud.svg', name: 'Google Cloud' },
     { icon: 'continually_learning.svg', name: 'Continually Learning' },
+    { icon: 'challenge_me.svg', name: 'Challenge me' },
   ];
 
   /**

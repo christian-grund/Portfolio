@@ -134,12 +134,39 @@ section {
       }
     }
 
+    &.challenge-me {
+      .last-skill-img {
+        filter: brightness(0) saturate(100%) invert(88%) sepia(99%)
+          saturate(1360%) hue-rotate(326deg) brightness(103%) contrast(98%);
+      }
+
+      p {
+        color: rgb(255, 214, 0);
+      }
+
+      &:hover {
+        p {
+          color: $color-white;
+        }
+
+        img {
+          filter: unset !important;
+        }
+
+        .popup-challenge-me {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
     .popup-window {
       position: absolute;
       top: -150px;
       left: 50%;
       transform: translateX(-50%);
       background-color: $color-white;
+      border: 2px solid $primary-color;
       padding: 16px;
       border-radius: 24px;
       opacity: 0;
@@ -178,13 +205,33 @@ section {
         }
       }
     }
+
+    .popup-challenge-me {
+      position: absolute;
+      top: -156px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-white;
+      border: 2px solid $primary-color;
+      padding: 16px;
+      border-radius: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 1000;
+      width: 150px;
+
+      p {
+        color: $primary-color;
+      }
+    }
   }
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 100px;
   color: $color-white;
   padding-bottom: 40px;
 
@@ -192,6 +239,12 @@ section {
     background-color: $color-white;
     color: $primary-color;
   }
+}
+
+.adjust-font-height {
+  display: flex;
+  align-items: center;
+  height: 32px;
 }
 
 @keyframes carousel {
@@ -240,11 +293,19 @@ section {
   .skill-icon {
     width: 206px !important;
   }
+
+  .buttons {
+    gap: 72px;
+  }
 }
 
 @media (max-width: 1250px) {
   .skill-icon {
     width: 176px !important;
+  }
+
+  .buttons {
+    gap: 40px;
   }
 }
 
@@ -294,6 +355,12 @@ section {
   }
 }
 
+@media (max-width: 700px) {
+  .popup-challenge-me {
+    left: 40% !important;
+  }
+}
+
 @media (max-width: 670px) {
   .skill-icons {
     height: 725px !important;
@@ -320,6 +387,12 @@ section {
   .popup-window {
     top: -128px !important;
     padding: 12px !important;
+  }
+
+  .popup-challenge-me {
+    padding: 12px !important;
+    width: 180px !important;
+    top: -134px !important;
   }
 
   .interest-icons {
@@ -362,13 +435,22 @@ section {
     height: 60px !important;
   }
 
-  .popup-window {
-    top: -100x !important;
+  .popup-window,
+  .popup-challenge-me {
     padding: 16px !important;
 
     p {
       font-size: 12px !important;
     }
+  }
+
+  .popup-window {
+    top: -150px !important;
+  }
+
+  .popup-challenge-me {
+    top: -150px !important;
+    width: 118px !important;
   }
 
   .interest img {
@@ -388,8 +470,9 @@ section {
   }
 }
 
-.adjust-font-height {
-  display: flex;
-  align-items: center;
-  height: 32px;
+@media (max-width: 350px) {
+  .popup-challenge-me {
+    top: -145px !important;
+    left: 20% !important;
+  }
 }

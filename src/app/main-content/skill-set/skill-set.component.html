@@ -13,7 +13,8 @@
                 class="skill-icon"
                 *ngFor="let skill of skillSetFrontend; let i = index"
                 [ngClass]="{
-                  'last-skill': i === skillSetFrontend.length - 1
+                  'last-skill': i === skillSetFrontend.length - 2,
+                  'challenge-me': i === skillSetFrontend.length - 1
                 }"
               >
                 <img
@@ -22,6 +23,7 @@
                   alt=""
                 />
                 <p class="skill-icon-p">{{ skill.name }}</p>
+
                 <div class="popup-window">
                   <p>{{ "eagerToLearn" | translate }}</p>
                   <div class="interest-icons">
@@ -41,6 +43,10 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="popup-challenge-me">
+                  <p>{{ "challengeMe" | translate }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -50,7 +56,8 @@
                 class="skill-icon"
                 *ngFor="let skill of skillSetBackend; let i = index"
                 [ngClass]="{
-                  'last-skill': i === skillSetBackend.length - 1
+                  'last-skill': i === skillSetBackend.length - 2,
+                  'challenge-me': i === skillSetFrontend.length - 1
                 }"
               >
                 <img
@@ -61,11 +68,12 @@
                 <p
                   class="skill-icon-p"
                   [ngClass]="{
-                    'adjust-font-height': i === skillSetBackend.length - 2
+                    'adjust-font-height': i === skillSetBackend.length - 3
                   }"
                 >
                   {{ skill.name }}
                 </p>
+
                 <div class="popup-window">
                   <p>{{ "eagerToLearn" | translate }}</p>
                   <div class="interest-icons">
@@ -84,6 +92,14 @@
                       <p>.NET Core</p>
                     </div>
                   </div>
+                </div>
+
+                <div class="popup-challenge-me">
+                  <p>
+                    Sie benötigen weitere Skills? Lassen Sie es mich wissen –
+                    ich bin offen dafür, mich in neue Technologien
+                    einzuarbeiten.
+                  </p>
                 </div>
               </div>
             </div>
